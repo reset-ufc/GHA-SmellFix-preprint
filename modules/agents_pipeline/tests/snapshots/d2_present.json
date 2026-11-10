@@ -1,0 +1,124 @@
+{
+  "result": {
+    "patched_workflow": "name: CI\npermissions:\n  contents: read\n",
+    "patch_valid": false,
+    "patch_validation_error": "GitHub Actions schema error at (root): 'on' is a required property (+1 more schema violation)",
+    "smell_detected": true,
+    "detection_justification": "Unscoped GITHUB_TOKEN at the workflow level.",
+    "refactor_justification": "Scoped GITHUB_TOKEN to contents: read.",
+    "detection_confidence": "medium",
+    "detection_confidence_justification": "Token use is implied by the checkout step.",
+    "refactor_confidence": "high",
+    "refactor_confidence_justification": "Adding a permissions block is a safe, localized edit.",
+    "count": 1,
+    "evidence_ranges": [
+      {
+        "start_line": 12,
+        "end_line": 18
+      }
+    ],
+    "token_usage": {
+      "total": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_tokens": 0,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "calls": 2
+      },
+      "by_role": {
+        "detection": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_tokens": 0,
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "calls": 1
+        },
+        "refactor": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_tokens": 0,
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "calls": 1
+        }
+      }
+    },
+    "agent_call_count": 2
+  },
+  "state": {
+    "detection_loop_converged": false,
+    "detection_loop_iterations": 0,
+    "detection_loop_iterations_log": [],
+    "refactor_loop_converged": null,
+    "refactor_loop_iterations": 0,
+    "refactor_loop_iterations_log": [],
+    "refactor_patches_per_iteration": [],
+    "last_refactor_validation": null,
+    "last_patched": null,
+    "final_detection": {
+      "reasoning": "Walked each job and step against the smell definition before deciding.",
+      "target_smell": "Define permissions for workflows with external actions",
+      "smell_detected": true,
+      "detection_justification": "Unscoped GITHUB_TOKEN at the workflow level.",
+      "count": 1,
+      "evidence_ranges": [
+        {
+          "start_line": 12,
+          "end_line": 18
+        }
+      ],
+      "detection_confidence": "medium",
+      "detection_confidence_justification": "Token use is implied by the checkout step."
+    },
+    "combined_result": {
+      "reasoning": "Walked each job and step against the smell definition before deciding.",
+      "target_smell": "Define permissions for workflows with external actions",
+      "smell_detected": true,
+      "detection_justification": "Unscoped GITHUB_TOKEN at the workflow level.",
+      "count": 1,
+      "evidence_ranges": [
+        {
+          "start_line": 12,
+          "end_line": 18
+        }
+      ],
+      "detection_confidence": "medium",
+      "detection_confidence_justification": "Token use is implied by the checkout step.",
+      "patched_workflow": "name: CI\npermissions:\n  contents: read\n",
+      "refactor_justification": "Scoped GITHUB_TOKEN to contents: read.",
+      "refactor_confidence": "high",
+      "refactor_confidence_justification": "Adding a permissions block is a safe, localized edit."
+    },
+    "token_usage": {
+      "total": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_tokens": 0,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "calls": 2
+      },
+      "by_role": {
+        "detection": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_tokens": 0,
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "calls": 1
+        },
+        "refactor": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_tokens": 0,
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "calls": 1
+        }
+      }
+    },
+    "trace_calls": []
+  }
+}

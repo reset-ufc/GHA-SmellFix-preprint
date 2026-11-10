@@ -1,0 +1,153 @@
+[project]
+name = "replication-package"
+version = "0.1.0"
+description = "replication package — detector, dataset, agents pipeline, and evaluation."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "analysis",
+  "dataset-utils",
+  "gha-agents",
+  "gha-ci-detector",
+]
+
+[dependency-groups]
+dev = [
+  "ipykernel>=7.3.0",
+  "nbconvert>=7.17.1",
+  "nbmake>=1.5.5",
+  "pre-commit>=4.6.0",
+  "pytest>=9.0.3",
+  "ruff>=0.15.15",
+]
+
+[tool.pytest.ini_options]
+# importlib import-mode keeps per-module `tests` packages from colliding on
+# collection.
+addopts = "-ra --import-mode=importlib"
+testpaths = [
+  "modules/agents_pipeline/tests",
+  "modules/dataset/tests",
+  "modules/analysis/tests",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+fix = true
+
+[tool.ruff.lint]
+select = [
+  "YTT",
+  "S",
+  "B",
+  "A",
+  "C4",
+  "T10",
+  "SIM",
+  "I",
+  "C90",
+  "E",
+  "W",
+  "F",
+  "PGH",
+  "UP",
+  "RUF",
+  "TRY",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests: allow asserts, tmp paths, long lines
+"modules/**/tests/**" = ["S101"]
+# Long prompt strings — readability over line length
+"modules/agents_pipeline/gha_agents/prompts.py" = ["E501"]
+# Step 8 — legacy port from old/study-dataset; keep behavior identical
+"modules/dataset/scripts/08_online_enrich_dataset.py" = [
+  "E501",
+  "TRY003",
+  "TRY301",
+  "C901",
+  "S110",
+  "F841",
+  "RUF059"
+]
+# Legacy code under agents_pipeline (external authors / pre-existing)
+"modules/agents_pipeline/gha_agents/**" = [
+  "E501",
+  "TRY003",
+  "B905",
+  "F841",
+  "E741",
+  "C901",
+  "E402",
+  "RUF001",
+  "RUF002",
+  "RUF003",
+  "RUF005",
+  "RUF046",
+  "SIM113"
+]
+"modules/agents_pipeline/scripts/**" = [
+  "E501",
+  "TRY003",
+  "B905",
+  "F841",
+  "E741",
+  "S110",
+  "T201",
+  "C901",
+  "RUF001",
+  "RUF002",
+  "RUF003",
+  "RUF046"
+]
+# External detector source — keep upstream style
+"modules/gha_detector/gha_ci_detector/**" = [
+  "E501",
+  "TRY003",
+  "SIM108",
+  "B905",
+  "C901",
+  "E741",
+  "SIM115",
+  "SIM102",
+  "TRY300"
+]
+# Notebooks: allow exec / dynamic patterns common in research code
+"modules/dataset/*.ipynb" = [
+  "E501",
+  "TRY003",
+  "T201",
+  "F401",
+  "E402",
+  "C901",
+  "E712",
+  "A001",
+  "S311",
+  "F841",
+  "RUF001",
+  "RUF002",
+  "RUF003"
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = [
+  "modules/agents_pipeline",
+  "modules/dataset",
+  "modules/gha_detector",
+  "modules/analysis",
+]
+
+[tool.uv.sources]
+gha-ci-detector = { workspace = true }
+dataset-utils = { workspace = true }
+gha-agents = { workspace = true }
+analysis = { workspace = true }

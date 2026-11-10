@@ -1,0 +1,93 @@
+{
+  "result": {
+    "patched_workflow": "name: CI\non: [push]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps: []\n",
+    "patch_valid": false,
+    "patch_validation_error": "GitHub Actions schema error at jobs.build.steps: [] should be non-empty",
+    "smell_detected": false,
+    "detection_justification": "No matching smell instance found.",
+    "refactor_justification": "",
+    "detection_confidence": null,
+    "detection_confidence_justification": "",
+    "refactor_confidence": null,
+    "refactor_confidence_justification": "",
+    "count": 0,
+    "evidence_ranges": [],
+    "token_usage": {
+      "total": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_tokens": 0,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "calls": 1
+      },
+      "by_role": {
+        "detection": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_tokens": 0,
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "calls": 1
+        }
+      }
+    },
+    "agent_call_count": 1
+  },
+  "state": {
+    "detection_loop_converged": false,
+    "detection_loop_iterations": 0,
+    "detection_loop_iterations_log": [],
+    "refactor_loop_converged": null,
+    "refactor_loop_iterations": 0,
+    "refactor_loop_iterations_log": [],
+    "refactor_patches_per_iteration": [],
+    "last_refactor_validation": null,
+    "last_patched": null,
+    "final_detection": {
+      "reasoning": "Walked each job and step against the smell definition before deciding.",
+      "target_smell": "Define permissions for workflows with external actions",
+      "smell_detected": false,
+      "detection_justification": "No matching smell instance found.",
+      "count": 0,
+      "evidence_ranges": [],
+      "detection_confidence": null,
+      "detection_confidence_justification": ""
+    },
+    "combined_result": {
+      "reasoning": "Walked each job and step against the smell definition before deciding.",
+      "target_smell": "Define permissions for workflows with external actions",
+      "smell_detected": false,
+      "detection_justification": "No matching smell instance found.",
+      "count": 0,
+      "evidence_ranges": [],
+      "detection_confidence": null,
+      "detection_confidence_justification": "",
+      "patched_workflow": "name: CI\non: [push]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps: []\n",
+      "refactor_justification": "",
+      "refactor_confidence": null,
+      "refactor_confidence_justification": ""
+    },
+    "token_usage": {
+      "total": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_tokens": 0,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "calls": 1
+      },
+      "by_role": {
+        "detection": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_tokens": 0,
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "calls": 1
+        }
+      }
+    },
+    "trace_calls": []
+  }
+}

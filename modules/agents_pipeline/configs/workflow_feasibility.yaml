@@ -1,0 +1,36 @@
+version: 1
+
+# Workflow-level feasibility diagnostic: 8 workflows annotated for all 19 smells,
+# one target-conditioned run per smell -> 8 x 19 x {D1, D2} = 304 runs, Haiku 4.5
+# only, single repetition. Build the ground truth first with
+#   uv run python modules/agents_pipeline/scripts/workflow_feasibility.py build-gt
+# then
+#   uv run python -m gha_agents.experiment modules/agents_pipeline/configs/workflow_feasibility.yaml
+# Output stays outside data/agents_runs_outputs/ so the main study loaders never see it.
+
+defaults:
+  ground_truth_file: ./data/workflow_feasibility/ground_truth.json
+  output_dir: ./data/workflow_feasibility/runs/output-haiku45
+  max_iterations: 3
+  verbose: true
+  limit: null
+
+sampling:
+  json_mode: true
+
+models:
+  haiku45:
+    id: claude-haiku-4-5
+    provider: anthropic
+
+matrix:
+  designs: [D1, D2]
+  models: [haiku45]
+  repetitions: [1]
+
+execution:
+  max_workers: 3
+  stop_on_error: false    # absorb transient 429s; resume backfills
+  resume: true            # crash-safe: a re-run skips completed cells
+  request_timeout: 180
+  persist_traces: true

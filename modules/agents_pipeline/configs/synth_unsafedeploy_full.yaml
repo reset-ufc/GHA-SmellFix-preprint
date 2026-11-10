@@ -1,0 +1,34 @@
+version: 1
+
+# Synthetic-smell run for UnsafeDeployOnFork over the full synthetic ground
+# truth (45 synthetic positive + 45 negative), DeepSeek V4 Flash, single run.
+#   uv run python -m gha_agents.experiment modules/agents_pipeline/configs/synth_unsafedeploy_full.yaml
+
+defaults:
+  ground_truth_file: ./data/12f_unsafedeploy_synth90_full.json
+  output_dir: ./output-synth-unsafedeploy-full
+  max_iterations: 3
+  verbose: true
+  limit: null
+
+sampling:
+  json_mode: true
+
+models:
+  deepseek-v4-flash:
+    id: deepseek/deepseek-v4-flash
+    provider: openrouter
+
+matrix:
+  designs: [D1, D2]
+  models: [deepseek-v4-flash]
+  repetitions: [1]
+
+execution:
+  max_workers: 3          # one global pool across providers — keep modest against
+                          # the tightest TPM (Anthropic). Raise via --max-workers,
+                          # or split by provider if you hit rate limits.
+  stop_on_error: false    # absorb transient 429s; resume backfills
+  resume: true            # crash-safe: a re-run skips completed cells
+  request_timeout: 180
+  persist_traces: true

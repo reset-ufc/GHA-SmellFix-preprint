@@ -1,0 +1,47 @@
+version: 1
+
+# Full run over the complete ground truth (~1711 pairs), both designs (D1 and D2).
+# Reps differ by model: Claude Haiku 4.5 carries the k=3 repeatability axis; the
+# temperature-0 models (Gemini 3.5 Flash, DeepSeek V4 Flash) run once.
+#   uv run python -m gha_agents.experiment modules/agents_pipeline/configs/full.yaml
+
+defaults:
+  ground_truth_file: ./data/12b_final_ground_truth.json
+  output_dir: ./output-full
+  max_iterations: 3
+  verbose: true
+  limit: null
+
+sampling:
+  json_mode: true
+
+models:
+  haiku45:
+    id: claude-haiku-4-5
+    provider: anthropic
+  gemini35-flash:
+    id: gemini-3.5-flash
+    provider: vertex
+  deepseek-v4-flash:
+    id: deepseek/deepseek-v4-flash
+    provider: openrouter
+
+matrix:
+  designs: [D1, D2]
+  models: [haiku45]            # k=3 repeatability model
+  repetitions: [1, 2, 3]
+
+runs:                          # single-run (temperature-0) models, rep 1
+  - {name: gemini35-flash-d1-r1, design: D1, model: gemini35-flash, repetition: 1}
+  - {name: gemini35-flash-d2-r1, design: D2, model: gemini35-flash, repetition: 1}
+  - {name: deepseek-v4-flash-d1-r1, design: D1, model: deepseek-v4-flash, repetition: 1}
+  - {name: deepseek-v4-flash-d2-r1, design: D2, model: deepseek-v4-flash, repetition: 1}
+
+execution:
+  max_workers: 3          # one global pool across providers — keep modest against
+                          # the tightest TPM (Anthropic). Raise via --max-workers,
+                          # or split by provider if you hit rate limits.
+  stop_on_error: false    # absorb transient 429s; resume backfills
+  resume: true            # crash-safe: a re-run skips completed cells
+  request_timeout: 180
+  persist_traces: true

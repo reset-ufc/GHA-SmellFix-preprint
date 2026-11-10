@@ -1,0 +1,19 @@
+[project]
+name = "dataset-utils"
+version = "0.1.0"
+description = "Dataset construction pipeline: mining, cleaning, and ground-truth building."
+requires-python = ">=3.12"
+dependencies = [
+  "httpx[http2]>=0.28.1",
+  "polars>=1.41.2",
+  "scikit-learn>=1.9.0",
+  "tqdm>=4.67.3",
+  "pyyaml>=6.0.3",
+]
+
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["dataset_utils"]

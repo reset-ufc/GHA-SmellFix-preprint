@@ -1,0 +1,1898 @@
+file_key,smell,decision,note
+0xpolygonmiden@miden-vm@changelog.yml,MissingConcurrencyBranch,absent,Does not have the key `on: push`
+0xpolygonmiden@miden-vm@changelog.yml,MultiCommandStep,absent,Does not have the key `run:`
+0xpolygonmiden@miden-vm@changelog.yml,SingleOSExecution,absent,Does not have the key `run-on:`
+0xpolygonmiden@miden-vm@changelog.yml,MissingPermExternalActions,absent,No external action.
+0xpolygonmiden@miden-vm@changelog.yml,MissingConcurrencyBranch,absent,Does not have on push
+0xpolygonmiden@miden-vm@changelog.yml,MultiCommandStep,absent,Does not have run
+0xpolygonmiden@miden-vm@changelog.yml,UnsafeArtifactUploadFork,absent,Doesn't perform artifact upload.
+0xpolygonmiden@miden-vm@changelog.yml,MissingUploadCondition,absent,Doesn't upload anything
+0xpolygonmiden@miden-vm@changelog.yml,MissingPermExternalActions,absent,Has defined permissions.
+0xpolygonmiden@miden-vm@changelog.yml,UnpinnedActionVersion,absent,fixed hash
+0xpolygonmiden@miden-vm@changelog.yml,MissingTokenPermissions,absent,without secret
+0xpolygonmiden@miden-vm@changelog.yml,MissingForkGuardSchedule,absent,not applicable
+0xpolygonmiden@miden-vm@changelog.yml,MissingConcurrencyGlobal,absent,not applicable
+0xpolygonmiden@miden-vm@changelog.yml,MutableRunnerVersion,absent,not applicable
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MissingForkGuardPR,absent,not applicable
+AlexProgrammerDE@SoulFire@dependency-submission.yml,UnsafeArtifactUploadFork,absent,if present
+AlexProgrammerDE@SoulFire@dependency-submission.yml,SuboptimalCacheUsage,absent,not applicable
+0xpolygonmiden@miden-vm@changelog.yml,SuboptimalCacheUsage,absent,Does not have the cache block.
+0xpolygonmiden@miden-vm@changelog.yml,UnpinnedDependencies,absent,No installations in this workflow
+0xpolygonmiden@miden-vm@changelog.yml,SingleLangVersionCI,absent,No matrix blocks
+AlexProgrammerDE@SoulFire@dependency-submission.yml,UnpinnedDependencies,absent,not applicable
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MissingConcurrencyPR,absent,The workflow is not triggered with PR
+JuliaLang@julia@Typos.yml,MultiCommandStep,absent,Run does not have multiple phases
+Expensify@react-native-live-markdown@publish.yml,MissingTokenPermissions,absent,not applicable
+Expensify@react-native-live-markdown@publish.yml,MissingForkGuardPR,absent,not applicable
+Expensify@react-native-live-markdown@publish.yml,MissingForkGuardSchedule,absent,not applicable
+Expensify@react-native-live-markdown@publish.yml,MissingConcurrencyGlobal,absent,not applicable
+Expensify@react-native-live-markdown@publish.yml,MutableRunnerVersion,absent,not applicable
+HariSekhon@Knowledge-Base@sonarcloud.yaml,UnsafeDeployOnFork,absent,not applicable
+LadybirdBrowser@ladybird@ci.yml,MissingJobTimeout,absent,not applicable
+LadybirdBrowser@ladybird@ci.yml,UnsafeArtifactUploadFork,absent,not applicable
+LadybirdBrowser@ladybird@ci.yml,MissingUploadCondition,absent,not applicable
+LadybirdBrowser@ladybird@ci.yml,SuboptimalCacheUsage,absent,not applicable
+LadybirdBrowser@ladybird@ci.yml,UnpinnedDependencies,absent,not applicable
+LadybirdBrowser@ladybird@ci.yml,SingleLangVersionCI,absent,not applicable
+LayerZero-Labs@devtools@on-develop.yaml,MissingConcurrencyPR,absent,not applicable
+LayerZero-Labs@devtools@on-develop.yaml,MultiCommandStep,absent,not applicable
+LayerZero-Labs@devtools@on-develop.yaml,SingleOSExecution,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,UnpinnedActionVersion,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,MissingJobTimeout,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,MissingConcurrencyBranch,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,MultiCommandStep,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,SingleOSExecution,absent,not applicable
+TraceMachina@nativelink@sanitizers.yaml,MissingPermExternalActions,absent,not applicable
+TraceMachina@nativelink@sanitizers.yaml,MissingTokenPermissions,absent,not applicable
+TraceMachina@nativelink@sanitizers.yaml,MissingForkGuardPR,absent,not applicable
+TraceMachina@nativelink@sanitizers.yaml,MissingForkGuardSchedule,absent,not applicable
+TraceMachina@nativelink@sanitizers.yaml,MissingConcurrencyGlobal,absent,not applicable
+TraceMachina@nativelink@sanitizers.yaml,MutableRunnerVersion,absent,not applicable
+TraceMachina@nativelink@vale.yaml,UnpinnedActionVersion,absent,not applicable
+TraceMachina@nativelink@vale.yaml,MissingConcurrencyBranch,absent,not applicable
+TraceMachina@nativelink@vale.yaml,MultiCommandStep,absent,not applicable
+TraceMachina@nativelink@vale.yaml,SingleOSExecution,absent,not applicable
+agama-project@agama@obs-staging-rust.yml,MultiCommandStep,absent,not applicable
+agama-project@agama@obs-staging-rust.yml,SingleOSExecution,absent,not applicable
+agama-project@agama@obs-staging-service.yml,MissingPermExternalActions,absent,not applicable
+agama-project@agama@obs-staging-web.yml,MissingPermExternalActions,absent,not applicable
+agama-project@agama@obs-staging-web.yml,UnpinnedActionVersion,absent,not applicable
+agama-project@agama@obs-staging-web.yml,MissingTokenPermissions,absent,not applicable
+agama-project@agama@obs-staging-web.yml,MissingConcurrencyPR,absent,not applicable
+agama-project@agama@obs-staging-web.yml,MissingForkGuardSchedule,absent,not applicable
+agama-project@agama@obs-staging-web.yml,MissingConcurrencyGlobal,absent,not applicable
+agama-project@agama@obs-staging-web.yml,MutableRunnerVersion,absent,not applicable
+ant-design@ant-design@sync-gitee.yml,UnsafeDeployOnFork,absent,not applicable
+apache@arrow-adbc@r-basic.yml,MissingPermExternalActions,absent,not applicable
+apache@arrow-adbc@r-basic.yml,MissingTokenPermissions,absent,not applicable
+AlexProgrammerDE@SoulFire@dependency-submission.yml,UnsafeDeployOnFork,absent,Doesn't contain deploy
+apache@arrow-adbc@r-basic.yml,MissingForkGuardSchedule,absent,not applicable
+apache@arrow-adbc@r-basic.yml,MissingConcurrencyGlobal,absent,not applicable
+apache@arrow-adbc@r-standard.yml,MissingPermExternalActions,absent,not applicable
+apache@ozone@post-commit.yml,MissingPermExternalActions,absent,not applicable
+apache@ozone@post-commit.yml,MissingTokenPermissions,absent,not applicable
+apache@ozone@post-commit.yml,MissingForkGuardPR,absent,not applicable
+apache@ozone@post-commit.yml,MissingConcurrencyPR,absent,not applicable
+apache@ozone@post-commit.yml,MissingForkGuardSchedule,absent,not applicable
+apache@ozone@post-commit.yml,MissingConcurrencyGlobal,absent,not applicable
+apache@ozone@post-commit.yml,MutableRunnerVersion,absent,not applicable
+argoproj@argo-cd@codeql.yml,UnsafeDeployOnFork,absent,not applicable
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MultiCommandStep,absent,Does not have run: nor &&
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingConcurrencyBranch,absent,not applicable
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingPathFilters,absent,triggers already have path filter
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,UnsafeArtifactUploadFork,absent,not applicable
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingUploadCondition,absent,not applicable
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,SuboptimalCacheUsage,absent,not applicable
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,UnpinnedDependencies,absent,not applicable
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,SingleLangVersionCI,absent,not applicable
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingForkGuardPR,absent,not applicable
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingConcurrencyBranch,absent,not applicable
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingPathFilters,absent,triggers already have paths filter
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,UnsafeArtifactUploadFork,absent,not applicable
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingUploadCondition,absent,not applicable
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,SuboptimalCacheUsage,absent,not applicable
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,UnpinnedDependencies,absent,not applicable
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,SingleLangVersionCI,absent,not applicable
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,UnpinnedActionVersion,absent,not applicable
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingTokenPermissions,absent,not applicable
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingForkGuardSchedule,absent,not applicable
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingConcurrencyGlobal,absent,not applicable
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MutableRunnerVersion,absent,not applicable
+astarte-platform@astarte@astarte-pairing-workflow.yaml,UnpinnedActionVersion,absent,not applicable
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingTokenPermissions,absent,not applicable
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingConcurrencyBranch,absent,not applicable
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingForkGuardSchedule,absent,not applicable
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingConcurrencyGlobal,absent,not applicable
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MutableRunnerVersion,absent,not applicable
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,UnpinnedActionVersion,absent,not applicable
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingTokenPermissions,absent,not applicable
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingForkGuardSchedule,absent,not applicable
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingConcurrencyGlobal,absent,not applicable
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MutableRunnerVersion,absent,not applicable
+astropy@photutils@publish.yml,MissingConcurrencyPR,absent,not applicable
+astropy@photutils@publish.yml,UnsafeArtifactUploadFork,absent,not applicable
+astropy@photutils@publish.yml,MissingUploadCondition,absent,not applicable
+astropy@photutils@publish.yml,SuboptimalCacheUsage,absent,not applicable
+astropy@photutils@publish.yml,UnpinnedDependencies,absent,not applicable
+astropy@photutils@publish.yml,SingleLangVersionCI,absent,not applicable
+awslabs@mountpoint-s3@bench_main.yml,UnsafeDeployOnFork,absent,not applicable
+balena-io@etcher@flowzone.yml,UnsafeDeployOnFork,absent,not applicable
+balena-io@open-balena@flowzone.yml,UnpinnedActionVersion,absent,not applicable
+balena-io@open-balena@flowzone.yml,MissingJobTimeout,absent,not applicable
+balena-io@open-balena@flowzone.yml,MissingConcurrencyBranch,absent,not applicable
+balena-io@open-balena@flowzone.yml,MultiCommandStep,absent,not applicable
+balena-io@open-balena@flowzone.yml,SingleOSExecution,absent,not applicable
+balena-os@balena-supervisor@flowzone.yml,MissingForkGuardPR,absent,not applicable
+balena-os@balena-supervisor@flowzone.yml,MultiCommandStep,absent,not applicable
+balena-os@balena-supervisor@flowzone.yml,SingleOSExecution,absent,not applicable
+0xpolygonmiden@miden-vm@changelog.yml,MissingJobTimeout,absent,No steps
+0xpolygonmiden@miden-vm@changelog.yml,UnsafeArtifactUploadFork,absent,No upload
+0xpolygonmiden@miden-vm@changelog.yml,MissingUploadCondition,absent,Not related
+0xpolygonmiden@miden-vm@changelog.yml,SuboptimalCacheUsage,absent,No setup
+0xpolygonmiden@miden-vm@changelog.yml,UnpinnedDependencies,absent,Unrelated job
+0xpolygonmiden@miden-vm@changelog.yml,SingleLangVersionCI,absent,Not related
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MissingConcurrencyPR,absent,No PR triggered
+AlexProgrammerDE@SoulFire@dependency-submission.yml,UnsafeDeployOnFork,absent,Not related to deploy
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MultiCommandStep,absent,Not related
+0xpolygonmiden@miden-vm@changelog.yml,UnpinnedActionVersion,absent,Job uses commit hash
+0xpolygonmiden@miden-vm@changelog.yml,MissingTokenPermissions,absent,Does not use gh token
+0xpolygonmiden@miden-vm@changelog.yml,MissingForkGuardSchedule,absent,not scheduled
+0xpolygonmiden@miden-vm@changelog.yml,MissingConcurrencyGlobal,absent,not scheduled or release
+0xpolygonmiden@miden-vm@changelog.yml,MutableRunnerVersion,absent,no runs on
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MissingForkGuardPR,absent,not a PR or issue based
+AlexProgrammerDE@SoulFire@dependency-submission.yml,UnsafeArtifactUploadFork,absent,no upload
+AlexProgrammerDE@SoulFire@dependency-submission.yml,SuboptimalCacheUsage,absent,without cache action
+AlexProgrammerDE@SoulFire@dependency-submission.yml,UnpinnedDependencies,absent,version  specified
+Expensify@react-native-live-markdown@publish.yml,MissingPermExternalActions,absent,Correct handling
+Expensify@react-native-live-markdown@publish.yml,MissingConcurrencyPR,absent,No PR triggered
+Expensify@react-native-live-markdown@publish.yml,UnsafeArtifactUploadFork,absent,Not related
+Expensify@react-native-live-markdown@publish.yml,MissingUploadCondition,absent,Not related
+Expensify@react-native-live-markdown@publish.yml,SuboptimalCacheUsage,absent,Not related
+Expensify@react-native-live-markdown@publish.yml,UnpinnedDependencies,absent,Not related
+Expensify@react-native-live-markdown@publish.yml,SingleLangVersionCI,absent,Not related
+JuliaLang@julia@LabelCheck.yml,MissingForkGuardPR,absent,Not related
+LadybirdBrowser@ladybird@ci.yml,UnpinnedActionVersion,absent,Not related
+LadybirdBrowser@ladybird@ci.yml,MissingConcurrencyBranch,absent,Correct handling
+LadybirdBrowser@ladybird@ci.yml,MultiCommandStep,absent,Not related
+LadybirdBrowser@ladybird@ci.yml,SingleOSExecution,absent,Correct handling
+ballerina-platform@module-ballerina-http@pull-request.yml,UnsafeDeployOnFork,absent,not applicable
+bufbuild@buf@pr-title.yaml,MissingPermExternalActions,absent,not applicable
+bufbuild@buf@pr-title.yaml,MissingConcurrencyBranch,absent,not applicable
+bufbuild@buf@pr-title.yaml,MultiCommandStep,absent,not applicable
+bufbuild@buf@pr-title.yaml,SingleOSExecution,absent,not applicable
+causify-ai@helpers@linter.yml,UnpinnedActionVersion,absent,not applicable
+causify-ai@helpers@linter.yml,MissingTokenPermissions,absent,not applicable
+causify-ai@helpers@linter.yml,MissingForkGuardPR,absent,not applicable
+causify-ai@helpers@linter.yml,MissingForkGuardSchedule,absent,not applicable
+causify-ai@helpers@linter.yml,MissingConcurrencyGlobal,absent,not applicable
+causify-ai@helpers@linter.yml,MutableRunnerVersion,absent,not applicable
+cilium@cilium@build-images-base-renovate.yaml,MissingPathFilters,absent,triggers already have path filter
+cilium@cilium@build-images-base-renovate.yaml,MultiCommandStep,absent,not applicable
+cilium@cilium@build-images-base-renovate.yaml,SingleOSExecution,absent,not applicable
+curl@curl@fuzz.yml,MissingConcurrencyBranch,absent,not applicable
+curl@curl@fuzz.yml,MissingPathFilters,absent,all triggers already have path filtering.
+curl@curl@fuzz.yml,MultiCommandStep,absent,not applicable
+curl@curl@fuzz.yml,SingleOSExecution,absent,not applicable
+daos-stack@daos@bash_unit_testing.yml,MissingPermExternalActions,absent,not applicable
+daos-stack@daos@bash_unit_testing.yml,MissingTokenPermissions,absent,not applicable
+daos-stack@daos@bash_unit_testing.yml,MissingForkGuardPR,absent,not applicable
+daos-stack@daos@bash_unit_testing.yml,MissingConcurrencyPR,absent,not applicable
+daos-stack@daos@bash_unit_testing.yml,MissingForkGuardSchedule,absent,not applicable
+daos-stack@daos@bash_unit_testing.yml,MissingConcurrencyGlobal,absent,not applicable
+daos-stack@daos@bash_unit_testing.yml,MutableRunnerVersion,absent,not applicable
+daos-stack@daos@unit-testing.yml,MissingConcurrencyPR,absent,not applicable
+daos-stack@daos@unit-testing.yml,UnsafeArtifactUploadFork,absent,not applicable
+daos-stack@daos@unit-testing.yml,MissingUploadCondition,absent,not applicable
+daos-stack@daos@unit-testing.yml,SuboptimalCacheUsage,absent,not applicable
+daos-stack@daos@unit-testing.yml,UnpinnedDependencies,absent,not applicable
+daos-stack@daos@unit-testing.yml,SingleLangVersionCI,absent,not applicable
+dart-lang@native@health.yaml,MissingPermExternalActions,absent,not applicable
+dart-lang@native@health.yaml,MissingPathFilters,absent,the relevant triggers already have path filter
+dart-lang@native@health.yaml,UnsafeArtifactUploadFork,absent,not applicable
+dart-lang@native@health.yaml,MissingUploadCondition,absent,not applicable
+dart-lang@native@health.yaml,SuboptimalCacheUsage,absent,not applicable
+dart-lang@native@health.yaml,UnpinnedDependencies,absent,not applicable
+dart-lang@native@health.yaml,SingleLangVersionCI,absent,not applicable
+datadog@integrations-core@labeler.yml,MissingConcurrencyBranch,absent,not applicable
+datadog@integrations-core@labeler.yml,MissingPathFilters,absent,the workflow is not CI
+datadog@integrations-core@labeler.yml,MultiCommandStep,absent,not applicable
+datadog@integrations-core@labeler.yml,SingleOSExecution,absent,not applicable
+datadog@integrations-core@pr.yml,MissingPermExternalActions,absent,not applicable
+datadog@integrations-core@pr.yml,UnsafeArtifactUploadFork,absent,not applicable
+datadog@integrations-core@pr.yml,MissingUploadCondition,absent,not applicable
+datadog@integrations-core@pr.yml,SuboptimalCacheUsage,absent,not applicable
+datadog@integrations-core@pr.yml,UnpinnedDependencies,absent,not applicable
+datadog@integrations-core@pr.yml,SingleLangVersionCI,absent,not applicable
+datadog@integrations-extras@pr.yml,MissingConcurrencyBranch,absent,not applicable
+datadog@integrations-extras@pr.yml,UnsafeArtifactUploadFork,absent,not applicable
+datadog@integrations-extras@pr.yml,MissingUploadCondition,absent,not applicable
+datadog@integrations-extras@pr.yml,SuboptimalCacheUsage,absent,not applicable
+datadog@integrations-extras@pr.yml,UnpinnedDependencies,absent,not applicable
+bufbuild@buf@pr-title.yaml,MissingPathFilters,absent,workflow does not validate code
+bufbuild@buf@pr-title.yaml,UnsafeArtifactUploadFork,absent,not applicable
+bufbuild@buf@pr-title.yaml,MissingConcurrencyGlobal,absent,not applicable
+bufbuild@buf@pr-title.yaml,UnpinnedDependencies,absent,not applicable
+bufbuild@buf@pr-title.yaml,SingleLangVersionCI,absent,not applicable
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MissingTokenPermissions,absent,Does not have the key `secrets.GITHUB_TOKEN`
+LadybirdBrowser@ladybird@ci.yml,MissingForkGuardSchedule,absent,Not related
+LayerZero-Labs@devtools@on-develop.yaml,MissingConcurrencyBranch,absent,Correct handling
+LayerZero-Labs@devtools@on-develop.yaml,UnsafeArtifactUploadFork,absent,Not related
+LayerZero-Labs@devtools@on-develop.yaml,UnpinnedDependencies,absent,Not related
+LayerZero-Labs@devtools@on-develop.yaml,SingleLangVersionCI,absent,Not related
+TraceMachina@nativelink@pre-commit.yaml,MissingForkGuardSchedule,absent,Not related
+TraceMachina@nativelink@pre-commit.yaml,SuboptimalCacheUsage,absent,Not related
+TraceMachina@nativelink@pre-commit.yaml,UnpinnedDependencies,absent,Not related
+TraceMachina@nativelink@sanitizers.yaml,UnpinnedActionVersion,absent,Correct handling
+TraceMachina@nativelink@sanitizers.yaml,MissingJobTimeout,absent,Correct handling
+TraceMachina@nativelink@sanitizers.yaml,MissingPathFilters,absent,Correct handling
+TraceMachina@nativelink@sanitizers.yaml,UnsafeArtifactUploadFork,absent,Not related
+TraceMachina@nativelink@vale.yaml,MissingPermExternalActions,absent,Handled correctly
+TraceMachina@nativelink@vale.yaml,MissingConcurrencyPR,absent,Handled correctly
+TraceMachina@nativelink@vale.yaml,MissingForkGuardSchedule,absent,Not related
+TraceMachina@nativelink@vale.yaml,MissingUploadCondition,absent,Not related
+TraceMachina@nativelink@vale.yaml,SuboptimalCacheUsage,absent,Not related
+adobe@s3mock@maven-ci-and-prb.yml,SingleLangVersionCI,absent,Not related
+adyen@adyen-magento2@restapi-test.yml,UnsafeDeployOnFork,absent,Not related
+Expensify@react-native-live-markdown@publish.yml,MissingConcurrencyBranch,absent,not applicable
+Expensify@react-native-live-markdown@publish.yml,MultiCommandStep,absent,not applicable
+LadybirdBrowser@ladybird@ci.yml,MissingForkGuardPR,absent,not applicable
+LadybirdBrowser@ladybird@ci.yml,MutableRunnerVersion,absent,not applicable
+LayerZero-Labs@devtools@on-develop.yaml,MissingTokenPermissions,absent,not applicable
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MissingForkGuardSchedule,absent,Not a scheduled workflow
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MissingConcurrencyGlobal,absent,workflow does not need concurrency
+AlexProgrammerDE@SoulFire@dependency-submission.yml,UnpinnedActionVersion,absent,The actions have SHA included
+Expensify@react-native-live-markdown@publish.yml,SingleOSExecution,absent,not related to tests
+HariSekhon@Knowledge-Base@markdown.yaml,UnsafeDeployOnFork,absent,Not a deploy workflow
+LadybirdBrowser@ladybird@ci.yml,MissingTokenPermissions,absent,no reference to `secrets.GITHUB_TOKEN`
+LadybirdBrowser@ladybird@ci.yml,MissingConcurrencyPR,absent,has `cancel-in-progress: true`
+LayerZero-Labs@devtools@on-develop.yaml,UnpinnedActionVersion,absent,does not have any explicit action
+LayerZero-Labs@devtools@on-develop.yaml,MissingForkGuardSchedule,absent,Not a schedule workflow
+LayerZero-Labs@devtools@on-develop.yaml,MissingUploadCondition,absent,Not an upload workflow
+LayerZero-Labs@devtools@on-develop.yaml,MutableRunnerVersion,absent,does not have the key `run-on`
+LayerZero-Labs@devtools@on-develop.yaml,MissingConcurrencyGlobal,absent,not applicable
+canonical@microcloud@codeql.yml,MultiCommandStep,absent,Run does not have multiple phases
+causify-ai@helpers@linter.yml,MissingPermExternalActions,absent,not applicable
+causify-ai@helpers@linter.yml,MissingConcurrencyBranch,absent,not applicable
+causify-ai@helpers@linter.yml,UnsafeArtifactUploadFork,absent,not applicable
+causify-ai@helpers@linter.yml,MultiCommandStep,absent,not applicable
+causify-ai@helpers@linter.yml,SingleLangVersionCI,absent,not applicable
+cilium@cilium@build-images-base-renovate.yaml,SuboptimalCacheUsage,absent,not applicable
+cilium@cilium@build-images-base-renovate.yaml,UnpinnedDependencies,absent,not applicable
+Expensify@react-native-live-markdown@publish.yml,MissingPermExternalActions,absent,exists permissions declaring the authorizations
+curl@curl@fuzz.yml,MissingConcurrencyGlobal,absent,not applicable
+Expensify@react-native-live-markdown@publish.yml,MissingConcurrencyPR,absent,is not activated by pull-request
+daos-stack@daos@bash_unit_testing.yml,MissingConcurrencyBranch,absent,not applicable
+daos-stack@daos@bash_unit_testing.yml,MissingUploadCondition,absent,not applicable
+daos-stack@daos@bash_unit_testing.yml,MultiCommandStep,absent,not applicable
+daos-stack@daos@bash_unit_testing.yml,UnpinnedDependencies,absent,not applicable
+Expensify@react-native-live-markdown@publish.yml,UnsafeArtifactUploadFork,absent,no upload
+daos-stack@daos@unit-testing.yml,MissingConcurrencyBranch,absent,not applicable
+Expensify@react-native-live-markdown@publish.yml,MissingUploadCondition,absent,no upload
+Expensify@react-native-live-markdown@publish.yml,SuboptimalCacheUsage,absent,no steps
+Expensify@react-native-live-markdown@publish.yml,UnpinnedDependencies,absent,without installation
+Expensify@react-native-live-markdown@publish.yml,SingleLangVersionCI,absent,without runs-on
+daos-stack@daos@unit-testing.yml,MultiCommandStep,absent,not applicable
+dart-lang@native@health.yaml,MissingTokenPermissions,absent,not applicable
+dart-lang@native@health.yaml,MissingConcurrencyBranch,absent,not applicable
+datadog@integrations-core@labeler.yml,MissingPermExternalActions,absent,not applicable
+datadog@integrations-core@labeler.yml,UnpinnedActionVersion,absent,not applicable
+datadog@integrations-core@labeler.yml,MissingUploadCondition,absent,not applicable
+datadog@integrations-core@labeler.yml,MutableRunnerVersion,absent,not applicable
+datadog@integrations-core@pr.yml,MissingConcurrencyPR,absent,not applicable
+datadog@integrations-extras@pr.yml,UnpinnedActionVersion,absent,not applicable
+datadog@integrations-extras@pr.yml,MissingConcurrencyGlobal,absent,not applicable
+datadog@integrations-extras@pr.yml,MultiCommandStep,absent,not applicable
+dbt-labs@metricflow@changelog-existence.yml,MissingUploadCondition,absent,not applicable
+dbt-labs@metricflow@changelog-existence.yml,SingleOSExecution,absent,not applicable
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingPermExternalActions,absent,not applicable
+ddterm@gnome-shell-extension-ddterm@pr.yml,SuboptimalCacheUsage,absent,not applicable
+dotansimha@graphql-code-generator@pr.yml,MissingTokenPermissions,absent,not applicable
+duckdb@duckdb-r@vendor.yaml,MultiCommandStep,absent,Run does not have multiple phases
+etcd-io@jetcd@build-pr.yml,MissingPermExternalActions,absent,not applicable
+etcd-io@jetcd@build-pr.yml,MissingUploadCondition,absent,not applicable
+etcd-io@jetcd@build-pr.yml,MutableRunnerVersion,absent,not applicable
+etcd-io@jetcd@build-pr.yml,SingleOSExecution,absent,not applicable
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingTokenPermissions,absent,not applicable
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingForkGuardPR,absent,not applicable
+LayerZero-Labs@devtools@on-develop.yaml,SuboptimalCacheUsage,absent,not applicable
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingPathFilters,absent,workflow is not CI
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingConcurrencyGlobal,absent,not applicable
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,SingleOSExecution,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,MissingPermExternalActions,absent,not applicable
+facebook@lexical@tests-extended.yml,UnpinnedActionVersion,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,MissingForkGuardPR,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,MissingConcurrencyPR,absent,not applicable
+facebook@lexical@tests-extended.yml,MissingUploadCondition,absent,not applicable
+facebook@lexical@tests-extended.yml,MissingConcurrencyGlobal,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,UnsafeArtifactUploadFork,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,MutableRunnerVersion,absent,not applicable
+facebook@lexical@tests-extended.yml,UnpinnedDependencies,absent,not applicable
+facebook@lexical@tests.yml,MissingUploadCondition,absent,not applicable
+facebook@lexical@tests.yml,SingleOSExecution,absent,not applicable
+facebookincubator@velox@linux-build.yml,MissingPermExternalActions,absent,not applicable
+facebookincubator@velox@linux-build.yml,MissingTokenPermissions,absent,not applicable
+facebookincubator@velox@linux-build.yml,MissingConcurrencyPR,absent,not applicable
+facebookincubator@velox@linux-build.yml,MissingConcurrencyBranch,absent,not applicable
+facebookincubator@velox@linux-build.yml,UnsafeArtifactUploadFork,absent,not applicable
+facebookincubator@velox@linux-build.yml,MultiCommandStep,absent,not applicable
+facebookincubator@velox@linux-build.yml,SingleLangVersionCI,absent,not applicable
+finos@git-proxy@lint.yml,UnpinnedDependencies,absent,no upload-artifact
+getporter@porter@porter-canary.yml,MissingPermExternalActions,absent,not applicable
+getporter@porter@porter-canary.yml,MissingUploadCondition,absent,not applicable
+getporter@porter@porter-canary.yml,MutableRunnerVersion,absent,not applicable
+getporter@porter@porter-canary.yml,SingleOSExecution,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,SingleLangVersionCI,absent,not applicable
+TraceMachina@nativelink@sanitizers.yaml,MissingUploadCondition,absent,not applicable
+TraceMachina@nativelink@sanitizers.yaml,UnpinnedDependencies,absent,not applicable
+TraceMachina@nativelink@vale.yaml,MissingTokenPermissions,absent,not applicable
+TraceMachina@nativelink@vale.yaml,MissingConcurrencyGlobal,absent,not applicable
+agama-project@agama@obs-staging-rust.yml,MissingForkGuardPR,absent,not applicable
+agama-project@agama@obs-staging-rust.yml,MissingPathFilters,absent,the relevant triggers already have path filter
+agama-project@agama@obs-staging-rust.yml,MutableRunnerVersion,absent,not applicable
+agama-project@agama@obs-staging-rust.yml,SuboptimalCacheUsage,absent,not applicable
+agama-project@agama@obs-staging-rust.yml,UnpinnedDependencies,absent,not applicable
+agama-project@agama@obs-staging-web.yml,MissingForkGuardPR,absent,not applicable
+agama-project@agama@obs-staging-web.yml,MissingPathFilters,absent,the triggers already have path filter
+agama-project@agama@obs-staging-web.yml,UnsafeArtifactUploadFork,absent,not applicable
+agama-project@agama@obs-staging-web.yml,UnpinnedDependencies,absent,not applicable
+agama-project@agama@obs-staging-web.yml,SingleLangVersionCI,absent,not applicable
+apache@apisix@lint.yml,UnpinnedDependencies,absent,no upload-artifact
+apache@arrow-adbc@r-basic.yml,MissingConcurrencyBranch,absent,not applicable
+apache@arrow-adbc@r-basic.yml,UnsafeArtifactUploadFork,absent,not applicable
+apache@arrow-adbc@r-basic.yml,MultiCommandStep,absent,not applicable
+apache@arrow-adbc@r-basic.yml,SingleLangVersionCI,absent,not applicable
+apache@ozone@post-commit.yml,MissingUploadCondition,absent,not applicable
+apache@ozone@post-commit.yml,UnpinnedDependencies,absent,not applicable
+0xpolygonmiden@miden-vm@changelog.yml,SingleOSExecution,absent,Does not have test
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingConcurrencyPR,absent,not applicable
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MutableRunnerVersion,absent,not applicable
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MultiCommandStep,absent,not applicable
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MultiCommandStep,absent,not applicable
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingConcurrencyBranch,absent,not applicable
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,SuboptimalCacheUsage,absent,not applicable
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingPathFilters,absent,the triggers already have path filter
+astarte-platform@astarte@astarte-pairing-workflow.yaml,SingleOSExecution,absent,not applicable
+astarte-platform@astarte@astarte-pairing-workflow.yaml,UnpinnedDependencies,absent,not applicable
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingConcurrencyPR,absent,not applicable
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingUploadCondition,absent,not applicable
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,SingleOSExecution,absent,not applicable
+astropy@photutils@publish.yml,UnpinnedActionVersion,absent,"not applicable, hash defined L39"
+astropy@photutils@publish.yml,MutableRunnerVersion,absent,not applicable
+balena-io@open-balena@flowzone.yml,MissingForkGuardPR,absent,not applicable
+balena-io@open-balena@flowzone.yml,UnsafeArtifactUploadFork,absent,not applicable
+balena-io@open-balena@flowzone.yml,MutableRunnerVersion,absent,not applicable
+balena-io@open-balena@flowzone.yml,SingleLangVersionCI,absent,not applicable
+balena-os@balena-supervisor@flowzone.yml,MissingConcurrencyGlobal,absent,not applicable
+balena-os@balena-supervisor@flowzone.yml,SuboptimalCacheUsage,absent,not applicable
+agama-project@agama@obs-staging-rust.yml,UnpinnedActionVersion,absent,Not related
+agama-project@agama@obs-staging-rust.yml,MissingForkGuardSchedule,absent,Not related
+agama-project@agama@obs-staging-rust.yml,UnsafeArtifactUploadFork,absent,Not related
+agama-project@agama@obs-staging-rust.yml,SingleLangVersionCI,absent,Not related
+agama-project@agama@obs-staging-service.yml,MissingConcurrencyPR,absent,Not related
+agama-project@agama@obs-staging-web.yml,MissingUploadCondition,absent,Not related
+agama-project@agama@obs-staging-web.yml,SingleOSExecution,absent,Not related
+apache@apisix@link-check.yml,MultiCommandStep,absent,No multiple commands
+apache@arrow-adbc@r-basic.yml,MissingConcurrencyPR,absent,Handled correctly
+apache@arrow-adbc@r-basic.yml,UnpinnedDependencies,absent,Not related
+apache@commons-daemon@maven.yml,SuboptimalCacheUsage,absent,Handled correctly
+apache@ozone@post-commit.yml,MissingJobTimeout,absent,Not related
+apache@ozone@post-commit.yml,UnsafeArtifactUploadFork,absent,Not related
+apache@ozone@post-commit.yml,SingleLangVersionCI,absent,Not related
+apple@swift-nio@pull_request_label.yml,MissingForkGuardPR,absent,Not necessary in this case
+TraceMachina@nativelink@pre-commit.yaml,MissingTokenPermissions,absent,does not use `secrets.GITHUB_TOKEN`
+TraceMachina@nativelink@pre-commit.yaml,MissingUploadCondition,absent,does not have checkout action
+TraceMachina@nativelink@pre-commit.yaml,MissingConcurrencyGlobal,absent,is using concurrency
+LadybirdBrowser@ladybird@ci.yml,MissingConcurrencyBranch,absent,Has concurrency
+LadybirdBrowser@ladybird@ci.yml,MissingForkGuardSchedule,absent,no schedule
+LadybirdBrowser@ladybird@ci.yml,MultiCommandStep,absent,no run
+LadybirdBrowser@ladybird@ci.yml,SingleOSExecution,absent,tests on various OSs
+LayerZero-Labs@devtools@on-develop.yaml,MissingConcurrencyBranch,absent,Not triggered by push
+LayerZero-Labs@devtools@on-develop.yaml,UnsafeArtifactUploadFork,absent,does not upload
+LayerZero-Labs@devtools@on-develop.yaml,UnpinnedDependencies,absent,Doesn't perform installations
+LayerZero-Labs@devtools@on-develop.yaml,SingleLangVersionCI,absent,No steps
+TraceMachina@nativelink@main.yaml,SingleOSExecution,absent,The strategy and matrix blocks are present but commented
+TraceMachina@nativelink@pre-commit.yaml,MissingForkGuardSchedule,absent,without schedule
+TraceMachina@nativelink@pre-commit.yaml,UnpinnedDependencies,absent,without installation
+TraceMachina@nativelink@sanitizers.yaml,MissingJobTimeout,absent,has timeout
+TraceMachina@nativelink@sanitizers.yaml,MissingPathFilters,absent,has ignore
+TraceMachina@nativelink@sanitizers.yaml,UnsafeArtifactUploadFork,absent,does not upload
+TraceMachina@nativelink@sanitizers.yaml,MissingConcurrencyPR,absent,has the concurrency key
+TraceMachina@nativelink@sanitizers.yaml,MissingConcurrencyBranch,absent,has the `concurrency` key
+TraceMachina@nativelink@vale.yaml,MissingPermExternalActions,absent,exists permissions
+TraceMachina@nativelink@vale.yaml,MissingConcurrencyPR,absent,has concurrency
+TraceMachina@nativelink@vale.yaml,MissingForkGuardSchedule,absent,no schedule
+TraceMachina@nativelink@vale.yaml,MissingUploadCondition,absent,does not upload
+TraceMachina@nativelink@vale.yaml,MutableRunnerVersion,absent,determines the OS version
+TraceMachina@nativelink@vale.yaml,SuboptimalCacheUsage,absent,does not cache
+TraceMachina@nativelink@vale.yaml,UnpinnedDependencies,absent,does not install anything
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MissingTokenPermissions,absent,Line 5
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MissingForkGuardSchedule,absent,Does not have schedule
+AlexProgrammerDE@SoulFire@dependency-submission.yml,MissingConcurrencyGlobal,absent,Does not have schedule
+DigitecGalaxus@next-yak@autofix.yml,SuboptimalCacheUsage,absent,Line 27
+Expensify@react-native-live-markdown@publish.yml,SingleOSExecution,absent,Does not have test
+adyen@adyen-magento2@restapi-test.yml,UnsafeDeployOnFork,absent,no deploy block
+HariSekhon@Knowledge-Base@markdown.yaml,UnsafeDeployOnFork,absent,Missing deploy
+LadybirdBrowser@ladybird@ci.yml,MissingTokenPermissions,absent,Does not have steps
+LadybirdBrowser@ladybird@ci.yml,MissingConcurrencyPR,absent,Line 5
+LadybirdBrowser@ladybird@ci.yml,UnsafeDeployOnFork,absent,Missing deploy
+LadybirdBrowser@ladybird@ci.yml,MissingConcurrencyGlobal,absent,Missing schedule
+LayerZero-Labs@devtools@on-develop.yaml,UnpinnedActionVersion,absent,Missing steps
+LayerZero-Labs@devtools@on-develop.yaml,MissingForkGuardSchedule,absent,Missing schedule
+LayerZero-Labs@devtools@on-develop.yaml,MissingUploadCondition,absent,Does not have upload
+LayerZero-Labs@devtools@on-develop.yaml,MutableRunnerVersion,absent,Does not have runs-on
+agama-project@agama@obs-staging-rust.yml,MissingPermExternalActions,absent,declare permissions
+SonySemiconductorSolutions@mct-model-optimization@run_tests_python310_keras215.yml,MissingForkGuardSchedule,absent,line 10
+agama-project@agama@obs-staging-rust.yml,MissingForkGuardSchedule,absent,no schedule
+agama-project@agama@obs-staging-rust.yml,UnsafeArtifactUploadFork,absent,does not upload
+SonySemiconductorSolutions@mct-model-optimization@run_tests_python310_pytorch25.yml,MissingForkGuardSchedule,absent,line 10
+SonySemiconductorSolutions@mct-model-optimization@run_tests_python311_pytorch24.yml,MissingForkGuardSchedule,absent,Line 10
+SonySemiconductorSolutions@mct-model-optimization@run_tests_python312_pytorch24.yml,MissingForkGuardSchedule,absent,line 10
+TraceMachina@nativelink@pre-commit.yaml,MissingTokenPermissions,absent,line 11
+TraceMachina@nativelink@pre-commit.yaml,MissingUploadCondition,absent,Does not have upload
+TraceMachina@nativelink@pre-commit.yaml,MissingConcurrencyGlobal,absent,absence schedule
+TraceMachina@nativelink@sanitizers.yaml,MissingConcurrencyPR,absent,absence test
+TraceMachina@nativelink@sanitizers.yaml,MissingConcurrencyBranch,absent,line 18
+TraceMachina@nativelink@sanitizers.yaml,MultiCommandStep,absent,Line 33
+TraceMachina@nativelink@vale.yaml,MissingJobTimeout,absent,line 16
+TraceMachina@nativelink@vale.yaml,UnsafeArtifactUploadFork,absent,absence upload
+TraceMachina@nativelink@vale.yaml,SingleLangVersionCI,absent,absence test
+adyen@adyen-magento2@graphql-test.yml,SingleOSExecution,absent,absence test
+adyen@adyen-magento2@mftf-test.yml,UnsafeDeployOnFork,absent,absence deploy
+agama-project@agama@obs-staging-rust.yml,MissingUploadCondition,absent,absence steps
+agama-project@agama@obs-staging-web.yml,SuboptimalCacheUsage,absent,absence of setup actions
+agama-project@agama@obs-staging-rust.yml,SingleLangVersionCI,absent,without Steps
+apache@apisix@kubernetes-ci.yml,MultiCommandStep,absent,line 39
+apache@arrow-adbc@r-basic.yml,MissingPathFilters,absent,absence push
+apache@arrow-adbc@r-basic.yml,MissingUploadCondition,absent,absence upload
+apache@arrow-adbc@r-basic.yml,SingleOSExecution,absent,absence test
+apache@commons-cli@maven.yml,SuboptimalCacheUsage,absent,no cache function
+agama-project@agama@obs-staging-service.yml,MissingConcurrencyPR,absent,is not triggered by pull_request
+agama-project@agama@obs-staging-web.yml,MissingUploadCondition,absent,does not upload
+apache@commons-collections@maven.yml,SuboptimalCacheUsage,absent,Missing cache function
+apache@commons-compress@maven.yml,SuboptimalCacheUsage,absent,absence cache function
+apache@commons-exec@maven.yml,SuboptimalCacheUsage,absent,absence of cache action
+agama-project@agama@obs-staging-web.yml,SingleOSExecution,absent,no test jobs
+apache@ozone@post-commit.yml,UnpinnedActionVersion,absent,missing uses: org/action@...
+apache@ozone@post-commit.yml,MissingConcurrencyBranch,absent,line 20
+apache@ozone@post-commit.yml,UnsafeDeployOnFork,absent,absence deploy
+apache@ozone@post-commit.yml,MultiCommandStep,absent,Missing steps
+apache@ratis@post-commit.yaml,UnsafeDeployOnFork,absent,absence deploy
+ardatan@feTS@release.yml,UnpinnedActionVersion,absent,local action
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingTokenPermissions,absent,absence github tokens
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingForkGuardSchedule,absent,absence schedule
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingTokenPermissions,absent,absence gitbuh tokens
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MutableRunnerVersion,absent,absence runs-on
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingUploadCondition,absent,missing upload artifact
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MultiCommandStep,absent,absence steps
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,SingleLangVersionCI,absent,absence runs-on
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingJobTimeout,absent,absence steps
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingConcurrencyBranch,absent,line 26
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,UnpinnedDependencies,absent,absence installation
+astropy@photutils@publish.yml,MissingPermExternalActions,absent,line 27 and 36
+apache@arrow-adbc@r-basic.yml,MissingConcurrencyPR,absent,has concurrency
+astropy@photutils@publish.yml,MissingTokenPermissions,absent,Missing github token
+astropy@photutils@publish.yml,MissingForkGuardPR,absent,line 41
+astropy@photutils@publish.yml,MissingJobTimeout,absent,absence steps
+astropy@photutils@publish.yml,MissingForkGuardSchedule,absent,line 41
+astropy@photutils@publish.yml,UnsafeDeployOnFork,absent,Missing deploy
+astropy@photutils@publish.yml,MissingConcurrencyGlobal,absent,line 23
+astropy@photutils@publish.yml,MultiCommandStep,absent,absence of steps
+auth0@express-openid-connect@release.yml,MissingConcurrencyGlobal,absent,absence of schedule
+TraceMachina@nativelink@vale.yaml,MissingJobTimeout,absent,has timeout-minutes
+TraceMachina@nativelink@vale.yaml,UnsafeArtifactUploadFork,absent,not a workflow that uploads artifacts
+LadybirdBrowser@ladybird@ci.yml,UnsafeDeployOnFork,absent,has if: github.repository == 'LadybirdBrowser/ladybird'
+LadybirdBrowser@ladybird@ci.yml,MissingConcurrencyGlobal,absent,has correct concurrency
+TraceMachina@nativelink@sanitizers.yaml,MultiCommandStep,absent,run does not have chained commands or with &
+TraceMachina@nativelink@vale.yaml,SingleLangVersionCI,absent,Does not have `actions/setup-node|python|java|dotnet`
+adyen@adyen-magento2@mftf-test.yml,UnsafeDeployOnFork,absent,Not a deploy workflow
+agama-project@agama@obs-staging-rust.yml,MissingUploadCondition,absent,does not have upload action
+apache@arrow-adbc@r-basic.yml,UnpinnedDependencies,absent,does not install
+agama-project@agama@obs-staging-web.yml,SuboptimalCacheUsage,absent,does not have action `actions/setup-node|python|java`
+apache@camel-kafka-connector@backport.yml,MissingTokenPermissions,absent,no permissions
+apache@arrow-adbc@r-basic.yml,MissingPathFilters,absent,"uses the `paths` key, but it's also not very relevant"
+balena-io@open-balena@flowzone.yml,MissingTokenPermissions,absent,line 11
+balena-io@open-balena@flowzone.yml,MissingForkGuardSchedule,absent,Missing schedule
+apache@arrow-adbc@r-basic.yml,MissingUploadCondition,absent,Does not have upload action
+apache@ozone@post-commit.yml,UnsafeArtifactUploadFork,absent,does not upload
+apache@ozone@post-commit.yml,SingleOSExecution,absent,does not have test job
+apache@ozone@post-commit.yml,SingleLangVersionCI,absent,no runs-on
+apache@ozone@post-commit.yml,MissingConcurrencyBranch,absent,has the concurrency key
+apache@ozone@post-commit.yml,UnsafeDeployOnFork,absent,has if
+apache@ozone@post-commit.yml,MultiCommandStep,absent,no run in step
+apache@ozone@post-commit.yml,SuboptimalCacheUsage,absent,Not related
+balena-io@open-balena@flowzone.yml,MissingUploadCondition,absent,absence upload
+balena-io@open-balena@flowzone.yml,UnsafeDeployOnFork,absent,absence deploy
+balena-os@balena-supervisor@flowzone.yml,MissingJobTimeout,absent,absence steps
+balena-os@balena-supervisor@flowzone.yml,MissingConcurrencyBranch,absent,absence push
+apache@ratis@post-commit.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+balena-os@balena-supervisor@flowzone.yml,UnsafeDeployOnFork,absent,absence deploy
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingConcurrencyGlobal,absent,has concurrency
+balena-os@balena-supervisor@flowzone.yml,MutableRunnerVersion,absent,absence runs-on
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingConcurrencyGlobal,absent,has concurrency
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingConcurrencyPR,absent,has concurrency
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,UnpinnedDependencies,absent,does not install
+astarte-platform@astarte@astarte-pairing-workflow.yaml,UnsafeArtifactUploadFork,absent,does not upload
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingUploadCondition,absent,upload
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,UnsafeArtifactUploadFork,absent,does not upload
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MultiCommandStep,absent,the run: are only one line
+apache@ozone@post-commit.yml,SingleOSExecution,absent,Not related
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingConcurrencyGlobal,absent,Handled correctly
+astropy@photutils@publish.yml,MissingConcurrencyBranch,absent,has concurrency
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingJobTimeout,absent,Not related
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingForkGuardSchedule,absent,Not related
+balena-io@open-balena@flowzone.yml,UnpinnedDependencies,absent,absence of installation commands
+balena-os@balena-supervisor@flowzone.yml,MissingTokenPermissions,absent,absence of github tokens
+balena-os@balena-supervisor@flowzone.yml,MissingForkGuardSchedule,absent,absence of schedule
+aws-amplify@amplify-flutter@amplify_auth_cognito_test.yaml,MissingForkGuardSchedule,absent,has schedule
+aws-amplify@amplify-flutter@amplify_flutter.yaml,MissingForkGuardSchedule,absent,has schedule
+balena-os@balena-supervisor@flowzone.yml,UnpinnedDependencies,absent,absence installation commands
+balena-os@balena-supervisor@flowzone.yml,SingleLangVersionCI,absent,absence runs-on
+ballerina-platform@module-ballerina-ftp@build-with-bal-test-graalvm.yml,UnsafeDeployOnFork,absent,absence deploy
+ballerina-platform@module-ballerina-ftp@pull-request.yml,UnsafeDeployOnFork,absent,absence deploy
+ballerina-platform@module-ballerina-websocket@pull-request.yml,UnsafeDeployOnFork,absent,absence deploy
+balena-io@open-balena@flowzone.yml,MissingPermExternalActions,absent,has permissions
+balena-io@open-balena@flowzone.yml,SuboptimalCacheUsage,absent,no steps
+bombshell-dev@clack@publish.yml,UnsafeDeployOnFork,absent,absence deploy
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingConcurrencyGlobal,absent,Handled correctly
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingJobTimeout,absent,Not related
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingConcurrencyPR,absent,Handled correctly
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,UnpinnedDependencies,absent,Not related
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingJobTimeout,absent,Not related
+bufbuild@buf@pr-title.yaml,MissingForkGuardSchedule,absent,absence of schedule
+bitwarden@sdk-sm@build-napi.yml,SingleLangVersionCI,absent,tests on different OS versions
+astarte-platform@astarte@astarte-pairing-workflow.yaml,UnsafeArtifactUploadFork,absent,Not related
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingUploadCondition,absent,Not related
+bufbuild@buf@pr-title.yaml,MissingUploadCondition,absent,absence upload actions
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,UnsafeArtifactUploadFork,absent,Not related
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MultiCommandStep,absent,Not related
+bufbuild@buf@pr-title.yaml,MutableRunnerVersion,absent,absence of runs-on line
+astropy@photutils@publish.yml,MissingConcurrencyBranch,absent,Handled correctly
+causify-ai@helpers@linter.yml,MissingJobTimeout,absent,without steps
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingTokenPermissions,absent,Does not have `secrets.GITHUB_TOKEN`
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingForkGuardSchedule,absent,No scheduled
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingTokenPermissions,absent,Does not have `secrets.GITHUB_TOKEN`
+cockpit-project@cockpit@flatpak-test.yml,SingleOSExecution,absent,without test job
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MutableRunnerVersion,absent,does not use `runs-on`
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingUploadCondition,absent,Does not have upload action
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MultiCommandStep,absent,Does not have `run`
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,SingleLangVersionCI,absent,Does not have `actions/setup-node|python|java|dotnet`
+curl@curl@fuzz.yml,MissingConcurrencyPR,absent,has concurrency
+curl@curl@fuzz.yml,UnsafeArtifactUploadFork,absent,does not upload
+curl@curl@fuzz.yml,UnpinnedDependencies,absent,does not install
+daos-stack@daos@bash_unit_testing.yml,UnsafeArtifactUploadFork,absent,does not upload
+daos-stack@daos@unit-testing.yml,MissingTokenPermissions,absent,no secrets
+causify-ai@helpers@linter.yml,UnpinnedDependencies,absent,absence of installation commands
+daos-stack@daos@unit-testing.yml,MissingForkGuardSchedule,absent,without schedule
+datadog@integrations-core@labeler.yml,UnsafeArtifactUploadFork,absent,no upload
+datadog@integrations-extras@pr.yml,MissingConcurrencyPR,absent,has concurrency
+Expensify@react-native-live-markdown@publish.yml,MissingTokenPermissions,absent,no gh token
+Expensify@react-native-live-markdown@publish.yml,MissingForkGuardPR,absent,not a PR or issue
+Expensify@react-native-live-markdown@publish.yml,MissingConcurrencyBranch,absent,l14
+Expensify@react-native-live-markdown@publish.yml,MissingForkGuardSchedule,absent,not scheduled
+cilium@cilium@build-images-base-renovate.yaml,MissingTokenPermissions,absent,line 12
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingUploadCondition,absent,no upload
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingConcurrencyGlobal,absent,has concurrency
+ddterm@gnome-shell-extension-ddterm@pr.yml,MultiCommandStep,absent,without run:
+ddterm@gnome-shell-extension-ddterm@pr.yml,SingleOSExecution,absent,without job test:
+dolthub@dolt@ci-data-dump-loading-tests.yaml,SingleOSExecution,absent,no test:
+dotansimha@graphql-code-generator@pr.yml,UnpinnedActionVersion,absent,have the SHA
+cilium@cilium@conformance-kind-proxy-embedded.yaml,MultiCommandStep,absent,line 92
+cloudposse@atmos@feature-release.yml,MissingConcurrencyGlobal,absent,absence schedule
+cnpm@cnpmcore@release.yml,MissingConcurrencyGlobal,absent,absence schedule
+cockpit-project@cockpit@unit-tests.yml,MultiCommandStep,absent,line 19
+dotansimha@graphql-code-generator@pr.yml,MissingConcurrencyPR,absent,has concurrency
+cockpit-project@cockpit@unit-tests.yml,SingleOSExecution,absent,absence test
+confidential-containers@guest-components@aa_sev_kbc.yml,MultiCommandStep,absent,line 24
+confidential-containers@trustee@scorecard.yaml,MissingUploadCondition,absent,line 21
+cue-lang@cue@push_tip_to_trybot.yaml,MissingForkGuardPR,absent,absence pull request
+cue-lang@cue@push_tip_to_trybot.yaml,UnsafeDeployOnFork,absent,absence deploy
+curl@curl@fuzz.yml,MissingTokenPermissions,absent,absence of token
+curl@curl@fuzz.yml,MissingForkGuardSchedule,absent,absence schedule
+Expensify@react-native-live-markdown@publish.yml,MissingConcurrencyGlobal,absent,l14
+Expensify@react-native-live-markdown@publish.yml,MutableRunnerVersion,absent,without runs-on
+Expensify@react-native-live-markdown@publish.yml,MultiCommandStep,absent,without run step
+curl@curl@fuzz.yml,MutableRunnerVersion,absent,absence builds
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingConcurrencyBranch,absent,uses `concurrency`
+dani-garcia@vaultwarden@trivy.yml,UnsafeDeployOnFork,absent,absence deploy
+daos-stack@daos@unit-testing.yml,UnsafeDeployOnFork,absent,absence deploy
+datadog@datadog-serverless-functions@aws_integration_test.yml,SingleOSExecution,absent,absence test
+datadog@integrations-core@labeler.yml,MissingTokenPermissions,absent,absence github token
+datadog@integrations-core@labeler.yml,MissingJobTimeout,absent,absence steps
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingConcurrencyBranch,absent,without push
+datadog@integrations-core@pr.yml,MissingJobTimeout,absent,without steps
+datadog@integrations-core@pr.yml,MissingConcurrencyBranch,absent,absence push
+datadog@integrations-extras@pr.yml,MissingJobTimeout,absent,absence of builds and steps
+dbt-labs@metricflow@changelog-existence.yml,MissingJobTimeout,absent,absence steps
+dbt-labs@metricflow@changelog-existence.yml,MissingConcurrencyGlobal,absent,absence schedule
+dbt-labs@metricflow@changelog-existence.yml,SuboptimalCacheUsage,absent,without cache function
+dbt-labs@metricflow@changelog-existence.yml,UnpinnedDependencies,absent,absence install command
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingTokenPermissions,absent,absence steps
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingForkGuardSchedule,absent,absence schedule
+ddterm@gnome-shell-extension-ddterm@pr.yml,UnsafeArtifactUploadFork,absent,missing upload-artifacts
+ddterm@gnome-shell-extension-ddterm@pr.yml,MutableRunnerVersion,absent,absence steps
+ddterm@gnome-shell-extension-ddterm@pr.yml,UnpinnedDependencies,absent,absence install
+ddterm@gnome-shell-extension-ddterm@pr.yml,SingleLangVersionCI,absent,absence steps
+docker@bake-action@test.yml,MissingUploadCondition,absent,line 38
+dotansimha@graphql-code-generator@pr.yml,MissingJobTimeout,absent,absence steps
+dotansimha@graphql-code-generator@pr.yml,UnsafeArtifactUploadFork,absent,missing uploads
+dotansimha@graphql-code-generator@pr.yml,MissingConcurrencyGlobal,absent,absence schedule
+dotansimha@graphql-code-generator@pr.yml,SingleOSExecution,absent,absence tests
+edgelesssys@contrast@e2e_on_pull_request.yml,MissingPermExternalActions,absent,has permissions
+envoyproxy@envoy@toolchain-test.yml,SingleOSExecution,absent,the matrix does not specify OS versions
+etcd-io@jetcd@build-pr.yml,MissingConcurrencyPR,absent,has concurrency
+elastic@apm-agent-nodejs@microbenchmark.yml,UnpinnedActionVersion,absent,local action
+etcd-io@jetcd@build-pr.yml,SuboptimalCacheUsage,absent,does not cache
+etcd-io@jetcd@build-pr.yml,SingleLangVersionCI,absent,specifies the language versions
+elastic@apm-agent-python@microbenchmark.yml,UnpinnedActionVersion,absent,local action
+etcd-io@jetcd@build-pr.yml,MissingTokenPermissions,absent,absence github token
+evroon@bracket@automerge.yml,UnsafeDeployOnFork,absent,absence deploy
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingPermExternalActions,absent,has permissions
+expensify@react-native-onyx@test.yml,SuboptimalCacheUsage,absent,absence cache function
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingConcurrencyPR,absent,without pull_request
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingForkGuardSchedule,absent,without schedule
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,UnsafeArtifactUploadFork,absent,no upload
+facebook@lexical@tests-extended.yml,MissingTokenPermissions,absent,without secrets
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,UnpinnedActionVersion,absent,line 18
+facebook@lexical@tests-extended.yml,MissingConcurrencyPR,absent,has concurrency
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingJobTimeout,absent,line 14
+facebook@lexical@tests-extended.yml,MissingConcurrencyBranch,absent,without push
+facebook@lexical@tests-extended.yml,MissingForkGuardSchedule,absent,without schedule
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingUploadCondition,absent,absence upload
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,UnsafeDeployOnFork,absent,absence deploy
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MutableRunnerVersion,absent,line 13
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,SuboptimalCacheUsage,absent,absence setup
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MultiCommandStep,absent,line 17
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,UnpinnedDependencies,absent,without installation commands
+facebook@lexical@tests-extended.yml,MissingForkGuardPR,absent,line 18
+facebook@lexical@tests-extended.yml,UnsafeArtifactUploadFork,absent,No artifact uploads
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingPathFilters,absent,has `paths`
+facebook@lexical@tests-extended.yml,UnsafeDeployOnFork,absent,without deploy
+facebook@lexical@tests-extended.yml,MutableRunnerVersion,absent,without runs-on
+facebook@lexical@tests.yml,MissingForkGuardPR,absent,checks repository
+facebook@lexical@tests-extended.yml,MultiCommandStep,absent,absence steps
+facebook@lexical@tests-extended.yml,SingleOSExecution,absent,absence steps
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,UnpinnedDependencies,absent,"Does not have `npm install, pip install, brew install`"
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,SingleLangVersionCI,absent,Does not have `actions/setup-node|python|java|dotnet`
+facebook@lexical@tests.yml,MissingConcurrencyBranch,absent,has concurrency
+facebook@lexical@tests.yml,MissingForkGuardSchedule,absent,without schedule
+astropy@photutils@publish.yml,MissingPermExternalActions,absent,has `permissions`
+facebook@lexical@tests.yml,MissingTokenPermissions,absent,without github token
+facebook@lexical@tests.yml,MissingConcurrencyGlobal,absent,concurrency
+facebookincubator@velox@linux-build.yml,MissingPathFilters,absent,exists path block
+facebook@lexical@tests-extended.yml,SuboptimalCacheUsage,absent,absence of action-setup
+facebook@lexical@tests.yml,UnsafeArtifactUploadFork,absent,missing upload-artifact
+facebook@lexical@tests.yml,MutableRunnerVersion,absent,absence runs-on
+facebookincubator@velox@linux-build.yml,MutableRunnerVersion,absent,without runs-on
+facebook@lexical@tests.yml,SuboptimalCacheUsage,absent,absence of actions setup
+facebook@lexical@tests.yml,MultiCommandStep,absent,absence steps
+facebookincubator@velox@linux-build.yml,MissingForkGuardSchedule,absent,absence schedule
+facebookincubator@velox@linux-build.yml,MissingUploadCondition,absent,missing upload-artifacts
+facebookincubator@velox@linux-build.yml,MissingConcurrencyGlobal,absent,absence schedule
+facebookincubator@velox@linux-build.yml,SuboptimalCacheUsage,absent,without cache
+firebase@flutterfire@ios.yaml,MultiCommandStep,absent,line 70
+facebookincubator@velox@linux-build.yml,SingleOSExecution,absent,without test block
+fission@fission@lint.yaml,MissingUploadCondition,absent,line 79
+facebookincubator@velox@linux-build.yml,UnpinnedDependencies,absent,without installation
+frankframework@frankframework@codeql-java.yml,SuboptimalCacheUsage,absent,absence cache function
+frankframework@frankframework@smoke-tests.yml,SuboptimalCacheUsage,absent,absence cache function
+getporter@porter@porter-canary.yml,MissingConcurrencyBranch,absent,line 17
+getporter@porter@porter-canary.yml,MissingPathFilters,absent,line 7
+getporter@porter@porter-canary.yml,MultiCommandStep,absent,absence steps
+getporter@porter@porter-canary.yml,UnpinnedDependencies,absent,absence install command
+google@heir@build_and_test.yml,SingleOSExecution,absent,absence test
+google@protobuf.dart@publish.yaml,UnsafeDeployOnFork,absent,absence deploy
+h5bp@html5-boilerplate@test.yml,SuboptimalCacheUsage,absent,absence cache function after setup-node
+harisekhon@devops-bash-tools@alpine.yaml,MissingJobTimeout,absent,absence steps
+harisekhon@devops-bash-tools@alpine.yaml,MissingConcurrencyPR,absent,absence pull request
+harisekhon@devops-bash-tools@alpine.yaml,MissingForkGuardSchedule,absent,line 79
+harisekhon@devops-bash-tools@alpine.yaml,UnsafeArtifactUploadFork,absent,missing upload-artifacts
+harisekhon@devops-bash-tools@alpine.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@alpine.yaml,MissingConcurrencyGlobal,absent,line 71
+harisekhon@devops-bash-tools@alpine.yaml,SuboptimalCacheUsage,absent,absence of action-setup
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingPermExternalActions,absent,line 68
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingConcurrencyBranch,absent,line 71
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingUploadCondition,absent,absence of action-upload
+harisekhon@devops-bash-tools@alpine_3.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@alpine_3.yaml,MultiCommandStep,absent,absence run
+harisekhon@devops-bash-tools@alpine_3.yaml,SingleOSExecution,absent,absence test
+harisekhon@devops-bash-tools@alpine_3.yaml,UnpinnedDependencies,absent,absence install commands
+harisekhon@devops-bash-tools@checkov.yaml,MissingConcurrencyGlobal,absent,"workflow will not cause ""inefficient resource consumption"" if it runs without canceling the previous execution."
+harisekhon@devops-bash-tools@debian.yaml,MissingTokenPermissions,absent,absence github token
+harisekhon@devops-bash-tools@debian.yaml,MissingForkGuardPR,absent,absence pull request
+harisekhon@devops-bash-tools@debian.yaml,MissingJobTimeout,absent,absence steps
+harisekhon@devops-bash-tools@debian.yaml,MissingConcurrencyPR,absent,absence pull request
+harisekhon@devops-bash-tools@debian.yaml,MissingPathFilters,absent,line 21
+harisekhon@devops-bash-tools@debian.yaml,MissingForkGuardSchedule,absent,line 79
+harisekhon@devops-bash-tools@debian.yaml,UnsafeArtifactUploadFork,absent,missing upload-artifact
+harisekhon@devops-bash-tools@debian.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@debian.yaml,MutableRunnerVersion,absent,absence runs-on
+harisekhon@devops-bash-tools@debian.yaml,SingleLangVersionCI,absent,absence steps with action-setup-node
+harisekhon@devops-bash-tools@debian_10.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@debian_10.yaml,MissingConcurrencyGlobal,absent,line 71
+harisekhon@devops-bash-tools@debian_10.yaml,SuboptimalCacheUsage,absent,absence of action-setup-node
+harisekhon@devops-bash-tools@fedora.yaml,MissingPermExternalActions,absent,line 68
+harisekhon@devops-bash-tools@fedora.yaml,MissingJobTimeout,absent,absence steps
+harisekhon@devops-bash-tools@fedora.yaml,MissingConcurrencyBranch,absent,line 71
+harisekhon@devops-bash-tools@fedora.yaml,MissingForkGuardSchedule,absent,line 79
+harisekhon@devops-bash-tools@fedora.yaml,MissingUploadCondition,absent,"absence actions/upload-artifact, codecov/codecov-action, coverallsapp/..."
+harisekhon@devops-bash-tools@fedora.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@fedora.yaml,MultiCommandStep,absent,absence run
+harisekhon@devops-bash-tools@fedora.yaml,SingleOSExecution,absent,absence test
+harisekhon@devops-bash-tools@fedora.yaml,UnpinnedDependencies,absent,absence run
+harisekhon@devops-bash-tools@kics.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@mac.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@python3.7.yaml,MissingPermExternalActions,absent,line 45
+harisekhon@devops-bash-tools@python3.7.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@python3.8.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@semgrep-cloud.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@semgrep.yaml,MissingPermExternalActions,absent,line 47
+harisekhon@devops-bash-tools@semgrep.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@trivy.yaml,MissingPermExternalActions,absent,line 45
+harisekhon@devops-bash-tools@trivy.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingTokenPermissions,absent,absence github token
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingForkGuardPR,absent,absence pull request
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingConcurrencyPR,absent,absence pull request
+astropy@photutils@publish.yml,UnsafeDeployOnFork,absent,has if
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingPathFilters,absent,line 21
+harisekhon@devops-bash-tools@ubuntu.yaml,UnsafeArtifactUploadFork,absent,absence steps
+harisekhon@devops-bash-tools@ubuntu.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@ubuntu.yaml,MutableRunnerVersion,absent,absence runs-on
+harisekhon@devops-bash-tools@ubuntu.yaml,SingleLangVersionCI,absent,absence steps
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingJobTimeout,absent,absence steps
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingForkGuardSchedule,absent,line 79
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingConcurrencyGlobal,absent,line 71
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,SuboptimalCacheUsage,absent,absence setup-node
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MissingPermExternalActions,absent,line 68
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MissingConcurrencyBranch,absent,line 71
+HariSekhon@Knowledge-Base@sonarcloud.yaml,UnsafeDeployOnFork,absent,l44
+astropy@photutils@publish.yml,MissingConcurrencyGlobal,absent,has `concurrency` key
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MissingUploadCondition,absent,absence upload
+astropy@photutils@publish.yml,MultiCommandStep,absent,Does not have `run`
+harisekhon@devops-bash-tools@ubuntu_github.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MultiCommandStep,absent,absence run
+harisekhon@devops-bash-tools@ubuntu_github.yaml,SingleOSExecution,absent,absence test
+harisekhon@devops-bash-tools@ubuntu_github.yaml,UnpinnedDependencies,absent,absence installation commands
+LadybirdBrowser@ladybird@ci.yml,MissingForkGuardPR,absent,l12
+harisekhon@devops-bash-tools@validate.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-python-tools@alpine.yaml,MissingJobTimeout,absent,absence steps
+LadybirdBrowser@ladybird@ci.yml,UnsafeArtifactUploadFork,absent,no upload
+harisekhon@devops-python-tools@alpine.yaml,MissingConcurrencyPR,absent,absence pull request
+LadybirdBrowser@ladybird@ci.yml,MissingUploadCondition,absent,no upload
+harisekhon@devops-python-tools@alpine.yaml,UnsafeDeployOnFork,absent,absence deploy
+LadybirdBrowser@ladybird@ci.yml,MutableRunnerVersion,absent,specifies all versions
+harisekhon@devops-python-tools@alpine.yaml,MissingConcurrencyGlobal,absent,line 71
+LadybirdBrowser@ladybird@ci.yml,SuboptimalCacheUsage,absent,doesn't use this action
+LadybirdBrowser@ladybird@ci.yml,UnpinnedDependencies,absent,doesn't use PM
+LadybirdBrowser@ladybird@ci.yml,SingleLangVersionCI,absent,doesn't use
+harisekhon@devops-python-tools@alpine.yaml,SuboptimalCacheUsage,absent,without setup-node
+harisekhon@devops-python-tools@alpine_3.yaml,MissingPermExternalActions,absent,line 68
+LayerZero-Labs@devtools@on-develop.yaml,MissingTokenPermissions,absent,does not mention GITHUB_TOKEN
+harisekhon@devops-python-tools@alpine_3.yaml,MissingConcurrencyBranch,absent,line 71
+harisekhon@devops-python-tools@alpine_3.yaml,MissingForkGuardSchedule,absent,line 79
+harisekhon@devops-python-tools@alpine_3.yaml,MissingUploadCondition,absent,without upload actions
+harisekhon@devops-python-tools@alpine_3.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-python-tools@alpine_3.yaml,MultiCommandStep,absent,absence run
+harisekhon@devops-python-tools@alpine_3.yaml,SingleOSExecution,absent,absence test
+harisekhon@devops-python-tools@alpine_3.yaml,UnpinnedDependencies,absent,absence installation commands
+harisekhon@devops-python-tools@debian.yaml,MissingTokenPermissions,absent,absence github token
+harisekhon@devops-python-tools@debian.yaml,MissingForkGuardPR,absent,without pull request
+harisekhon@devops-python-tools@debian.yaml,MissingPathFilters,absent,line 21
+harisekhon@devops-python-tools@debian.yaml,UnsafeArtifactUploadFork,absent,no artifact upload
+harisekhon@devops-python-tools@debian.yaml,UnsafeDeployOnFork,absent,without deploy
+LayerZero-Labs@devtools@on-develop.yaml,MissingConcurrencyPR,absent,l19
+harisekhon@devops-python-tools@debian.yaml,MutableRunnerVersion,absent,without runs-on
+LayerZero-Labs@devtools@on-develop.yaml,MissingConcurrencyGlobal,absent,not a release
+LayerZero-Labs@devtools@on-develop.yaml,SuboptimalCacheUsage,absent,does not use actions
+LayerZero-Labs@devtools@on-develop.yaml,MultiCommandStep,absent,no run
+harisekhon@devops-python-tools@debian.yaml,SingleLangVersionCI,absent,absence of actions/setup-node|python|java|dotnet
+LayerZero-Labs@devtools@on-develop.yaml,SingleOSExecution,absent,not a test
+harisekhon@devops-python-tools@debian_10.yaml,MissingJobTimeout,absent,without steps
+harisekhon@devops-python-tools@debian_10.yaml,MissingConcurrencyPR,absent,without pull request
+harisekhon@devops-python-tools@debian_10.yaml,MissingForkGuardSchedule,absent,line 79
+harisekhon@devops-python-tools@debian_10.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-python-tools@debian_10.yaml,MissingConcurrencyGlobal,absent,line 71
+harisekhon@devops-python-tools@debian_10.yaml,SuboptimalCacheUsage,absent,absence of actions/setup-node|python|java
+harisekhon@devops-python-tools@fedora.yaml,MissingPermExternalActions,absent,line 68
+harisekhon@devops-python-tools@fedora.yaml,MissingConcurrencyBranch,absent,line 71
+harisekhon@devops-python-tools@fedora.yaml,MissingUploadCondition,absent,"absence actions/upload-artifact, codecov/codecov-action, coverallsapp/..."
+harisekhon@devops-python-tools@fedora.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-python-tools@fedora.yaml,MultiCommandStep,absent,absence run
+harisekhon@devops-python-tools@fedora.yaml,SingleOSExecution,absent,absence test
+harisekhon@devops-python-tools@fedora.yaml,UnpinnedDependencies,absent,absence installation commands
+harisekhon@devops-python-tools@mac.yaml,UnsafeDeployOnFork,absent,absence deploy
+TraceMachina@nativelink@native-cargo.yaml,MissingPermExternalActions,absent,l16
+harisekhon@devops-python-tools@python3.7.yaml,MissingTokenPermissions,absent,without github token
+balena-io@open-balena@flowzone.yml,MissingTokenPermissions,absent,Does not use `secrets.GITHUB_TOKEN`
+harisekhon@devops-python-tools@python3.7.yaml,MissingForkGuardPR,absent,line 56
+TraceMachina@nativelink@pre-commit.yaml,MissingPermExternalActions,absent,l11
+TraceMachina@nativelink@pre-commit.yaml,UnpinnedActionVersion,absent,all use hash
+balena-io@open-balena@flowzone.yml,MissingForkGuardSchedule,absent,Not a `schedule` workflow
+harisekhon@devops-python-tools@python3.7.yaml,MissingPathFilters,absent,line 21
+TraceMachina@nativelink@pre-commit.yaml,MissingForkGuardPR,absent,not applicable
+harisekhon@devops-python-tools@python3.7.yaml,MissingForkGuardSchedule,absent,line 56
+TraceMachina@nativelink@pre-commit.yaml,MissingJobTimeout,absent,l20
+TraceMachina@nativelink@pre-commit.yaml,MissingConcurrencyPR,absent,l13
+harisekhon@devops-python-tools@python3.7.yaml,UnsafeArtifactUploadFork,absent,no upload artifacts
+TraceMachina@nativelink@pre-commit.yaml,MissingConcurrencyBranch,absent,l13
+harisekhon@devops-python-tools@python3.7.yaml,UnsafeDeployOnFork,absent,absence deploy
+balena-io@open-balena@flowzone.yml,MissingUploadCondition,absent,Does not have upload action
+TraceMachina@nativelink@pre-commit.yaml,UnsafeArtifactUploadFork,absent,no upload
+harisekhon@devops-python-tools@python3.7.yaml,MutableRunnerVersion,absent,without runs-on
+TraceMachina@nativelink@pre-commit.yaml,MutableRunnerVersion,absent,not applicable
+TraceMachina@nativelink@pre-commit.yaml,MultiCommandStep,absent,without run
+TraceMachina@nativelink@pre-commit.yaml,SingleOSExecution,absent,not a test
+harisekhon@devops-python-tools@python3.7.yaml,SingleLangVersionCI,absent,absence of actions/setup-node|python|java|dotnet
+TraceMachina@nativelink@pre-commit.yaml,SingleLangVersionCI,absent,no setup
+harisekhon@devops-python-tools@python3.8.yaml,MissingJobTimeout,absent,without steps
+TraceMachina@nativelink@sanitizers.yaml,MissingPermExternalActions,absent,l16
+TraceMachina@nativelink@sanitizers.yaml,MissingTokenPermissions,absent,without screts
+harisekhon@devops-python-tools@python3.8.yaml,MissingConcurrencyPR,absent,line 48
+harisekhon@devops-python-tools@python3.8.yaml,UnsafeDeployOnFork,absent,absence deploy
+TraceMachina@nativelink@sanitizers.yaml,MissingForkGuardPR,absent,not applicable
+TraceMachina@nativelink@sanitizers.yaml,MissingForkGuardSchedule,absent,not scheduled nor release
+TraceMachina@nativelink@sanitizers.yaml,MissingUploadCondition,absent,no upload
+TraceMachina@nativelink@sanitizers.yaml,MissingConcurrencyGlobal,absent,neither scheduled nor release
+harisekhon@devops-python-tools@python3.8.yaml,MissingConcurrencyGlobal,absent,line 48
+TraceMachina@nativelink@sanitizers.yaml,MutableRunnerVersion,absent,l27
+TraceMachina@nativelink@sanitizers.yaml,SuboptimalCacheUsage,absent,no cache action
+TraceMachina@nativelink@sanitizers.yaml,UnpinnedDependencies,absent,no pm
+TraceMachina@nativelink@vale.yaml,UnpinnedActionVersion,absent,all with hash
+harisekhon@devops-python-tools@python3.8.yaml,SuboptimalCacheUsage,absent,absence of actions/setup-node|python|java
+harisekhon@devops-python-tools@ubuntu.yaml,MissingPermExternalActions,absent,line 68
+harisekhon@devops-python-tools@ubuntu.yaml,MissingConcurrencyBranch,absent,line 71
+TraceMachina@nativelink@vale.yaml,MissingTokenPermissions,absent,without secrets
+TraceMachina@nativelink@vale.yaml,MissingConcurrencyBranch,absent,not a push triggered
+harisekhon@devops-python-tools@ubuntu.yaml,MissingForkGuardSchedule,absent,line 79
+harisekhon@devops-python-tools@ubuntu.yaml,MissingUploadCondition,absent,"without actions/upload-artifact, codecov/codecov-action, coverallsapp/..."
+harisekhon@devops-python-tools@ubuntu.yaml,UnsafeDeployOnFork,absent,without deploy
+TraceMachina@nativelink@vale.yaml,MissingConcurrencyGlobal,absent,no schedueld or releease
+TraceMachina@nativelink@vale.yaml,MultiCommandStep,absent,no run
+harisekhon@devops-python-tools@ubuntu.yaml,MultiCommandStep,absent,absence deploy
+TraceMachina@nativelink@vale.yaml,SingleOSExecution,absent,no test
+harisekhon@devops-python-tools@ubuntu.yaml,SingleOSExecution,absent,absence test
+harisekhon@devops-python-tools@ubuntu.yaml,UnpinnedDependencies,absent,absence run
+balena-io@open-balena@flowzone.yml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingTokenPermissions,absent,without github token
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingForkGuardPR,absent,without pull request
+balena-io@open-balena@flowzone.yml,UnpinnedDependencies,absent,"does not have `npm install, pip install, brew install`"
+balena-os@balena-supervisor@flowzone.yml,MissingTokenPermissions,absent,Does not have `secrets.GITHUB_TOKEN`
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingPathFilters,absent,line 21
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,UnsafeArtifactUploadFork,absent,no artifact upload
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,UnsafeDeployOnFork,absent,absence deploy
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MutableRunnerVersion,absent,without runs-on
+balena-os@balena-supervisor@flowzone.yml,MissingConcurrencyBranch,absent,does not have `on: push`
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,SingleLangVersionCI,absent,No setup-node
+balena-os@balena-supervisor@flowzone.yml,MissingForkGuardSchedule,absent,does not have `on: schedule`
+balena-os@balena-supervisor@flowzone.yml,UnsafeDeployOnFork,absent,Not a deploy workflow
+balena-os@balena-supervisor@flowzone.yml,MutableRunnerVersion,absent,Does not have `runs-on`
+harisekhon@devops-bash-tools@alpine.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-bash-tools@alpine.yaml,MissingTokenPermissions,absent,without secrets
+harisekhon@devops-bash-tools@alpine.yaml,MissingForkGuardPR,absent,without pull_request
+harisekhon@devops-bash-tools@alpine.yaml,MissingPathFilters,absent,has ignore
+harisekhon@devops-bash-tools@alpine.yaml,MissingUploadCondition,absent,no upload
+harisekhon@devops-bash-tools@alpine.yaml,MultiCommandStep,absent,without run:
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingConcurrencyPR,absent,without pull_request
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingForkGuardSchedule,absent,defines the repository
+harisekhon@devops-bash-tools@alpine_3.yaml,UnsafeArtifactUploadFork,absent,no upload
+harisekhon@devops-bash-tools@alpine_3.yaml,MutableRunnerVersion,absent,without runs-on
+harisekhon@devops-bash-tools@alpine_3.yaml,SuboptimalCacheUsage,absent,has cache block
+harisekhon@devops-bash-tools@debian.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-bash-tools@debian.yaml,MissingConcurrencyBranch,absent,has concurrency
+balena-os@balena-supervisor@flowzone.yml,UnpinnedDependencies,absent,"Does not have `npm install, pip install, brew install`"
+balena-os@balena-supervisor@flowzone.yml,SingleLangVersionCI,absent,Does not have `actions/setup-node|python|java|dotnet`
+ballerina-platform@module-ballerina-ftp@build-with-bal-test-graalvm.yml,UnsafeDeployOnFork,absent,Not a deploy workflow
+ballerina-platform@module-ballerina-ftp@pull-request.yml,UnsafeDeployOnFork,absent,Not directly a deploy workflow
+harisekhon@devops-bash-tools@debian.yaml,MissingConcurrencyGlobal,absent,has concurrency
+ballerina-platform@module-ballerina-websocket@pull-request.yml,UnsafeDeployOnFork,absent,Not directly a deploy workflow
+harisekhon@devops-bash-tools@debian.yaml,UnpinnedDependencies,absent,without installation
+harisekhon@devops-bash-tools@debian_10.yaml,MissingTokenPermissions,absent,without secrets
+harisekhon@devops-bash-tools@debian_10.yaml,MissingForkGuardPR,absent,without pull_request
+harisekhon@devops-bash-tools@debian_10.yaml,MissingConcurrencyPR,absent,has concurrency
+bombshell-dev@clack@publish.yml,UnsafeDeployOnFork,absent,"Not directly a deploy workflow, but uses if"
+harisekhon@devops-python-tools@ubuntu_github.yaml,MissingConcurrencyPR,absent,No pull request
+harisekhon@devops-python-tools@ubuntu_github.yaml,UnsafeDeployOnFork,absent,without deploy
+bufbuild@buf@pr-title.yaml,MissingForkGuardSchedule,absent,is not `scheduled`
+harisekhon@devops-bash-tools@debian_10.yaml,MissingPathFilters,absent,has ignore
+hashicorp@vault@milestone-checker.yml,UnsafeDeployOnFork,absent,without deploy
+homebrew@homebrew-cask@cache.yml,MissingTokenPermissions,absent,without github token
+bufbuild@buf@pr-title.yaml,MissingUploadCondition,absent,not directly a deploy workflow
+homebrew@homebrew-cask@cache.yml,MissingForkGuardPR,absent,without pull request
+bufbuild@buf@pr-title.yaml,MutableRunnerVersion,absent,No runs-on:
+homebrew@homebrew-cask@cache.yml,MissingConcurrencyPR,absent,without pull request
+harisekhon@devops-bash-tools@debian_10.yaml,MissingForkGuardSchedule,absent,checks the repository
+homebrew@homebrew-cask@cache.yml,UnsafeDeployOnFork,absent,without deploy
+harisekhon@devops-bash-tools@debian_10.yaml,UnsafeArtifactUploadFork,absent,no upload
+harisekhon@devops-bash-tools@debian_10.yaml,MissingUploadCondition,absent,no upload
+homebrew@homebrew-cask@cache.yml,MultiCommandStep,absent,line 45
+homebrew@homebrew-cask@cache.yml,SingleOSExecution,absent,no test
+causify-ai@helpers@linter.yml,MissingUploadCondition,absent,is not an upload action
+harisekhon@devops-bash-tools@debian_10.yaml,MultiCommandStep,absent,without run:
+causify-ai@helpers@linter.yml,UnpinnedDependencies,absent,"Does not have `npm install, pip install, brew install`"
+harisekhon@devops-bash-tools@fedora.yaml,MutableRunnerVersion,absent,without runs-on
+hyperledger@besu@integration-tests.yml,SingleOSExecution,absent,no test
+harisekhon@devops-bash-tools@fedora.yaml,SuboptimalCacheUsage,absent,has cache block
+infomaniak@android-kdrive@semantic-commit.yml,UnpinnedActionVersion,absent,local action
+ishioni@homelab-ops@labeler.yaml,UnsafeDeployOnFork,absent,without deploy
+cilium@cilium@build-images-base-renovate.yaml,MissingTokenPermissions,absent,no reference to `secrets.GITHUB_TOKEN`
+k0sproject@k0s@dependabot-prs.yaml,MissingForkGuardPR,absent,line 11
+cilium@cilium@build-images-base-renovate.yaml,SingleLangVersionCI,absent,Does not have `actions/setup-node|python|java|dotnet`
+kaito-project@kaito@ragengine-e2e.yaml,MissingConcurrencyPR,absent,line 3
+kaito-project@kaito@workspace-e2e.yaml,MissingTokenPermissions,absent,absence github token
+kaito-project@kaito@workspace-e2e.yaml,MissingConcurrencyBranch,absent,absence push
+kaito-project@kaito@workspace-e2e.yaml,UnsafeArtifactUploadFork,absent,missing upload-artifact
+harisekhon@devops-bash-tools@python3.8.yaml,MissingPermExternalActions,absent,has permissions
+kaito-project@kaito@workspace-e2e.yaml,SuboptimalCacheUsage,absent,absence setup-node
+harisekhon@devops-bash-tools@semgrep-cloud.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingPermExternalActions,absent,has permissions
+kata-containers@kata-containers@actionlint.yaml,UnpinnedActionVersion,absent,line 19
+kata-containers@kata-containers@actionlint.yaml,MissingTokenPermissions,absent,absence github token
+kata-containers@kata-containers@actionlint.yaml,MissingUploadCondition,absent,no upload-artifact
+kata-containers@kata-containers@actionlint.yaml,MissingConcurrencyGlobal,absent,without schedule
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingConcurrencyBranch,absent,has concurrency
+kata-containers@kata-containers@actionlint.yaml,SingleLangVersionCI,absent,without setup-node
+kata-containers@kata-containers@scorecard.yaml,MissingUploadCondition,absent,line 25
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingConcurrencyGlobal,absent,has concurrency
+kata-containers@kata-containers@static-checks-self-hosted.yaml,UnpinnedActionVersion,absent,no uses: org/action@...
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingTokenPermissions,absent,without github token
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingForkGuardSchedule,absent,without schedule
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingUploadCondition,absent,no upload
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingConcurrencyGlobal,absent,without schedule
+kata-containers@kata-containers@static-checks-self-hosted.yaml,SingleOSExecution,absent,no test
+kata-containers@kata-containers@static-checks-self-hosted.yaml,SingleLangVersionCI,absent,without setup-node
+katello@katello@react_tests.yml,UnpinnedActionVersion,absent,local action
+harisekhon@devops-bash-tools@ubuntu.yaml,UnpinnedDependencies,absent,without installation
+khan@wonder-blocks@gerald-pr.yml,MissingTokenPermissions,absent,without github token
+kubeflow@katib@e2e-test-enas-cifar10.yaml,SingleOSExecution,absent,no test
+kubeflow@katib@e2e-test-ui-random-search-postgres.yaml,SingleOSExecution,absent,no test
+cue-lang@cue@push_tip_to_trybot.yaml,MissingForkGuardPR,absent,is not `pull_request`
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingTokenPermissions,absent,without secrets
+labring@sealos@controllers.yml,MissingPermExternalActions,absent,line 67
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingForkGuardPR,absent,without pull_request
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingConcurrencyPR,absent,has concurrency
+labring@sealos@controllers.yml,MissingJobTimeout,absent,without steps
+cue-lang@cue@push_tip_to_trybot.yaml,UnsafeDeployOnFork,absent,not a workflow of `deploy`
+labring@sealos@controllers.yml,MissingConcurrencyPR,absent,line 72
+labring@sealos@controllers.yml,MissingConcurrencyBranch,absent,line 72
+labring@sealos@controllers.yml,MissingForkGuardSchedule,absent,without schedule
+labring@sealos@controllers.yml,UnsafeArtifactUploadFork,absent,no upload-artifact
+labring@sealos@controllers.yml,MissingConcurrencyGlobal,absent,without schedule
+labring@sealos@controllers.yml,SuboptimalCacheUsage,absent,without action-setup-node
+labring@sealos@controllers.yml,SingleOSExecution,absent,no test
+curl@curl@fuzz.yml,MissingTokenPermissions,absent,Does not reference `secrets.GITHUB_TOKEN`
+labring@sealos@controllers.yml,UnpinnedDependencies,absent,without installation commands
+curl@curl@fuzz.yml,MissingForkGuardSchedule,absent,not a workflow of `scheduled`
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingPathFilters,absent,has ignore
+curl@curl@fuzz.yml,MissingUploadCondition,absent,Not an upload workflow
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,UnsafeArtifactUploadFork,absent,no upload
+curl@curl@fuzz.yml,MutableRunnerVersion,absent,No runs-on
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MultiCommandStep,absent,without run:
+dani-garcia@vaultwarden@trivy.yml,UnsafeDeployOnFork,absent,uses if
+daos-stack@daos@unit-testing.yml,UnpinnedActionVersion,absent,uses hash
+labring@sealos@services.yml,MissingPermExternalActions,absent,line 68
+labring@sealos@services.yml,UnpinnedActionVersion,absent,no uses: org/action@...
+labring@sealos@services.yml,MissingTokenPermissions,absent,without github token
+labring@sealos@services.yml,MissingPathFilters,absent,has paths
+daos-stack@daos@unit-testing.yml,MissingForkGuardPR,absent,has if
+labring@sealos@services.yml,MissingUploadCondition,absent,no upload
+daos-stack@daos@unit-testing.yml,UnsafeDeployOnFork,absent,Not a deploy workflow
+labring@sealos@services.yml,MutableRunnerVersion,absent,without runs-on
+labring@sealos@services.yml,MultiCommandStep,absent,without run
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MutableRunnerVersion,absent,without runs-on
+labring@sealos@services.yml,SingleLangVersionCI,absent,without actions/setup-node|python|java|dotnet
+harisekhon@devops-bash-tools@ubuntu_github.yaml,SuboptimalCacheUsage,absent,has cache block
+laravel-lang@lang@release-drafter.yml,MissingConcurrencyGlobal,absent,without schedule
+datadog@integrations-core@labeler.yml,MissingTokenPermissions,absent,does not reference `secrets.GITHUB_TOKEN`
+datadog@integrations-core@pr.yml,MissingTokenPermissions,absent,Does not reference `secrets.GITHUB_TOKEN`
+lede-project@source@kernel.yml,MissingForkGuardSchedule,absent,without schedule
+lede-project@source@kernel.yml,MissingUploadCondition,absent,no upload
+datadog@integrations-core@pr.yml,MissingConcurrencyBranch,absent,does not have `on: push`
+lede-project@source@kernel.yml,MissingConcurrencyGlobal,absent,without schedule
+lede-project@source@kernel.yml,MutableRunnerVersion,absent,without runs-on
+datadog@integrations-core@pr.yml,MissingConcurrencyGlobal,absent,"is not ""release"" or ""scheduled"""
+lede-project@source@kernel.yml,MultiCommandStep,absent,without run
+lede-project@source@kernel.yml,SingleOSExecution,absent,no test
+lede-project@source@kernel.yml,SingleLangVersionCI,absent,without actions/setup-node|python|java|dotnet
+lede-project@source@packages.yml,MissingForkGuardSchedule,absent,without schedule
+datadog@integrations-extras@pr.yml,SingleOSExecution,absent,does not have `runs-on:`
+lede-project@source@packages.yml,UnsafeArtifactUploadFork,absent,no upload-artifacts
+lede-project@source@packages.yml,MissingConcurrencyGlobal,absent,without schedule
+lede-project@source@packages.yml,MutableRunnerVersion,absent,without runs-on
+dbt-labs@metricflow@changelog-existence.yml,MissingConcurrencyGlobal,absent,"not a workflow of ""release"" or ""scheduled"""
+dbt-labs@metricflow@changelog-existence.yml,SuboptimalCacheUsage,absent,does not have `actions/setup-node|python|java`
+dbt-labs@metricflow@changelog-existence.yml,UnpinnedDependencies,absent,does not have installation command
+lede-project@source@packages.yml,SuboptimalCacheUsage,absent,without setup-node
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingTokenPermissions,absent,does not reference `secrets.GITHUB_TOKEN`
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingForkGuardSchedule,absent,does not have `on: schedule`
+liam-hq@liam@database-ci.yml,SingleOSExecution,absent,no test
+ddterm@gnome-shell-extension-ddterm@pr.yml,UnsafeArtifactUploadFork,absent,does not have artifact action
+ddterm@gnome-shell-extension-ddterm@pr.yml,MutableRunnerVersion,absent,Does not have `runs-on`
+ddterm@gnome-shell-extension-ddterm@pr.yml,UnpinnedDependencies,absent,No installation command
+ddterm@gnome-shell-extension-ddterm@pr.yml,SingleLangVersionCI,absent,Does not have `actions/setup-node|python|java|dotnet`
+likec4@likec4@push.yaml,MissingForkGuardPR,absent,line 30
+likec4@likec4@push.yaml,MissingConcurrencyPR,absent,line 16
+likec4@likec4@push.yaml,MissingConcurrencyBranch,absent,line 16
+harisekhon@devops-bash-tools@validate.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-python-tools@alpine.yaml,MissingTokenPermissions,absent,without secrets
+harisekhon@devops-python-tools@alpine.yaml,MissingForkGuardPR,absent,without pull_request
+harisekhon@devops-python-tools@alpine.yaml,MissingPathFilters,absent,has ignore
+harisekhon@devops-python-tools@alpine.yaml,MissingForkGuardSchedule,absent,checks repository
+harisekhon@devops-python-tools@alpine.yaml,UnsafeArtifactUploadFork,absent,no upload
+harisekhon@devops-python-tools@alpine.yaml,MultiCommandStep,absent,without run:
+harisekhon@devops-python-tools@alpine_3.yaml,MissingConcurrencyPR,absent,without pull_request
+harisekhon@devops-python-tools@alpine_3.yaml,MutableRunnerVersion,absent,without runs-on:
+harisekhon@devops-python-tools@alpine_3.yaml,SuboptimalCacheUsage,absent,has cache block
+harisekhon@devops-python-tools@debian.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-python-tools@debian.yaml,MissingConcurrencyBranch,absent,has concurrency
+harisekhon@devops-python-tools@debian.yaml,MissingForkGuardSchedule,absent,checks repository
+harisekhon@devops-python-tools@debian.yaml,MissingConcurrencyGlobal,absent,has concurrency
+harisekhon@devops-python-tools@debian.yaml,UnpinnedDependencies,absent,without installations
+harisekhon@devops-python-tools@debian_10.yaml,MissingForkGuardPR,absent,without pull_request
+harisekhon@devops-python-tools@debian_10.yaml,MissingPathFilters,absent,has ignore
+harisekhon@devops-python-tools@debian_10.yaml,UnsafeArtifactUploadFork,absent,no upload
+harisekhon@devops-python-tools@debian_10.yaml,MultiCommandStep,absent,without run:
+harisekhon@devops-python-tools@fedora.yaml,MissingConcurrencyPR,absent,without pull_request
+harisekhon@devops-python-tools@fedora.yaml,MutableRunnerVersion,absent,without runs-on:
+harisekhon@devops-python-tools@fedora.yaml,SuboptimalCacheUsage,absent,has cache block
+harisekhon@devops-python-tools@python3.7.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-python-tools@python3.7.yaml,MissingConcurrencyBranch,absent,has concurrency
+harisekhon@devops-python-tools@python3.7.yaml,MissingConcurrencyGlobal,absent,has concurrency
+harisekhon@devops-python-tools@python3.7.yaml,UnpinnedDependencies,absent,without installations
+harisekhon@devops-python-tools@python3.8.yaml,MissingForkGuardPR,absent,checks the repository
+harisekhon@devops-python-tools@python3.8.yaml,MissingPathFilters,absent,exists a path
+harisekhon@devops-python-tools@python3.8.yaml,UnsafeArtifactUploadFork,absent,no upload
+harisekhon@devops-python-tools@python3.8.yaml,MultiCommandStep,absent,without run:
+harisekhon@devops-python-tools@python3.8.yaml,SingleLangVersionCI,absent,no strategy
+harisekhon@devops-python-tools@ubuntu.yaml,MissingConcurrencyPR,absent,without pull_request
+harisekhon@devops-python-tools@ubuntu.yaml,MutableRunnerVersion,absent,without runs-on:
+harisekhon@devops-python-tools@ubuntu.yaml,SuboptimalCacheUsage,absent,has cache block
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingConcurrencyBranch,absent,has concurrency
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingConcurrencyGlobal,absent,has concurrency
+harisekhon@devops-python-tools@ubuntu_github.yaml,MissingPathFilters,absent,has ignore
+intelowlproject@greedybear@release.yml,UnsafeDeployOnFork,absent,does not deploy
+kaito-project@kaito@workspace-e2e.yaml,MissingConcurrencyPR,absent,has concurrency
+kaito-project@kaito@workspace-e2e.yaml,MissingPathFilters,absent,has ignore
+kata-containers@kata-containers@actionlint.yaml,MissingForkGuardSchedule,absent,without schedule
+kata-containers@kata-containers@actionlint.yaml,SuboptimalCacheUsage,absent,without cache
+kata-containers@kata-containers@actionlint.yaml,MultiCommandStep,absent,without run:
+kata-containers@kata-containers@actionlint.yaml,UnpinnedDependencies,absent,without installation
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MultiCommandStep,absent,without run:
+katsutedev@background@stale.yml,MissingConcurrencyGlobal,absent,without concurrency
+kubeflow@katib@e2e-test-pytorch-mnist.yaml,SingleOSExecution,absent,the matrix does not version the OSs
+kubeflow@katib@e2e-test-simple-pbt.yaml,SingleOSExecution,absent,the matrix does not verify the OS version
+labring@sealos@controllers.yml,MissingTokenPermissions,absent,no secrets.GITHUB_TOKEN
+labring@sealos@controllers.yml,MissingPathFilters,absent,has a paths block
+labring@sealos@controllers.yml,MissingUploadCondition,absent,without upload
+labring@sealos@controllers.yml,MutableRunnerVersion,absent,without runs-on:
+labring@sealos@controllers.yml,MultiCommandStep,absent,without run:
+labring@sealos@controllers.yml,SingleLangVersionCI,absent,matrix does not version the language
+labring@sealos@services.yml,MissingConcurrencyPR,absent,has concurrency
+labring@sealos@services.yml,MissingConcurrencyBranch,absent,has concurrency
+labring@sealos@services.yml,MissingForkGuardSchedule,absent,without schedule
+labring@sealos@services.yml,UnsafeArtifactUploadFork,absent,no upload
+labring@sealos@services.yml,MissingConcurrencyGlobal,absent,has concurrency
+labring@sealos@services.yml,SuboptimalCacheUsage,absent,without cache
+labring@sealos@services.yml,UnpinnedDependencies,absent,does not install
+lede-project@source@packages.yml,MissingConcurrencyPR,absent,has concurrency
+lede-project@source@packages.yml,MissingPathFilters,absent,has ignores
+dotansimha@graphql-code-generator@pr.yml,UnsafeArtifactUploadFork,absent,does not have upload artifact action
+dotansimha@graphql-code-generator@pr.yml,MissingConcurrencyGlobal,absent,"Not a ""release"" or ""scheduled"" workflow"
+dotansimha@graphql-code-generator@pr.yml,SingleOSExecution,absent,Not a test workflow
+agama-project@agama@obs-staging-rust.yml,MissingForkGuardPR,absent,not a PR or issue
+agama-project@agama@obs-staging-rust.yml,MissingPathFilters,absent,Has paths
+agama-project@agama@obs-staging-rust.yml,MutableRunnerVersion,absent,does not use runs on
+agama-project@agama@obs-staging-rust.yml,SuboptimalCacheUsage,absent,does not use actions/cache
+agama-project@agama@obs-staging-rust.yml,MultiCommandStep,absent,does not use run
+agama-project@agama@obs-staging-rust.yml,SingleOSExecution,absent,does not use runs on
+agama-project@agama@obs-staging-rust.yml,UnpinnedDependencies,absent,does not use PM
+agama-project@agama@obs-staging-service.yml,MissingPermExternalActions,absent,interl aciton
+agama-project@agama@obs-staging-web.yml,MissingPermExternalActions,absent,internal action
+agama-project@agama@obs-staging-web.yml,UnpinnedActionVersion,absent,no tags
+agama-project@agama@obs-staging-web.yml,MissingTokenPermissions,absent,no secrets
+agama-project@agama@obs-staging-web.yml,MissingForkGuardPR,absent,not a PR or issue
+agama-project@agama@obs-staging-web.yml,MissingConcurrencyPR,absent,.
+agama-project@agama@obs-staging-web.yml,MissingPathFilters,absent,Uses paths line 8
+agama-project@agama@obs-staging-web.yml,MissingForkGuardSchedule,absent,.
+agama-project@agama@obs-staging-web.yml,UnsafeArtifactUploadFork,absent,.
+agama-project@agama@obs-staging-web.yml,MissingConcurrencyGlobal,absent,.
+agama-project@agama@obs-staging-web.yml,MutableRunnerVersion,absent,.
+agama-project@agama@obs-staging-web.yml,UnpinnedDependencies,absent,.
+agama-project@agama@obs-staging-web.yml,SingleLangVersionCI,absent,.
+ant-design@ant-design@sync-gitee.yml,UnsafeDeployOnFork,absent,not deploy
+apache@arrow-adbc@r-basic.yml,MissingPermExternalActions,absent,internal
+apache@arrow-adbc@r-basic.yml,MissingTokenPermissions,absent,.
+etcd-io@jetcd@build-pr.yml,MissingTokenPermissions,absent,Does not use `secrets.GITHUB_TOKEN`
+evroon@bracket@automerge.yml,UnsafeDeployOnFork,absent,Not a deploy workflow
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,UnpinnedActionVersion,absent,uses hash
+apache@arrow-adbc@r-basic.yml,MissingConcurrencyBranch,absent,.
+apache@arrow-adbc@r-basic.yml,MissingForkGuardSchedule,absent,.
+apache@arrow-adbc@r-basic.yml,UnsafeArtifactUploadFork,absent,.
+apache@arrow-adbc@r-basic.yml,MissingConcurrencyGlobal,absent,.
+apache@arrow-adbc@r-basic.yml,MultiCommandStep,absent,.
+apache@arrow-adbc@r-basic.yml,SingleLangVersionCI,absent,.
+apache@arrow-adbc@r-standard.yml,MissingPermExternalActions,absent,.
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingUploadCondition,absent,does not have upload action
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,UnsafeDeployOnFork,absent,not a workflow of deploy
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MutableRunnerVersion,absent,fixes a version
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,SuboptimalCacheUsage,absent,does not have cache action
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MultiCommandStep,absent,Does not have `run`
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,UnpinnedDependencies,absent,No install command
+facebook@lexical@tests-extended.yml,MissingForkGuardPR,absent,uses if
+facebook@lexical@tests-extended.yml,UnsafeArtifactUploadFork,absent,does not have artifact action
+facebook@lexical@tests-extended.yml,UnsafeDeployOnFork,absent,Not a deploy workflow
+facebook@lexical@tests-extended.yml,MutableRunnerVersion,absent,no runs-on
+facebook@lexical@tests-extended.yml,SuboptimalCacheUsage,absent,doesn't have `actions/setup-node|python|java`
+facebook@lexical@tests-extended.yml,MultiCommandStep,absent,No run
+facebook@lexical@tests-extended.yml,SingleOSExecution,absent,No runs-on
+facebook@lexical@tests.yml,MissingTokenPermissions,absent,no secrets.GITHUB_TOKEN
+facebook@lexical@tests.yml,UnsafeArtifactUploadFork,absent,does not have upload artifact action
+facebook@lexical@tests.yml,MutableRunnerVersion,absent,No runs-on
+facebook@lexical@tests.yml,SuboptimalCacheUsage,absent,does not have `actions/setup-node|python|java`
+facebook@lexical@tests.yml,MultiCommandStep,absent,No run
+facebookincubator@velox@linux-build.yml,MissingForkGuardSchedule,absent,Not on: schedule
+facebookincubator@velox@linux-build.yml,MissingUploadCondition,absent,does not have upload artifact action
+facebookincubator@velox@linux-build.yml,MissingConcurrencyGlobal,absent,"not directly workflows of ""release"" or ""scheduled"""
+getporter@porter@porter-canary.yml,MissingConcurrencyBranch,absent,has concurrency
+getporter@porter@porter-canary.yml,MissingPathFilters,absent,has paths-ignore:; but also is not relevant workflow
+apache@ozone@post-commit.yml,MissingPermExternalActions,absent,internal
+getporter@porter@porter-canary.yml,MultiCommandStep,absent,no run
+getporter@porter@porter-canary.yml,UnpinnedDependencies,absent,does not have installation command
+apache@ozone@post-commit.yml,MissingTokenPermissions,absent,.
+apache@ozone@post-commit.yml,MissingForkGuardPR,absent,.
+google@protobuf.dart@publish.yaml,UnsafeDeployOnFork,absent,uses if
+harisekhon@devops-bash-tools@alpine.yaml,MissingConcurrencyPR,absent,not on: pull_request
+harisekhon@devops-bash-tools@alpine.yaml,MissingForkGuardSchedule,absent,uses if
+harisekhon@devops-bash-tools@alpine.yaml,UnsafeArtifactUploadFork,absent,"does not have action `upload-artifact, codecov, coveralls`"
+harisekhon@devops-bash-tools@alpine.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-bash-tools@alpine.yaml,MissingConcurrencyGlobal,absent,uses concurrency
+harisekhon@devops-bash-tools@alpine.yaml,SuboptimalCacheUsage,absent,does not have `actions/setup-node|python|java and also actions/cache`
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingConcurrencyBranch,absent,uses concurrency
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingUploadCondition,absent,"does not have actions/upload-artifact, codecov/codecov-action"
+harisekhon@devops-bash-tools@alpine_3.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-bash-tools@alpine_3.yaml,MultiCommandStep,absent,no run
+harisekhon@devops-bash-tools@alpine_3.yaml,SingleOSExecution,absent,is not a test
+harisekhon@devops-bash-tools@alpine_3.yaml,UnpinnedDependencies,absent,does not have installation command
+harisekhon@devops-bash-tools@debian.yaml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+harisekhon@devops-bash-tools@debian.yaml,MissingForkGuardPR,absent,does not have `on; pull_request or issue`
+harisekhon@devops-bash-tools@debian.yaml,MissingConcurrencyPR,absent,Not on: pull_request
+harisekhon@devops-bash-tools@debian.yaml,MissingPathFilters,absent,"has paths: or paths-ignore:, but is not relevant workflow"
+harisekhon@devops-bash-tools@debian.yaml,MissingForkGuardSchedule,absent,uses if
+harisekhon@devops-bash-tools@debian.yaml,UnsafeArtifactUploadFork,absent,not a workflow of artifact
+harisekhon@devops-bash-tools@debian.yaml,UnsafeDeployOnFork,absent,is not deploy
+harisekhon@devops-bash-tools@debian.yaml,MutableRunnerVersion,absent,no runs-on:
+harisekhon@devops-bash-tools@debian.yaml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+harisekhon@devops-bash-tools@debian_10.yaml,UnsafeDeployOnFork,absent,is not deploy
+harisekhon@devops-bash-tools@debian_10.yaml,MissingConcurrencyGlobal,absent,has concurrency
+harisekhon@devops-bash-tools@debian_10.yaml,SuboptimalCacheUsage,absent,does not have actions/setup-node|python|java
+harisekhon@devops-bash-tools@fedora.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-bash-tools@fedora.yaml,MissingConcurrencyBranch,absent,has concurrency
+harisekhon@devops-bash-tools@fedora.yaml,MissingForkGuardSchedule,absent,has if
+harisekhon@devops-bash-tools@fedora.yaml,MissingUploadCondition,absent,not a workflow of upload artifact
+harisekhon@devops-bash-tools@fedora.yaml,UnsafeDeployOnFork,absent,is not deploy
+harisekhon@devops-bash-tools@fedora.yaml,MultiCommandStep,absent,no run
+harisekhon@devops-bash-tools@fedora.yaml,SingleOSExecution,absent,no runs-on
+harisekhon@devops-bash-tools@fedora.yaml,UnpinnedDependencies,absent,No installation command
+harisekhon@devops-bash-tools@kics.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-bash-tools@mac.yaml,UnsafeDeployOnFork,absent,Not a deploy workflow
+harisekhon@devops-bash-tools@python3.7.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-bash-tools@python3.7.yaml,UnsafeDeployOnFork,absent,Not a deploy workflow
+harisekhon@devops-bash-tools@python3.8.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-bash-tools@semgrep-cloud.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-bash-tools@semgrep.yaml,MissingPermExternalActions,absent,uses permissions
+harisekhon@devops-bash-tools@semgrep.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-bash-tools@trivy.yaml,MissingPermExternalActions,absent,uses permissions
+harisekhon@devops-bash-tools@trivy.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+apache@ozone@post-commit.yml,MissingConcurrencyPR,absent,l22
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingForkGuardPR,absent,not pull_request or issues
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingConcurrencyPR,absent,not on: pull_request
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingPathFilters,absent,"has paths: or paths-ignore:, but also is not relevant workflow"
+harisekhon@devops-bash-tools@ubuntu.yaml,UnsafeArtifactUploadFork,absent,not a workflow of artifact
+harisekhon@devops-bash-tools@ubuntu.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-bash-tools@ubuntu.yaml,MutableRunnerVersion,absent,no runs-on
+harisekhon@devops-bash-tools@ubuntu.yaml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingForkGuardSchedule,absent,uses if
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingConcurrencyGlobal,absent,uses concurrency
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,SuboptimalCacheUsage,absent,does not have actions/setup-node|python|java
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MissingConcurrencyBranch,absent,has concurrency
+apache@ozone@post-commit.yml,MissingForkGuardSchedule,absent,.
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MissingUploadCondition,absent,not a workflow of upload artifact
+apache@ozone@post-commit.yml,MissingUploadCondition,absent,no upload artifact
+apache@ozone@post-commit.yml,MissingConcurrencyGlobal,absent,.
+apache@ozone@post-commit.yml,MutableRunnerVersion,absent,.
+apache@ozone@post-commit.yml,UnpinnedDependencies,absent,.
+argoproj@argo-cd@codeql.yml,UnsafeDeployOnFork,absent,.
+argoproj@argo-cd@codeql.yml,SingleOSExecution,absent,codeql i didn't consider as test
+harisekhon@devops-bash-tools@ubuntu_github.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MultiCommandStep,absent,no run
+harisekhon@devops-bash-tools@ubuntu_github.yaml,SingleOSExecution,absent,no runs-on
+harisekhon@devops-bash-tools@ubuntu_github.yaml,UnpinnedDependencies,absent,does not have installation command
+harisekhon@devops-bash-tools@validate.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-python-tools@alpine.yaml,MissingConcurrencyPR,absent,does not have on: pull_request
+harisekhon@devops-python-tools@alpine.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-python-tools@alpine.yaml,MissingConcurrencyGlobal,absent,has concurrency
+harisekhon@devops-python-tools@alpine.yaml,SuboptimalCacheUsage,absent,does not have actions/setup-node|python|java
+harisekhon@devops-python-tools@alpine_3.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-python-tools@alpine_3.yaml,MissingConcurrencyBranch,absent,has concurrency
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingConcurrencyPR,absent,.
+harisekhon@devops-python-tools@alpine_3.yaml,MissingForkGuardSchedule,absent,uses if
+harisekhon@devops-python-tools@alpine_3.yaml,MissingUploadCondition,absent,not upload-artifact
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingConcurrencyBranch,absent,.
+harisekhon@devops-python-tools@alpine_3.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-python-tools@alpine_3.yaml,MultiCommandStep,absent,no run
+harisekhon@devops-python-tools@alpine_3.yaml,SingleOSExecution,absent,No runs-on
+harisekhon@devops-python-tools@alpine_3.yaml,UnpinnedDependencies,absent,does not have installation command
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingPathFilters,absent,"Has ""paths""."
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,UnsafeArtifactUploadFork,absent,.
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MissingUploadCondition,absent,.
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MutableRunnerVersion,absent,.
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,SuboptimalCacheUsage,absent,.
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,MultiCommandStep,absent,.
+astarte-platform@astarte@astarte-appengine-api-workflow.yaml,UnpinnedDependencies,absent,.
+harisekhon@devops-bash-tools@fedora.yaml,MissingConcurrencyPR,absent,not on: pull_request
+harisekhon@devops-bash-tools@fedora.yaml,MissingPathFilters,absent,"uses paths: or paths-ignore:, but it's also not a relevant workflow"
+harisekhon@devops-bash-tools@fedora.yaml,MissingConcurrencyGlobal,absent,has concurrency
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingForkGuardPR,absent,.
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingConcurrencyBranch,absent,.
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingPathFilters,absent,Uses paths
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MissingForkGuardPR,absent,not on: pull_request or issues
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,UnsafeArtifactUploadFork,absent,.
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MissingUploadCondition,absent,.
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,SuboptimalCacheUsage,absent,.
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,MultiCommandStep,absent,.
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,UnpinnedDependencies,absent,.
+astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml,SingleLangVersionCI,absent,.
+harisekhon@devops-bash-tools@ubuntu_github.yaml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+harisekhon@devops-python-tools@alpine.yaml,MissingConcurrencyBranch,absent,has concurrency
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,UnpinnedActionVersion,absent,.
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingTokenPermissions,absent,.
+harisekhon@devops-python-tools@alpine_3.yaml,MissingForkGuardPR,absent,not on: pull_request or issues
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingConcurrencyBranch,absent,.
+harisekhon@devops-python-tools@debian.yaml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingForkGuardSchedule,absent,.
+harisekhon@devops-python-tools@debian.yaml,MissingForkGuardPR,absent,Not on: pull_request or issues
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MissingConcurrencyGlobal,absent,.
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,MutableRunnerVersion,absent,.
+harisekhon@devops-python-tools@debian.yaml,MissingConcurrencyPR,absent,not on: pull_request
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,SuboptimalCacheUsage,absent,.
+harisekhon@devops-python-tools@debian.yaml,MissingPathFilters,absent,"uses paths: or paths-ignore:,  but it's also not a relevant workflow"
+astarte-platform@astarte@astarte-pairing-workflow.yaml,UnpinnedActionVersion,absent,.
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingTokenPermissions,absent,.
+harisekhon@devops-python-tools@debian.yaml,UnsafeArtifactUploadFork,absent,not a workflow of upload artifact
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingConcurrencyBranch,absent,.
+harisekhon@devops-python-tools@debian.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingPathFilters,absent,Has paths
+harisekhon@devops-python-tools@debian.yaml,MutableRunnerVersion,absent,no runs-on
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingForkGuardSchedule,absent,.
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MissingConcurrencyGlobal,absent,.
+astarte-platform@astarte@astarte-pairing-workflow.yaml,MutableRunnerVersion,absent,.
+astarte-platform@astarte@astarte-pairing-workflow.yaml,SingleOSExecution,absent,.
+astarte-platform@astarte@astarte-pairing-workflow.yaml,UnpinnedDependencies,absent,.
+harisekhon@devops-python-tools@debian.yaml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,UnpinnedActionVersion,absent,.
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingTokenPermissions,absent,.
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingConcurrencyPR,absent,.
+harisekhon@devops-python-tools@debian_10.yaml,MissingPermExternalActions,absent,has permissions
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingForkGuardSchedule,absent,.
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingUploadCondition,absent,.
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingConcurrencyGlobal,absent,.
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MutableRunnerVersion,absent,.
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,SingleOSExecution,absent,.
+harisekhon@devops-python-tools@debian_10.yaml,MissingConcurrencyPR,absent,not on: pull_request
+harisekhon@devops-python-tools@debian_10.yaml,MissingForkGuardSchedule,absent,uses if
+harisekhon@devops-python-tools@debian_10.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-python-tools@debian_10.yaml,MissingConcurrencyGlobal,absent,uses concurrency
+harisekhon@devops-python-tools@debian_10.yaml,SuboptimalCacheUsage,absent,does not have actions/setup-node|python|java
+harisekhon@devops-python-tools@fedora.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-python-tools@fedora.yaml,MissingConcurrencyBranch,absent,has concurrency
+harisekhon@devops-python-tools@fedora.yaml,MissingUploadCondition,absent,not a workflow of upload artifact
+harisekhon@devops-python-tools@fedora.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-python-tools@fedora.yaml,MultiCommandStep,absent,no run
+harisekhon@devops-python-tools@fedora.yaml,SingleOSExecution,absent,no runs-on
+harisekhon@devops-python-tools@fedora.yaml,UnpinnedDependencies,absent,No installation command
+harisekhon@devops-python-tools@mac.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-python-tools@python3.7.yaml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+harisekhon@devops-python-tools@python3.7.yaml,MissingForkGuardPR,absent,has if
+harisekhon@devops-python-tools@python3.7.yaml,MissingPathFilters,absent,uses paths or paths-ignore;  but it's also not a relevant workflow
+harisekhon@devops-python-tools@python3.7.yaml,MissingForkGuardSchedule,absent,uses if
+astropy@photutils@publish.yml,UnpinnedActionVersion,absent,.
+astropy@photutils@publish.yml,MissingConcurrencyPR,absent,.
+harisekhon@devops-python-tools@python3.7.yaml,UnsafeArtifactUploadFork,absent,not a workflow of upload artifact
+astropy@photutils@publish.yml,UnsafeArtifactUploadFork,absent,l42
+astropy@photutils@publish.yml,MissingUploadCondition,absent,.
+astropy@photutils@publish.yml,MutableRunnerVersion,absent,.
+astropy@photutils@publish.yml,SuboptimalCacheUsage,absent,.
+harisekhon@devops-python-tools@python3.7.yaml,MissingUploadCondition,absent,not a workflow of upload artifact
+harisekhon@devops-python-tools@python3.7.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-python-tools@python3.7.yaml,MutableRunnerVersion,absent,no runs-ons
+harisekhon@devops-python-tools@python3.7.yaml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+astropy@photutils@publish.yml,UnpinnedDependencies,absent,.
+astropy@photutils@publish.yml,SingleLangVersionCI,absent,.
+harisekhon@devops-python-tools@python3.8.yaml,MissingConcurrencyPR,absent,uses concurrency
+harisekhon@devops-python-tools@python3.8.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-python-tools@python3.8.yaml,MissingConcurrencyGlobal,absent,uses concurrency
+harisekhon@devops-python-tools@python3.8.yaml,SuboptimalCacheUsage,absent,does not use actions/setup-node|python|java
+harisekhon@devops-python-tools@ubuntu.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-python-tools@ubuntu.yaml,MissingConcurrencyBranch,absent,has concurrency
+harisekhon@devops-python-tools@ubuntu.yaml,MissingPathFilters,absent,uses paths: or paths-ignore:;  but it's also not a relevant workflow
+harisekhon@devops-python-tools@ubuntu.yaml,MissingForkGuardSchedule,absent,uses if
+harisekhon@devops-python-tools@ubuntu.yaml,MissingUploadCondition,absent,not a workflow of upload artifact
+harisekhon@devops-python-tools@ubuntu.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+harisekhon@devops-python-tools@ubuntu.yaml,MultiCommandStep,absent,no run
+harisekhon@devops-python-tools@ubuntu.yaml,SingleOSExecution,absent,no runs-on
+harisekhon@devops-python-tools@ubuntu.yaml,UnpinnedDependencies,absent,does not have installation command
+harisekhon@devops-python-tools@ubuntu.yaml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+awslabs@mountpoint-s3@bench_main.yml,UnsafeDeployOnFork,absent,not deploy
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingForkGuardPR,absent,not on: pull_request or issues
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingPathFilters,absent,uses paths: or paths-ignore:;  but it's also not a relevant workflow
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,UnsafeArtifactUploadFork,absent,not a workflow of upload artifact
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+balena-io@etcher@flowzone.yml,UnsafeDeployOnFork,absent,.
+balena-io@open-balena@flowzone.yml,UnpinnedActionVersion,absent,.
+balena-io@open-balena@flowzone.yml,MissingForkGuardPR,absent,.
+balena-io@open-balena@flowzone.yml,MissingJobTimeout,absent,.
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MutableRunnerVersion,absent,no runs-on
+balena-io@open-balena@flowzone.yml,MissingConcurrencyBranch,absent,.
+balena-io@open-balena@flowzone.yml,UnsafeArtifactUploadFork,absent,.
+balena-io@open-balena@flowzone.yml,MutableRunnerVersion,absent,.
+balena-io@open-balena@flowzone.yml,MultiCommandStep,absent,.
+balena-io@open-balena@flowzone.yml,SingleOSExecution,absent,.
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,SingleOSExecution,absent,no runs-on
+balena-io@open-balena@flowzone.yml,SingleLangVersionCI,absent,.
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+balena-os@balena-supervisor@flowzone.yml,MissingForkGuardPR,absent,.
+harisekhon@devops-python-tools@ubuntu_github.yaml,MissingConcurrencyPR,absent,not on: pull_request
+balena-os@balena-supervisor@flowzone.yml,MissingConcurrencyGlobal,absent,.
+balena-os@balena-supervisor@flowzone.yml,SuboptimalCacheUsage,absent,.
+balena-os@balena-supervisor@flowzone.yml,MultiCommandStep,absent,.
+harisekhon@devops-python-tools@ubuntu_github.yaml,UnsafeDeployOnFork,absent,not a deploy workflow
+balena-os@balena-supervisor@flowzone.yml,SingleOSExecution,absent,.
+hashicorp@vault@milestone-checker.yml,UnsafeDeployOnFork,absent,not a deploy workflow
+homebrew@homebrew-cask@cache.yml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+homebrew@homebrew-cask@cache.yml,MissingForkGuardPR,absent,not on: pull_request or issues
+homebrew@homebrew-cask@cache.yml,MissingConcurrencyPR,absent,not on: pull_request
+homebrew@homebrew-cask@cache.yml,UnsafeDeployOnFork,absent,not a workflow of deploy
+homebrew@homebrew-cask@cache.yml,MultiCommandStep,absent,run only executes one command
+homebrew@homebrew-cask@cache.yml,SingleOSExecution,absent,not a workflow of test
+ishioni@homelab-ops@labeler.yaml,UnsafeDeployOnFork,absent,not a workflow of deploy
+kaito-project@kaito@workspace-e2e.yaml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+kaito-project@kaito@workspace-e2e.yaml,MissingConcurrencyBranch,absent,not on: push
+kaito-project@kaito@workspace-e2e.yaml,UnsafeArtifactUploadFork,absent,not a workflow of upload artifact
+kaito-project@kaito@workspace-e2e.yaml,MissingUploadCondition,absent,not a workflow of upload artifact
+kaito-project@kaito@workspace-e2e.yaml,MutableRunnerVersion,absent,no runs-on
+kaito-project@kaito@workspace-e2e.yaml,SuboptimalCacheUsage,absent,does not use actions/setup-node|python|java
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,SingleOSExecution,absent,no runs-on
+astropy@photutils@publish.yml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+astropy@photutils@publish.yml,MissingForkGuardPR,absent,uses if
+kata-containers@kata-containers@actionlint.yaml,UnpinnedActionVersion,absent,uses hash
+kata-containers@kata-containers@actionlint.yaml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+kata-containers@kata-containers@actionlint.yaml,MissingConcurrencyPR,absent,uses concurrency
+kata-containers@kata-containers@actionlint.yaml,MissingConcurrencyBranch,absent,not on: push
+kata-containers@kata-containers@actionlint.yaml,MissingUploadCondition,absent,does not have upload action
+kata-containers@kata-containers@actionlint.yaml,MissingConcurrencyGlobal,absent,"not a workflow of ""release"" or ""scheduled"""
+kata-containers@kata-containers@actionlint.yaml,SingleOSExecution,absent,not test
+kata-containers@kata-containers@actionlint.yaml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+kata-containers@kata-containers@static-checks-self-hosted.yaml,UnpinnedActionVersion,absent,No uses: org/action@...
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingConcurrencyPR,absent,uses concurrency
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingConcurrencyBranch,absent,not on: push
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingForkGuardSchedule,absent,not on: schedule
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingUploadCondition,absent,not a workflow of upload artifact
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingConcurrencyGlobal,absent,"not a workflow of ""release"" or ""scheduled"""
+kata-containers@kata-containers@static-checks-self-hosted.yaml,SingleOSExecution,absent,not a workflow of test
+kata-containers@kata-containers@static-checks-self-hosted.yaml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+labring@sealos@controllers.yml,MissingPermExternalActions,absent,has permissions
+labring@sealos@controllers.yml,MissingConcurrencyPR,absent,has concurrency
+labring@sealos@controllers.yml,MissingConcurrencyBranch,absent,has concurrency
+labring@sealos@controllers.yml,MissingForkGuardSchedule,absent,not scheduled
+labring@sealos@controllers.yml,UnsafeArtifactUploadFork,absent,not a workflow of upload artifact
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MutableRunnerVersion,absent,no runs-on
+labring@sealos@services.yml,SingleOSExecution,absent,not a workflow of test
+likec4@likec4@push.yaml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+likec4@likec4@push.yaml,UnsafeArtifactUploadFork,absent,not a workflow of upload artifact
+homebrew@homebrew-cask@cache.yml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+kaito-project@kaito@workspace-e2e.yaml,MissingUploadCondition,absent,not a workflow of upload artifact
+kaito-project@kaito@workspace-e2e.yaml,MutableRunnerVersion,absent,no runs-on
+kata-containers@kata-containers@actionlint.yaml,MissingConcurrencyPR,absent,has concurrency
+kata-containers@kata-containers@actionlint.yaml,MissingConcurrencyBranch,absent,not on: push
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingConcurrencyPR,absent,has concurrency
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MissingConcurrencyBranch,absent,no on: push
+komikku-app@komikku@delete_merged_branch.yml,MultiCommandStep,absent,line 15
+kumahq@kuma@check.yaml,MultiCommandStep,absent,line 11
+lede-project@source@kernel.yml,MissingPermExternalActions,absent,no uses:
+lede-project@source@kernel.yml,UnpinnedDependencies,absent,does not have installation command
+libp2p@go-libp2p-pubsub@go-check.yml,UnpinnedActionVersion,absent,local action
+labring@sealos@controllers.yml,MissingConcurrencyGlobal,absent,"is not ""release"" or ""scheduled"""
+astropy@photutils@publish.yml,MissingForkGuardSchedule,absent,has if
+labring@sealos@services.yml,MissingPathFilters,absent,uses paths: or paths-ignore:
+labring@sealos@controllers.yml,SuboptimalCacheUsage,absent,does not have actions/setup-node|python|java
+labring@sealos@controllers.yml,SingleOSExecution,absent,Not a test workflow
+labring@sealos@controllers.yml,UnpinnedDependencies,absent,No installation command
+labring@sealos@services.yml,MissingPermExternalActions,absent,uses permissions
+labring@sealos@services.yml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+labring@sealos@services.yml,MissingUploadCondition,absent,not upload-artifact
+labring@sealos@services.yml,MutableRunnerVersion,absent,no runs-on
+labring@sealos@services.yml,MultiCommandStep,absent,no run
+labring@sealos@services.yml,SingleLangVersionCI,absent,No actions/setup-node|python|java|dotnet
+pytorch@torchrec@unittest_ci.yml,MissingPermExternalActions,absent,has permissions
+datadog@integrations-core@pr.yml,MissingTokenPermissions,absent,Does not have secrets.GITHUB_TOKEN
+datadog@integrations-core@pr.yml,MissingConcurrencyGlobal,absent,"is not ""release"" or ""scheduled"""
+datadog@integrations-core@pr.yml,MutableRunnerVersion,absent,without runs-on
+datadog@integrations-core@pr.yml,MutableRunnerVersion,absent,without runs-on
+likec4@likec4@push.yaml,MissingConcurrencyPR,absent,has concurrency
+likec4@likec4@push.yaml,MissingConcurrencyBranch,absent,uses concurrency
+ballerina-platform@module-ballerina-http@pull-request.yml,UnsafeDeployOnFork,absent,.
+facebookincubator@velox@linux-build.yml,MissingPermExternalActions,absent,.
+facebookincubator@velox@linux-build.yml,MissingTokenPermissions,absent,.
+lede-project@source@kernel.yml,MissingForkGuardSchedule,absent,Not on: schedule
+lede-project@source@kernel.yml,MissingUploadCondition,absent,Not an upload artifact workflow
+lede-project@source@kernel.yml,MissingConcurrencyGlobal,absent,"uses concurrency and is not ""release"" or ""scheduled"""
+lede-project@source@kernel.yml,MutableRunnerVersion,absent,has runs-on
+lede-project@source@kernel.yml,MultiCommandStep,absent,no run:
+lede-project@source@kernel.yml,SingleOSExecution,absent,no runs-on
+lede-project@source@kernel.yml,UnpinnedDependencies,absent,does not have installation command
+lede-project@source@kernel.yml,SingleLangVersionCI,absent,No actions/setup-node|python|java|dotnet
+lede-project@source@packages.yml,MissingForkGuardSchedule,absent,not on: schedule
+lede-project@source@packages.yml,UnsafeArtifactUploadFork,absent,not a workflow of upload artifact
+lede-project@source@packages.yml,MissingConcurrencyGlobal,absent,"uses concurrency and is not ""release"" or ""scheduled"""
+lede-project@source@packages.yml,MutableRunnerVersion,absent,no runs-on
+lede-project@source@packages.yml,SuboptimalCacheUsage,absent,does not have actions/setup-node|python|java
+lede-project@source@kernel.yml,MissingPermExternalActions,absent,has permissions
+TraceMachina@nativelink@sanitizers.yaml,SuboptimalCacheUsage,absent,applies correctly
+facebookincubator@velox@linux-build.yml,MissingConcurrencyPR,absent,l49
+facebookincubator@velox@linux-build.yml,MissingConcurrencyBranch,absent,.
+facebookincubator@velox@linux-build.yml,UnsafeArtifactUploadFork,absent,.
+facebookincubator@velox@linux-build.yml,MultiCommandStep,absent,.
+facebookincubator@velox@linux-build.yml,SingleLangVersionCI,absent,.
+curl@curl@fuzz.yml,MissingPathFilters,absent,Has paths and paths ignore
+curl@curl@fuzz.yml,MissingConcurrencyGlobal,absent,.
+curl@curl@fuzz.yml,MultiCommandStep,absent,.
+curl@curl@fuzz.yml,SingleOSExecution,absent,.
+daos-stack@daos@bash_unit_testing.yml,MissingPermExternalActions,absent,l14 - I remember that this empty key counts as a type of permission
+daos-stack@daos@bash_unit_testing.yml,MissingTokenPermissions,absent,.
+daos-stack@daos@bash_unit_testing.yml,MissingForkGuardPR,absent,.
+daos-stack@daos@bash_unit_testing.yml,MissingConcurrencyPR,absent,.
+daos-stack@daos@bash_unit_testing.yml,MissingConcurrencyBranch,absent,.
+daos-stack@daos@bash_unit_testing.yml,MissingForkGuardSchedule,absent,.
+daos-stack@daos@bash_unit_testing.yml,MissingUploadCondition,absent,.
+daos-stack@daos@bash_unit_testing.yml,MissingConcurrencyGlobal,absent,.
+daos-stack@daos@bash_unit_testing.yml,MutableRunnerVersion,absent,selfhosted and light if I'm not mistaken does not consider as actually mutable
+daos-stack@daos@bash_unit_testing.yml,MultiCommandStep,absent,.
+daos-stack@daos@bash_unit_testing.yml,UnpinnedDependencies,absent,.
+facebook@lexical@tests-extended.yml,UnpinnedActionVersion,absent,.
+facebook@lexical@tests-extended.yml,MissingUploadCondition,absent,.
+facebook@lexical@tests-extended.yml,MissingConcurrencyGlobal,absent,.
+facebook@lexical@tests-extended.yml,UnpinnedDependencies,absent,.
+daos-stack@daos@unit-testing.yml,MissingConcurrencyPR,absent,.
+daos-stack@daos@unit-testing.yml,MissingConcurrencyBranch,absent,.
+daos-stack@daos@unit-testing.yml,UnsafeArtifactUploadFork,absent,.
+daos-stack@daos@unit-testing.yml,MissingUploadCondition,absent,.
+daos-stack@daos@unit-testing.yml,SuboptimalCacheUsage,absent,.
+daos-stack@daos@unit-testing.yml,MultiCommandStep,absent,.
+daos-stack@daos@unit-testing.yml,UnpinnedDependencies,absent,.
+daos-stack@daos@unit-testing.yml,SingleLangVersionCI,absent,.
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingPermExternalActions,absent,.
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingPathFilters,absent,I don't consider it as CI
+ddterm@gnome-shell-extension-ddterm@pr.yml,SuboptimalCacheUsage,absent,.
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingTokenPermissions,absent,.
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingForkGuardPR,absent,.
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingConcurrencyGlobal,absent,.
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,SingleOSExecution,absent,.
+getporter@porter@porter-canary.yml,MissingUploadCondition,absent,.
+getporter@porter@porter-canary.yml,MutableRunnerVersion,absent,.
+getporter@porter@porter-canary.yml,SingleOSExecution,absent,.
+datadog@integrations-core@labeler.yml,MissingPathFilters,absent,Doesn't appear to be a CI workflow
+etcd-io@jetcd@build-pr.yml,MissingUploadCondition,absent,.
+etcd-io@jetcd@build-pr.yml,MutableRunnerVersion,absent,.
+etcd-io@jetcd@build-pr.yml,SingleOSExecution,absent,.
+datadog@integrations-core@labeler.yml,UnpinnedActionVersion,absent,.
+datadog@integrations-core@labeler.yml,MissingConcurrencyBranch,absent,.
+datadog@integrations-core@labeler.yml,MissingUploadCondition,absent,.
+datadog@integrations-core@labeler.yml,MutableRunnerVersion,absent,.
+datadog@integrations-core@labeler.yml,MultiCommandStep,absent,.
+datadog@integrations-core@labeler.yml,SingleOSExecution,absent,.
+datadog@integrations-core@pr.yml,MissingConcurrencyPR,absent,.
+dart-lang@native@health.yaml,MissingPermExternalActions,absent,has permissions
+datadog@integrations-extras@pr.yml,MissingConcurrencyBranch,absent,not on: push
+facebookincubator@velox@linux-build.yml,MissingPathFilters,absent,has paths: or paths-ignore:
+facebookincubator@velox@linux-build.yml,MutableRunnerVersion,absent,without runs-on:
+facebookincubator@velox@linux-build.yml,SuboptimalCacheUsage,absent,without actions/setup-node|python|java
+facebookincubator@velox@linux-build.yml,SingleOSExecution,absent,is not a test
+facebookincubator@velox@linux-build.yml,UnpinnedDependencies,absent,does not have installation command
+curl@curl@fuzz.yml,MissingConcurrencyPR,absent,has concurrency
+curl@curl@fuzz.yml,UnsafeArtifactUploadFork,absent,not applicable
+curl@curl@fuzz.yml,SuboptimalCacheUsage,absent,not applicable
+curl@curl@fuzz.yml,UnpinnedDependencies,absent,without installation command
+daos-stack@daos@bash_unit_testing.yml,UnsafeArtifactUploadFork,absent,not applicable
+balena-io@open-balena@flowzone.yml,SuboptimalCacheUsage,absent,not applicable
+facebook@lexical@tests-extended.yml,MissingConcurrencyPR,absent,has concurrency
+facebook@lexical@tests-extended.yml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+facebook@lexical@tests-extended.yml,MissingConcurrencyBranch,absent,not applicable
+facebook@lexical@tests-extended.yml,MissingForkGuardSchedule,absent,not applicable
+daos-stack@daos@unit-testing.yml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+daos-stack@daos@unit-testing.yml,MissingForkGuardSchedule,absent,not on: schedule
+daos-stack@daos@unit-testing.yml,MutableRunnerVersion,absent,not applicable
+TraceMachina@nativelink@vale.yaml,MutableRunnerVersion,absent,Determined version
+TraceMachina@nativelink@vale.yaml,UnpinnedDependencies,absent,without installation command
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingConcurrencyBranch,absent,not applicable
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingUploadCondition,absent,not applicable
+ddterm@gnome-shell-extension-ddterm@pr.yml,MissingConcurrencyGlobal,absent,not applicable
+ddterm@gnome-shell-extension-ddterm@pr.yml,MultiCommandStep,absent,not applicable
+ddterm@gnome-shell-extension-ddterm@pr.yml,SingleOSExecution,absent,not applicable
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingPermExternalActions,absent,has permissions
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingConcurrencyPR,absent,not applicable
+labring@sealos@controllers.yml,MissingPathFilters,absent,Handled correctly
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,MissingForkGuardSchedule,absent,not applicable
+fabulously-optimized@fabulously-optimized@git-repo-sync.yml,UnsafeArtifactUploadFork,absent,not applicable
+harisekhon@devops-bash-tools@alpine.yaml,MissingPathFilters,absent,uses paths: or paths-ignore:
+labring@sealos@controllers.yml,MissingTokenPermissions,absent,does not use secrets.GITHUB_TOKEN
+labring@sealos@controllers.yml,MissingUploadCondition,absent,not applicable
+labring@sealos@controllers.yml,MutableRunnerVersion,absent,not applicable
+labring@sealos@controllers.yml,MultiCommandStep,absent,not applicable
+labring@sealos@controllers.yml,SingleLangVersionCI,absent,not applicable
+labring@sealos@services.yml,MissingConcurrencyPR,absent,has concurrency
+harisekhon@devops-bash-tools@alpine.yaml,MissingPermExternalActions,absent,has permissions
+labring@sealos@services.yml,MissingConcurrencyBranch,absent,has concurrency
+labring@sealos@services.yml,MissingForkGuardSchedule,absent,not applicable
+labring@sealos@services.yml,UnsafeArtifactUploadFork,absent,not applicable
+labring@sealos@services.yml,MissingConcurrencyGlobal,absent,not applicable
+labring@sealos@services.yml,SuboptimalCacheUsage,absent,not applicable
+labring@sealos@services.yml,SingleOSExecution,absent,not applicable
+labring@sealos@services.yml,UnpinnedDependencies,absent,not applicable
+harisekhon@devops-bash-tools@alpine.yaml,MissingTokenPermissions,absent,not applicable
+harisekhon@devops-bash-tools@alpine.yaml,MissingForkGuardPR,absent,not applicable
+harisekhon@devops-bash-tools@alpine.yaml,MissingUploadCondition,absent,not applicable
+harisekhon@devops-bash-tools@alpine.yaml,MultiCommandStep,absent,not applicable
+harisekhon@devops-bash-tools@alpine.yaml,SingleOSExecution,absent,Not tests
+harisekhon@devops-bash-tools@alpine.yaml,SingleLangVersionCI,absent,not applicable
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingConcurrencyPR,absent,not applicable
+harisekhon@devops-bash-tools@debian_10.yaml,MissingPathFilters,absent,uses paths or paths-ignore
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingForkGuardSchedule,absent,not applicable
+harisekhon@devops-bash-tools@alpine_3.yaml,UnsafeArtifactUploadFork,absent,not applicable
+harisekhon@devops-bash-tools@alpine_3.yaml,MutableRunnerVersion,absent,not applicable
+harisekhon@devops-bash-tools@alpine_3.yaml,SuboptimalCacheUsage,absent,not applicable
+harisekhon@devops-bash-tools@debian.yaml,MissingPermExternalActions,absent,has permissions
+harisekhon@devops-bash-tools@debian.yaml,MissingConcurrencyBranch,absent,has concurrency
+harisekhon@devops-bash-tools@debian.yaml,MissingConcurrencyGlobal,absent,has concurrency
+harisekhon@devops-bash-tools@debian.yaml,UnpinnedDependencies,absent,not applicable
+harisekhon@devops-bash-tools@debian_10.yaml,MissingConcurrencyPR,absent,not applicable
+harisekhon@devops-bash-tools@debian_10.yaml,MissingTokenPermissions,absent,not applicable
+harisekhon@devops-bash-tools@debian_10.yaml,MissingForkGuardPR,absent,not applicable
+harisekhon@devops-bash-tools@debian_10.yaml,MissingForkGuardSchedule,absent,has if
+harisekhon@devops-bash-tools@debian_10.yaml,UnsafeArtifactUploadFork,absent,not applicable
+harisekhon@devops-bash-tools@debian_10.yaml,MissingUploadCondition,absent,not applicable
+harisekhon@devops-bash-tools@debian_10.yaml,MultiCommandStep,absent,not applicable
+harisekhon@devops-bash-tools@debian_10.yaml,SingleOSExecution,absent,not applicable
+harisekhon@devops-bash-tools@debian_10.yaml,SingleLangVersionCI,absent,not applicable
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingJobTimeout,absent,not applicable
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingPathFilters,absent,uses paths: or paths-ignore
+harisekhon@devops-bash-tools@fedora.yaml,MutableRunnerVersion,absent,not applicable
+harisekhon@devops-bash-tools@fedora.yaml,SuboptimalCacheUsage,absent,not applicable
+datadog@integrations-core@pr.yml,UnsafeArtifactUploadFork,absent,.
+datadog@integrations-core@pr.yml,MissingUploadCondition,absent,.
+datadog@integrations-core@pr.yml,SuboptimalCacheUsage,absent,does not use cache
+datadog@integrations-core@pr.yml,UnpinnedDependencies,absent,.
+datadog@integrations-core@pr.yml,SingleLangVersionCI,absent,.
+getporter@porter@porter-canary.yml,MissingPermExternalActions,absent,internal
+etcd-io@jetcd@build-pr.yml,MissingPermExternalActions,absent,.
+datadog@integrations-core@labeler.yml,MissingPermExternalActions,absent,.
+datadog@integrations-core@pr.yml,MissingPermExternalActions,absent,internal
+causify-ai@helpers@linter.yml,UnpinnedActionVersion,absent,I don't consider without the @
+dart-lang@native@health.yaml,MissingPathFilters,absent,Has paths
+causify-ai@helpers@linter.yml,MissingTokenPermissions,absent,doesn't reference github_token
+causify-ai@helpers@linter.yml,MissingConcurrencyBranch,absent,not a push
+causify-ai@helpers@linter.yml,MissingForkGuardSchedule,absent,not scheduled
+causify-ai@helpers@linter.yml,UnsafeArtifactUploadFork,absent,no upload
+causify-ai@helpers@linter.yml,MissingConcurrencyGlobal,absent,not a release or scheduled
+causify-ai@helpers@linter.yml,MutableRunnerVersion,absent,no runs-on
+causify-ai@helpers@linter.yml,MultiCommandStep,absent,no run
+causify-ai@helpers@linter.yml,SingleLangVersionCI,absent,does not use anything of the kind
+facebook@lexical@tests.yml,MissingUploadCondition,absent,no upload
+facebook@lexical@tests.yml,SingleOSExecution,absent,no runs-on
+dart-lang@native@health.yaml,MissingConcurrencyBranch,absent,not a push triggered
+dart-lang@native@health.yaml,MissingTokenPermissions,absent,doesn't use secrets
+dart-lang@native@health.yaml,UnsafeArtifactUploadFork,absent,no upload
+dart-lang@native@health.yaml,MissingUploadCondition,absent,no upload
+dart-lang@native@health.yaml,SuboptimalCacheUsage,absent,doesn't use cache
+dart-lang@native@health.yaml,UnpinnedDependencies,absent,no PM
+dart-lang@native@health.yaml,SingleLangVersionCI,absent,no lang
+causify-ai@helpers@linter.yml,MissingPermExternalActions,absent,internal
+datadog@integrations-extras@pr.yml,MissingPathFilters,absent,Not CI
+dbt-labs@metricflow@changelog-existence.yml,MissingUploadCondition,absent,no upload
+dbt-labs@metricflow@changelog-existence.yml,SingleOSExecution,absent,not a test
+datadog@integrations-extras@pr.yml,UnpinnedActionVersion,absent,everything is pinned
+datadog@integrations-extras@pr.yml,UnsafeArtifactUploadFork,absent,no upload
+datadog@integrations-extras@pr.yml,MissingUploadCondition,absent,no upload
+datadog@integrations-extras@pr.yml,MissingConcurrencyGlobal,absent,not scheduled or release
+datadog@integrations-extras@pr.yml,SuboptimalCacheUsage,absent,doesn't use actions/cache
+datadog@integrations-extras@pr.yml,MultiCommandStep,absent,no run
+datadog@integrations-extras@pr.yml,UnpinnedDependencies,absent,doesn't use PM
+bufbuild@buf@pr-title.yaml,MissingPathFilters,absent,Not CI
+bufbuild@buf@pr-title.yaml,MissingConcurrencyBranch,absent,not a push
+bufbuild@buf@pr-title.yaml,UnsafeArtifactUploadFork,absent,no upload
+bufbuild@buf@pr-title.yaml,MissingConcurrencyGlobal,absent,not scheduled or release
+bufbuild@buf@pr-title.yaml,MultiCommandStep,absent,is not a run
+bufbuild@buf@pr-title.yaml,SingleOSExecution,absent,does not use runs-on
+bufbuild@buf@pr-title.yaml,UnpinnedDependencies,absent,doesn't use PM
+bufbuild@buf@pr-title.yaml,SingleLangVersionCI,absent,doesn't use lang
+dotansimha@graphql-code-generator@pr.yml,MissingTokenPermissions,absent,has permissions
+cilium@cilium@build-images-base-renovate.yaml,MissingPathFilters,absent,Has paths
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingPermExternalActions,absent,Handled correctly
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingConcurrencyBranch,absent,Handled correctly
+harisekhon@devops-bash-tools@ubuntu.yaml,MissingConcurrencyGlobal,absent,Handled correctly
+harisekhon@devops-bash-tools@ubuntu.yaml,UnpinnedDependencies,absent,Not related
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingConcurrencyPR,absent,Not related
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingTokenPermissions,absent,Not related
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MissingForkGuardPR,absent,Not related
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,UnsafeArtifactUploadFork,absent,Not related
+harisekhon@devops-bash-tools@ubuntu_20.04.yaml,MultiCommandStep,absent,Not related
+harisekhon@devops-python-tools@alpine.yaml,MissingPathFilters,absent,Handled correctly
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MutableRunnerVersion,absent,Not related
+harisekhon@devops-bash-tools@ubuntu_github.yaml,SuboptimalCacheUsage,absent,Not related
+harisekhon@devops-python-tools@alpine_3.yaml,MissingConcurrencyPR,absent,Not related
+harisekhon@devops-python-tools@alpine.yaml,MissingTokenPermissions,absent,Not related
+harisekhon@devops-python-tools@alpine.yaml,MissingForkGuardPR,absent,Not related
+kata-containers@kata-containers@actionlint.yaml,MissingForkGuardSchedule,absent,Not related
+kata-containers@kata-containers@actionlint.yaml,SuboptimalCacheUsage,absent,Not related
+kata-containers@kata-containers@actionlint.yaml,MultiCommandStep,absent,Not related
+kata-containers@kata-containers@actionlint.yaml,UnpinnedDependencies,absent,Not related
+likec4@likec4@push.yaml,MissingTokenPermissions,absent,Handled correctly
+cilium@cilium@build-images-base-renovate.yaml,SuboptimalCacheUsage,absent,does not use actions/cache
+cilium@cilium@build-images-base-renovate.yaml,MultiCommandStep,absent,no run
+cilium@cilium@build-images-base-renovate.yaml,SingleOSExecution,absent,not a test
+cilium@cilium@build-images-base-renovate.yaml,UnpinnedDependencies,absent,doesn't use PM
+causify-ai@helpers@linter.yml,MissingJobTimeout,absent,Not related
+causify-ai@helpers@linter.yml,SuboptimalCacheUsage,absent,Not related
+facebook@lexical@tests.yml,MissingForkGuardPR,absent,Handled correctly
+facebook@lexical@tests.yml,MissingConcurrencyBranch,absent,Handled correctly
+facebook@lexical@tests.yml,MissingForkGuardSchedule,absent,Not related
+facebook@lexical@tests.yml,MissingConcurrencyGlobal,absent,Not related
+harisekhon@devops-python-tools@alpine.yaml,UnsafeArtifactUploadFork,absent,Not related
+harisekhon@devops-python-tools@alpine.yaml,MultiCommandStep,absent,Not related
+harisekhon@devops-python-tools@alpine.yaml,SingleOSExecution,absent,Not related
+harisekhon@devops-python-tools@alpine.yaml,SingleLangVersionCI,absent,Not related
+harisekhon@devops-python-tools@debian_10.yaml,MissingPathFilters,absent,Handled correctly
+harisekhon@devops-python-tools@alpine_3.yaml,MutableRunnerVersion,absent,Not related
+harisekhon@devops-python-tools@alpine_3.yaml,SuboptimalCacheUsage,absent,Not related
+harisekhon@devops-python-tools@debian.yaml,MissingPermExternalActions,absent,Not related
+harisekhon@devops-python-tools@debian.yaml,MissingConcurrencyBranch,absent,Handled correctly
+harisekhon@devops-python-tools@debian.yaml,MissingForkGuardSchedule,absent,Handled correctly
+harisekhon@devops-python-tools@debian.yaml,MissingConcurrencyGlobal,absent,Handled correctly
+harisekhon@devops-python-tools@debian.yaml,UnpinnedDependencies,absent,Not related
+harisekhon@devops-python-tools@fedora.yaml,MissingConcurrencyPR,absent,Not related
+ethui@ethui@pr-lint.yml,MissingForkGuardPR,absent,No necessary treatment
+harisekhon@devops-python-tools@debian_10.yaml,MissingForkGuardPR,absent,Not related
+harisekhon@devops-python-tools@debian_10.yaml,UnsafeArtifactUploadFork,absent,Not related
+harisekhon@devops-python-tools@debian_10.yaml,MultiCommandStep,absent,Not related
+harisekhon@devops-python-tools@debian_10.yaml,SingleOSExecution,absent,Not related
+harisekhon@devops-python-tools@debian_10.yaml,SingleLangVersionCI,absent,Not related
+harisekhon@devops-python-tools@python3.8.yaml,MissingPathFilters,absent,Handled correctly
+harisekhon@devops-python-tools@fedora.yaml,MutableRunnerVersion,absent,Not related
+harisekhon@devops-python-tools@fedora.yaml,SuboptimalCacheUsage,absent,Handled correctly
+harisekhon@devops-python-tools@python3.7.yaml,MissingPermExternalActions,absent,Handled correctly
+harisekhon@devops-python-tools@python3.7.yaml,MissingConcurrencyBranch,absent,Handled correctly
+harisekhon@devops-python-tools@python3.7.yaml,MissingConcurrencyGlobal,absent,Handled correctly
+harisekhon@devops-python-tools@python3.7.yaml,UnpinnedDependencies,absent,Not related
+harisekhon@devops-python-tools@ubuntu.yaml,MissingConcurrencyPR,absent,Not related
+harisekhon@devops-python-tools@python3.8.yaml,MissingForkGuardPR,absent,Handled correctly
+harisekhon@devops-python-tools@python3.8.yaml,UnsafeArtifactUploadFork,absent,Not related
+harisekhon@devops-python-tools@python3.8.yaml,MultiCommandStep,absent,Not related
+harisekhon@devops-python-tools@python3.8.yaml,SingleLangVersionCI,absent,Not related
+harisekhon@devops-python-tools@ubuntu_github.yaml,MissingPathFilters,absent,Handled correctly
+harisekhon@devops-python-tools@ubuntu.yaml,MutableRunnerVersion,absent,Not related
+harisekhon@devops-python-tools@ubuntu.yaml,SuboptimalCacheUsage,absent,Not related
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingPermExternalActions,absent,Not related
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingConcurrencyBranch,absent,Handled correctly
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,MissingConcurrencyGlobal,absent,Handled correctly
+harisekhon@devops-bash-tools@python3.8.yaml,MissingPermExternalActions,absent,Handled correctly
+getporter@porter@porter-canary.yml,SuboptimalCacheUsage,absent,Not related
+etcd-io@jetcd@build-pr.yml,MissingConcurrencyPR,absent,Handled correctly
+etcd-io@jetcd@build-pr.yml,SuboptimalCacheUsage,absent,Not related
+etcd-io@jetcd@build-pr.yml,SingleLangVersionCI,absent,Handled correctly
+harisekhon@devops-bash-tools@semgrep-cloud.yaml,MissingPermExternalActions,absent,Handled correctly
+datadog@integrations-core@labeler.yml,UnsafeArtifactUploadFork,absent,Not related
+harisekhon@devops-bash-tools@validate.yaml,MissingPermExternalActions,absent,Handled correctly
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MutableRunnerVersion,absent,Handled correctly
+kata-containers@kata-containers@static-checks-self-hosted.yaml,MultiCommandStep,absent,Not related
+likec4@likec4@push.yaml,UnsafeArtifactUploadFork,absent,Not related
+facebook@lexical@tests.yml,SingleLangVersionCI,absent,Not related
+kaito-project@kaito@workspace-e2e.yaml,MissingConcurrencyPR,absent,Handled correctly
+kaito-project@kaito@workspace-e2e.yaml,MissingPathFilters,absent,Handled correctly
+datadog@integrations-extras@pr.yml,MissingConcurrencyPR,absent,Handled correctly
+agama-project@agama@obs-staging-rust.yml,MissingPermExternalActions,absent,Handled correctly
+dbt-labs@metricflow@changelog-existence.yml,SingleLangVersionCI,absent,Not related
+lede-project@source@packages.yml,MissingConcurrencyPR,absent,Handled correctly
+lede-project@source@packages.yml,MissingPathFilters,absent,Handled correctly
+edgelesssys@contrast@e2e_on_pull_request.yml,MissingPermExternalActions,absent,permissions is at the end of the job
+AlexProgrammerDE@SoulFire@dependency-submission.yml,UnpinnedActionVersion,absent,Handled correctly
+dotansimha@graphql-code-generator@pr.yml,MissingConcurrencyPR,absent,Handled correctly
+eclipse-tycho@tycho@verify-platform.yml,SingleLangVersionCI,absent,Handled correctly
+dotansimha@graphql-code-generator@pr.yml,UnpinnedActionVersion,absent,Handled correctly
+harisekhon@devops-bash-tools@fedora.yaml,MissingConcurrencyPR,absent,does not have on: pull_request
+harisekhon@devops-python-tools@debian.yaml,MissingConcurrencyPR,absent,not on: pull_request
+mozilla@neqo@fuzz-bench.yml,MultiCommandStep,absent,line 34
+nextcloud@tables@lint-php-cs.yml,MultiCommandStep,absent,line 46
+open-telemetry@opentelemetry-collector-releases@release-k8s.yaml,MissingConcurrencyGlobal,absent,not scheduled or release workflow
+lizardbyte@sunshine@_codeql.yml,MissingForkGuardPR,absent,performs verification with if: ${{ github.repository != 'LizardByte/.github' }}
+lizardbyte@sunshine@_codeql.yml,MissingConcurrencyPR,absent,uses concurrency:
+lizardbyte@sunshine@_codeql.yml,MissingConcurrencyBranch,absent,uses concurrency
+lizardbyte@sunshine@_codeql.yml,MutableRunnerVersion,absent,no runs-on
+lizardbyte@sunshine@_codeql.yml,UnpinnedDependencies,absent,does not have installation
+daos-stack@daos@unit-testing.yml,UnpinnedActionVersion,absent,uses hash
+lizardbyte@sunshine@_codeql.yml,MissingForkGuardPR,absent,"has if, but possibly specific to run on forks"
+lizardbyte@sunshine@_codeql.yml,MissingConcurrencyPR,absent,has concurrency
+lizardbyte@sunshine@_codeql.yml,MissingConcurrencyBranch,absent,has concurrency
+lizardbyte@sunshine@_codeql.yml,MutableRunnerVersion,absent,has concurrency:
+lizardbyte@sunshine@_codeql.yml,UnpinnedDependencies,absent,not applicable
+daos-stack@daos@unit-testing.yml,MissingForkGuardPR,absent,has ` if: github.repository == 'daos-stack/daos'`
+harisekhon@devops-bash-tools@fedora.yaml,MissingPathFilters,absent,has paths: or paths-ignore:
+harisekhon@devops-bash-tools@fedora.yaml,MissingConcurrencyGlobal,absent,has concurrency
+harisekhon@devops-bash-tools@ubuntu_github.yaml,MissingForkGuardPR,absent,has if
+harisekhon@devops-bash-tools@ubuntu_github.yaml,SingleLangVersionCI,absent,not applicable
+harisekhon@devops-python-tools@alpine.yaml,MissingConcurrencyBranch,absent,has if
+harisekhon@devops-python-tools@alpine_3.yaml,MissingForkGuardPR,absent,not pull_request or issues
+harisekhon@devops-python-tools@ubuntu.yaml,MissingPathFilters,absent,uses paths: or paths-ignore:
+harisekhon@devops-python-tools@python3.7.yaml,MissingUploadCondition,absent,not applicable
+harisekhon@devops-python-tools@ubuntu.yaml,SingleLangVersionCI,absent,not applicable
+harisekhon@devops-python-tools@ubuntu_20.04.yaml,SingleOSExecution,absent,not applicable
+datadog@integrations-extras@pr.yml,SingleOSExecution,absent,not applicable
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,MissingPathFilters,absent,uses paths: or paths-ignore:
+astarte-platform@astarte@astarte-housekeeping-workflow.yaml,SingleOSExecution,absent,not applicable
+astarte-platform@astarte@astarte-realm-management-workflow.yaml,SingleLangVersionCI,absent,not applicable
+micrometer-metrics@micrometer@dependabot-automerge.yml,UnpinnedActionVersion,absent,uses hash
+micrometer-metrics@micrometer@dependabot-automerge.yml,UnpinnedActionVersion,absent,uses hash
+curl@curl@fuzz.yml,SingleLangVersionCI,absent,not applicable
+ros-controls@ros2_controllers@rolling-debian-build.yml,MissingPathFilters,absent,"Has ""pahts""."
+curl@curl@fuzz.yml,SingleLangVersionCI,absent,No setup action
+pytorch@torchrec@unittest_ci_cpu.yml,MissingPermExternalActions,absent,Line 79
+pytorch@torchrec@unittest_ci_cpu.yml,MissingPathFilters,absent,Line 12
+TraceMachina@nativelink@native-cargo.yaml,MissingPermExternalActions,absent,Line 16
+ros-controls@ros2_controllers@rolling-debian-build.yml,MissingPathFilters,absent,triggers already have path filtering
+pytorch@torchrec@unittest_ci.yml,MissingConcurrencyGlobal,absent,Not scheduled or release
+daos-stack@daos@bash_unit_testing.yml,SingleLangVersionCI,absent,No setup actions
+pytorch@torchrec@unittest_ci_cpu.yml,MissingPermExternalActions,absent,has permissions
+pytorch@torchrec@unittest_ci_cpu.yml,MissingPathFilters,absent,has paths: or paths-ignore:
+pytorch@torchrec@unittest_ci.yml,MissingConcurrencyGlobal,absent,"is not ""release"" or ""scheduled"""
+daos-stack@daos@bash_unit_testing.yml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+ros-controls@ros2_control@rolling-abi-compatibility.yml,SingleLangVersionCI,absent,does not have actions/setup-node|python|java|dotnet
+pennylaneai@pennylane-lightning@code_security_scan.yml,SingleOSExecution,absent,not a workflow of test
+pennylaneai@pennylane-lightning@code_security_scan.yml,SingleOSExecution,absent,is not a test
+ros-controls@ros2_control@rolling-abi-compatibility.yml,SingleLangVersionCI,absent,No setup action
+ipfs@rainbow@go-check.yml,UnpinnedActionVersion,absent,local action
+harisekhon@devops-bash-tools@ubuntu.yaml,SingleOSExecution,absent,not applicable
+harisekhon@devops-python-tools@fedora.yaml,MissingPathFilters,absent,"has paths: or paths-ignore:, but also is not relevant workflow"
+mojohaus@flatten-maven-plugin@maven.yml,UnpinnedActionVersion,absent,local action
+harisekhon@devops-python-tools@python3.7.yaml,SingleOSExecution,absent,not applicable
+sws2apps@organized-app@pr-ci.yml,SingleLangVersionCI,absent,uses paths: or paths-ignore:
+harisekhon@devops-python-tools@ubuntu.yaml,MissingForkGuardPR,absent,not applicable
+harisekhon@devops-bash-tools@ubuntu.yaml,SingleOSExecution,absent,is not a test
+harisekhon@devops-python-tools@python3.7.yaml,SingleOSExecution,absent,not test
+getporter@porter@porter-canary.yml,MissingForkGuardPR,absent,not applicable
+oxc-project@oxc@release_napi_minify.yml,MissingPathFilters,absent,uses paths: or paths-ignore:; but it's also not a relevant workflow
+oxc-project@oxc@release_napi_transform.yml,MissingForkGuardPR,absent,not applicable
+oxc-project@oxc@release_napi_transform.yml,MissingForkGuardSchedule,absent,not applicable
+prefix-dev@rattler-build@python-release.yml,SingleOSExecution,absent,not test
+mozilla@experimenter@glean-probe-scraper.yml,MissingJobTimeout,absent,no steps
+prefix-dev@rattler-build@python-release.yml,SingleOSExecution,absent,Not teste
+openwrt@openwrt@kernel.yml,MissingPathFilters,absent,uses paths: or paths-ignore:
+openwrt@openwrt@formal.yml,MissingForkGuardSchedule,absent,not applicable
+openwrt@openwrt@formal.yml,MissingForkGuardSchedule,absent,Not scheduled
+oxc-project@oxc@release_napi_transform.yml,MissingForkGuardSchedule,absent,Not scheduled
+harisekhon@devops-python-tools@fedora.yaml,MissingPathFilters,absent,line 21
+oxc-project@oxc@release_napi_minify.yml,MissingPathFilters,absent,Not CI
+openwrt@openwrt@kernel.yml,MissingPathFilters,absent,Line 13 and 5
+harisekhon@devops-python-tools@ubuntu.yaml,MissingForkGuardPR,absent,Not PR or issue
+getporter@porter@porter-canary.yml,MissingForkGuardPR,absent,Not PR or issue
+oxc-project@oxc@release_napi_transform.yml,MissingForkGuardPR,absent,Not PR or Issue
+mullvad@mullvadvpn-app@osv-scanner-pr.yml,UnpinnedActionVersion,absent,Has pinned hash
+zio@zio-http@clean.yml,MultiCommandStep,absent,line 22
+nginx@nginx-gateway-fabric@mend.yml,MissingForkGuardPR,absent,Line 34
+mozilla@neqo@rustfmt.yml,UnpinnedActionVersion,absent,Pinned hash
+spring-projects@spring-ws@ci.yml,MultiCommandStep,absent,line 34
+tyktechnologies@tyk@lint.yml,UnpinnedActionVersion,absent,Pinned hashes
+mullvad@mullvadvpn-app@osv-scanner-pr.yml,UnpinnedActionVersion,absent,uses hash
+nginx@nginx-gateway-fabric@mend.yml,MissingForkGuardPR,absent,checks if it is a fork
+mozilla@neqo@rustfmt.yml,UnpinnedActionVersion,absent,uses hash
+tyktechnologies@tyk@lint.yml,UnpinnedActionVersion,absent,uses hash
+microsoft@ebpf-for-windows@check-pr-local.yml,MissingJobTimeout,absent,no steps
+mozilla@neqo@actionlint.yml,UnpinnedActionVersion,absent,uses hash
+nginx@agent@mend.yml,UnpinnedActionVersion,absent,uses hash
+nginx@agent@mend.yml,MissingForkGuardPR,absent,checks if it's a fork
+mozilla@neqo@actionlint.yml,UnpinnedActionVersion,absent,Pinned version
+nginx@agent@mend.yml,MissingForkGuardPR,absent,Line 30
+oxc-project@oxc@pr.yml,MultiCommandStep,absent,line 20
+nginx@agent@mend.yml,UnpinnedActionVersion,absent,Pinned version
+rolldown@rolldown@autofix.yml,MultiCommandStep,absent,line 37
+datadog@integrations-core@labeler.yml,MissingForkGuardPR,absent,has if
+datadog@integrations-core@labeler.yml,MissingForkGuardPR,absent,Line 14
+pytorch@torchrec@unittest_ci_cpu.yml,MissingJobTimeout,absent,Line 84
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingForkGuardPR,absent,has if
+sigstore@model-transparency@dependency_review.yml,UnpinnedActionVersion,absent,uses hash
+sigstore@model-transparency@dependency_review.yml,MissingForkGuardPR,absent,has if
+harisekhon@devops-bash-tools@alpine_3.yaml,MissingForkGuardPR,absent,not a PR nor issue
+sigstore@model-transparency@dependency_review.yml,UnpinnedActionVersion,absent,pinned version
+sigstore@model-transparency@dependency_review.yml,MissingForkGuardPR,absent,line 27
+oxc-project@oxc@release_napi_parser.yml,MissingForkGuardPR,absent,not a PR nor issue
+oxc-project@oxc@release_napi_parser.yml,MissingForkGuardPR,absent,has if
+oxc-project@oxc@release_napi_minify.yml,MissingForkGuardPR,absent,not a PR nor issue
+oxc-project@oxc@release_napi_minify.yml,MissingForkGuardPR,absent,has if
+mozilla@neqo@deny.yml,UnpinnedActionVersion,absent,pinned version
+mozilla@neqo@deny.yml,UnpinnedActionVersion,absent,uses hash
+ros-controls@ros2_control@rolling-abi-compatibility.yml,UnpinnedActionVersion,absent,Reusable workflow call
+pytorch@torchrec@unittest_ci.yml,MissingJobTimeout,absent,Line 134
+daos-stack@daos@bash_unit_testing.yml,UnpinnedActionVersion,absent,Pinned version
+harisekhon@devops-bash-tools@fedora.yaml,MissingForkGuardPR,absent,not a PR or issue
+harisekhon@devops-python-tools@fedora.yaml,MissingForkGuardPR,absent,not a PR or issue
+mozilla@experimenter@glean-probe-scraper.yml,MissingForkGuardPR,absent,Line 6
+nginx@nginx-gateway-fabric@mend.yml,UnpinnedActionVersion,absent,Pinned version
+mozilla@neqo@machete.yml,UnpinnedActionVersion,absent,Pinned version
+uxlfoundation@oneDAL@skywalking-eyes.yml,MissingForkGuardPR,absent,Line 36
+nodejs@nodejs.org@dependency-review.yml,UnpinnedActionVersion,absent,Pinned version
+daos-stack@daos@bash_unit_testing.yml,UnpinnedActionVersion,absent,uses hash
+harisekhon@devops-bash-tools@fedora.yaml,MissingForkGuardPR,absent,has if
+harisekhon@devops-python-tools@fedora.yaml,MissingForkGuardPR,absent,has if
+mozilla@experimenter@glean-probe-scraper.yml,MissingForkGuardPR,absent,has if
+nginx@nginx-gateway-fabric@mend.yml,UnpinnedActionVersion,absent,uses hash
+mozilla@neqo@machete.yml,UnpinnedActionVersion,absent,uses hash
+uxlfoundation@oneDAL@skywalking-eyes.yml,MissingForkGuardPR,absent,has if
+nodejs@nodejs.org@dependency-review.yml,UnpinnedActionVersion,absent,uses hash
+unjs@unplugin@publish-commit.yml,UnsafeDeployOnFork,absent,is not deploy
+open-telemetry@opentelemetry-demo@build-images.yml,MissingForkGuardPR,absent,checks if it's not a fork
+open-telemetry@opentelemetry-demo@build-images.yml,MissingForkGuardPR,absent,checks that it's not a fork
+uxlfoundation@oneDAL@skywalking-eyes.yml,UnpinnedActionVersion,absent,uses hash
+uxlfoundation@oneDAL@skywalking-eyes.yml,UnpinnedActionVersion,absent,Pinned version
+prowler-cloud@prowler@sdk-codeql.yml,MissingJobTimeout,absent,Line 40
+prowler-cloud@prowler@sdk-codeql.yml,UnpinnedActionVersion,absent,Pinned versions
+pytorch@rl@test-linux-llm.yml,MissingJobTimeout,absent,Uses external timeouts but uses
+pytorch@rl@test-linux-sota.yml,MissingJobTimeout,absent,"Line 40, uses a third-party timeout"
+pytorch@rl@test-windows-optdepts.yml,MissingJobTimeout,absent,"Line 36, uses third-party timeout"
+pytorch@rl@test-linux-habitat.yml,MissingJobTimeout,absent,"Line 38, uses third-party timeout"
+prowler-cloud@prowler@ui-codeql.yml,MissingJobTimeout,absent,Line 36
+prowler-cloud@prowler@ui-codeql.yml,UnpinnedActionVersion,absent,Pinned versions
+TraceMachina@nativelink@native-cargo.yaml,MissingJobTimeout,absent,Line 34
+TraceMachina@nativelink@native-cargo.yaml,UnpinnedActionVersion,absent,Pinned version
+prettier@prettier@dev-package-test.yml,MissingJobTimeout,absent,Line 25
+lycheeverse@lychee@auto-merge.yml,UnpinnedActionVersion,absent,Does not use actions
+cue-lang@cue@push_tip_to_trybot.yaml,UnpinnedActionVersion,absent,Does not use actions
+reubeno@brush@cd.yaml,MissingJobTimeout,absent,Has timeout
+pytorch@tensordict@test-rl-gpu.yml,MissingJobTimeout,absent,"Line 39, third-party timeout"
+nginx@kubernetes-ingress@mend.yml,UnpinnedActionVersion,absent,Pinned version
+dani-garcia@vaultwarden@trivy.yml,MissingJobTimeout,absent,Line 32
+vectordotdev@vector@master_merge_queue.yml,MissingJobTimeout,absent,has timeout-minutes:
+prowler-cloud@prowler@sdk-codeql.yml,MissingJobTimeout,absent,has timeout-minutes:
+prowler-cloud@prowler@sdk-codeql.yml,UnpinnedActionVersion,absent,uses hash
+pytorch@rl@test-linux-llm.yml,MissingJobTimeout,absent,has timeout
+pytorch@rl@test-linux-sota.yml,MissingJobTimeout,absent,has timeout
+pytorch@rl@test-windows-optdepts.yml,MissingJobTimeout,absent,has timeout
+pytorch@rl@test-linux-habitat.yml,MissingJobTimeout,absent,has timeout
+prowler-cloud@prowler@ui-codeql.yml,UnpinnedActionVersion,absent,Use hash
+TraceMachina@nativelink@native-cargo.yaml,MissingJobTimeout,absent,Has timeout
+TraceMachina@nativelink@native-cargo.yaml,UnpinnedActionVersion,absent,Uses hash
+lycheeverse@lychee@auto-merge.yml,UnpinnedActionVersion,absent,not applicable
+cue-lang@cue@push_tip_to_trybot.yaml,UnpinnedActionVersion,absent,no action
+reubeno@brush@cd.yaml,MissingJobTimeout,absent,has timeouts
+pytorch@tensordict@test-rl-gpu.yml,MissingJobTimeout,absent,is not deploy
+nginx@kubernetes-ingress@mend.yml,UnpinnedActionVersion,absent,uses hash
+dani-garcia@vaultwarden@trivy.yml,MissingJobTimeout,absent,is not deploy
+dani-garcia@vaultwarden@trivy.yml,UnpinnedActionVersion,absent,Pinned versions
+viaversion@viaversion@build.yml,MissingJobTimeout,absent,Line 11
+yiisoft@db@db-oracle.yml,UnpinnedActionVersion,absent,Not deploy
+viaversion@viaversion@build.yml,UnpinnedActionVersion,absent,Pinned versions
+ros-controls@ros2_control@jazzy-debian-build.yml,MissingJobTimeout,absent,Not deploy
+sigstore@sigstore-python@depsreview.yml,UnpinnedActionVersion,absent,Pinned version
+withastro@starlight@format.yml,UnpinnedActionVersion,absent,Pinned version
+evroon@bracket@automerge.yml,UnpinnedActionVersion,absent,Doesn't have actions
+dani-garcia@vaultwarden@trivy.yml,UnpinnedActionVersion,absent,Does not apply
+viaversion@viaversion@build.yml,MissingJobTimeout,absent,Line 11
+yiisoft@db@db-oracle.yml,UnpinnedActionVersion,absent,Reusable workflow call
+viaversion@viaversion@build.yml,UnpinnedActionVersion,absent,Pinned version
+ros-controls@ros2_control@jazzy-debian-build.yml,MissingJobTimeout,absent,Reusable workflow call
+sigstore@sigstore-python@depsreview.yml,UnpinnedActionVersion,absent,Pinned version
+withastro@starlight@format.yml,UnpinnedActionVersion,absent,uses hash
+evroon@bracket@automerge.yml,UnpinnedActionVersion,absent,does not have action
+viaversion@viabackwards@build.yml,MissingJobTimeout,absent,has timeouts

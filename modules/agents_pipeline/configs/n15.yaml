@@ -1,0 +1,47 @@
+version: 1
+
+# Stability run over the N<=15-per-polarity capped ground truth (balanced),
+# both designs (D1 and D2). GPT-5.4-nano and Claude Haiku 4.5 carry the k=3
+# repeatability axis (RQ3); Gemini 3.5 Flash runs once.
+#   uv run python -m gha_agents.experiment modules/agents_pipeline/configs/n15.yaml
+
+defaults:
+  ground_truth_file: ./data/12b_ground_truth_n15.json
+  output_dir: ./output-n15
+  max_iterations: 3
+  verbose: true
+  limit: null
+
+sampling:
+  json_mode: true
+
+models:
+  gpt54-nano:
+    id: gpt-5.4-nano
+    provider: openai
+    sampling:
+      reasoning_effort: medium
+  haiku45:
+    id: claude-haiku-4-5
+    provider: anthropic
+  gemini35-flash:
+    id: gemini-3.5-flash
+    provider: vertex
+
+matrix:
+  designs: [D1, D2]
+  models: [gpt54-nano, haiku45]   # k=3 repeatability models
+  repetitions: [1, 2, 3]
+
+runs:                             # single-run (temperature-0) model, rep 1
+  - {name: gemini35-flash-d1-r1, design: D1, model: gemini35-flash, repetition: 1}
+  - {name: gemini35-flash-d2-r1, design: D2, model: gemini35-flash, repetition: 1}
+
+execution:
+  max_workers: 3          # one global pool across providers — keep modest against
+                          # the tightest TPM (Anthropic). Raise via --max-workers,
+                          # or split by provider if you hit rate limits.
+  stop_on_error: false    # absorb transient 429s; resume backfills
+  resume: true            # crash-safe: a re-run skips completed cells
+  request_timeout: 180
+  persist_traces: true

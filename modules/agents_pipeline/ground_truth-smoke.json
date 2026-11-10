@@ -1,0 +1,1209 @@
+[
+  {
+    "file_key": "0xpolygonmiden@miden-vm@changelog.yml",
+    "repository": "0xpolygonmiden/miden-vm",
+    "file_path": ".github/workflows/changelog.yml",
+    "yaml_content": "# Runs changelog related jobs.\n# CI job heavily inspired by: https://github.com/tarides/changelog-check-action\n\nname: changelog\n\npermissions:\n  contents: read\n\non:\n  pull_request:\n    branches:\n      - main\n      - next\n    types: [opened, reopened, synchronize, labeled, unlabeled]\n\njobs:\n  changelog-reusable:\n    uses: 0xMiden/.github/.github/workflows/changelog.yml@d34ae3cd29234c5aa4d3ab57635b30563471c3c3\n",
+    "file_line_count": 18,
+    "workflow_run_count": 5261,
+    "repo_language": "Rust",
+    "default_branch": "next",
+    "present_smells": [
+      {
+        "pascal": "MissingConcurrencyPR",
+        "count": 1
+      }
+    ],
+    "absent_smells": [
+      {
+        "pascal": "MissingPermExternalActions"
+      },
+      {
+        "pascal": "UnpinnedActionVersion"
+      },
+      {
+        "pascal": "MissingTokenPermissions"
+      },
+      {
+        "pascal": "MissingJobTimeout"
+      },
+      {
+        "pascal": "MissingConcurrencyBranch"
+      },
+      {
+        "pascal": "MissingForkGuardSchedule"
+      },
+      {
+        "pascal": "UnsafeArtifactUploadFork"
+      },
+      {
+        "pascal": "MissingUploadCondition"
+      },
+      {
+        "pascal": "MissingConcurrencyGlobal"
+      },
+      {
+        "pascal": "MutableRunnerVersion"
+      },
+      {
+        "pascal": "SuboptimalCacheUsage"
+      },
+      {
+        "pascal": "MultiCommandStep"
+      },
+      {
+        "pascal": "SingleOSExecution"
+      },
+      {
+        "pascal": "UnpinnedDependencies"
+      },
+      {
+        "pascal": "SingleLangVersionCI"
+      }
+    ]
+  },
+  {
+    "file_key": "AlexProgrammerDE@SoulFire@dependency-submission.yml",
+    "repository": "AlexProgrammerDE/SoulFire",
+    "file_path": ".github/workflows/dependency-submission.yml",
+    "yaml_content": "name: Dependency Submission\n\non: [ push ]\n\npermissions:\n  contents: write\n\njobs:\n  dependency-submission:\n    if: github.repository_owner == 'AlexProgrammerDE'\n    runs-on: blacksmith-2vcpu-ubuntu-2404\n    steps:\n      - name: Checkout Repository\n        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # 6.0.2\n        with:\n          persist-credentials: false\n      - name: Set up Gradle\n        uses: gradle/actions/setup-gradle@50e97c2cd7a37755bbfafc9c5b7cafaece252f6e # 6.1.0\n      - name: Set up JDK 25\n        uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654 # 5.2.0\n        with:\n          java-version: '25'\n          distribution: 'temurin'\n          check-latest: true\n      - name: Generate and submit dependency graph\n        uses: gradle/actions/dependency-submission@50e97c2cd7a37755bbfafc9c5b7cafaece252f6e # 6.1.0\n        with:\n          build-scan-publish: true\n          build-scan-terms-of-use-url: \"https://gradle.com/terms-of-use\"\n          build-scan-terms-of-use-agree: \"yes\"\n        env:\n          DEPENDENCY_GRAPH_EXCLUDE_PROJECTS: ':(buildSrc|data\\-generator)'\n",
+    "file_line_count": 32,
+    "workflow_run_count": 1865,
+    "repo_language": "Java",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingJobTimeout",
+        "count": 1
+      }
+    ],
+    "absent_smells": [
+      {
+        "pascal": "UnpinnedActionVersion"
+      },
+      {
+        "pascal": "MissingTokenPermissions"
+      },
+      {
+        "pascal": "MissingForkGuardPR"
+      },
+      {
+        "pascal": "MissingConcurrencyPR"
+      },
+      {
+        "pascal": "MissingForkGuardSchedule"
+      },
+      {
+        "pascal": "UnsafeArtifactUploadFork"
+      },
+      {
+        "pascal": "UnsafeDeployOnFork"
+      },
+      {
+        "pascal": "MissingConcurrencyGlobal"
+      },
+      {
+        "pascal": "SuboptimalCacheUsage"
+      },
+      {
+        "pascal": "MultiCommandStep"
+      },
+      {
+        "pascal": "UnpinnedDependencies"
+      }
+    ]
+  },
+  {
+    "file_key": "Azure@karpenter-provider-azure@dependency-review.yml",
+    "repository": "Azure/karpenter-provider-azure",
+    "file_path": ".github/workflows/dependency-review.yml",
+    "yaml_content": "# Dependency Review Action\n#\n# This Action will scan dependency manifest files that change as part of a Pull Request,\n# surfacing known-vulnerable versions of the packages declared or updated in the PR.\n# Once installed, if the workflow run is marked as required,\n# PRs introducing known-vulnerable packages will be blocked from merging.\n#\n# Source repository: https://github.com/actions/dependency-review-action\nname: 'Dependency Review'\non: [pull_request]\n\npermissions:\n  contents: read\n\njobs:\n  dependency-review:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Harden Runner\n        uses: step-security/harden-runner@a5ad31d6a139d249332a2605b85202e8c0b78450 # v2.19.1\n        with:\n          disable-telemetry: true\n          disable-sudo: true\n          egress-policy: block\n          allowed-endpoints: >\n            api.deps.dev:443\n            api.github.com:443\n            api.securityscorecards.dev:443\n            github.com:443\n\n      - name: 'Checkout Repository'\n        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2\n      - name: 'Dependency Review'\n        uses: actions/dependency-review-action@2031cfc080254a8a887f58cffee85186f0e49e48 # v4.9.0\n",
+    "file_line_count": 34,
+    "workflow_run_count": 3880,
+    "repo_language": "Go",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingForkGuardPR",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "Cambridge-ICCS@FTorch@JOSS_paper_pdf.yml",
+    "repository": "Cambridge-ICCS/FTorch",
+    "file_path": ".github/workflows/JOSS_paper_pdf.yml",
+    "yaml_content": "# Workflow to render the FTorch submission to JOSS\nname: Render JOSS paper\n\n# Controls when the workflow will run\non:\n  # Triggers the workflow on pushes to the \"main\" branch, i.e., PR merges\n  push:\n    branches: [ \"main\" ]\n\n  # Triggers the workflow on pushes to open pull requests to main with documentation changes\n  pull_request:\n    branches: [ \"main\" ]\n    paths:\n      - '.github/workflows/JOSS_paper_pdf.yml'\n      - 'paper/*'\n\n# Cancel jobs running if new commits are pushed\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}\n  cancel-in-progress: true\n\n# No write permission by default\npermissions: {}\n\njobs:\n  # The first job in this workflow builds a draft of the JOSS paper\n  build-draft:\n    name: build draft\n\n    # The type of runner that the job will run on\n    runs-on: ubuntu-latest\n\n    # Terminate the job if it runs for more than 5 minutes\n    timeout-minutes: 5\n\n    steps:\n      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it\n      - name: Checkout FTorch repository\n        with:\n          persist-credentials: true\n        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0\n\n      # Builds/renders the paper using the openjournals action\n      - name: Build draft PDF\n        uses: openjournals/openjournals-draft-action@85a18372e48f551d8af9ddb7a747de685fbbb01c\n        with:\n          journal: joss\n          paper-path: paper/paper.md\n\n  # The second job in this workflow uploads the rendered PDF to GitHub\n  upload-draft:\n    name: upload draft\n\n    # The type of runner that the job will run on\n    runs-on: ubuntu-latest\n\n    # Terminate the job if it runs for more than 5 minutes\n    timeout-minutes: 5\n\n    # The draft need to have been built first\n    needs: [build-draft]\n\n    permissions:\n      id-token: write  # We trust the deploy action with write permissions\n    steps:\n      - name: Upload draft PDF\n        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f #v6\n        with:\n          name: paper\n          path: paper/paper.pdf\n",
+    "file_line_count": 70,
+    "workflow_run_count": 140,
+    "repo_language": "Fortran",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingUploadCondition",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "Checkmk@ansible-collection-checkmk.general@ans-int-test-activation.yaml",
+    "repository": "Checkmk/ansible-collection-checkmk.general",
+    "file_path": ".github/workflows/ans-int-test-activation.yaml",
+    "yaml_content": "concurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\nname: Module Activation\n\npermissions:\n  contents: read\n\non:\n  workflow_dispatch:\n  schedule:\n    - cron: '0 0 * * 0'\n  pull_request:\n    branches:\n      - main\n      - devel\n    types:\n      - opened\n    paths:\n      - 'plugins/modules/activation.py'\n  push:\n    paths:\n      - '.github/workflows/ans-int-test-activation.yaml'\n      - 'plugins/modules/activation.py'\n      - 'plugins/module_utils/**'\n      - 'tests/integration/files/includes/**'\n      - 'tests/integration/targets/activation/**'\n\njobs:\n\n  integration:\n    name: \"Integration ${{ matrix.checkmk_version }}.${{ matrix.checkmk_edition }}\"\n    uses: ./.github/workflows/_template-ans-int-test.yaml\n    with:\n      module: activation\n      checkmk_version: ${{ matrix.checkmk_version }}\n      checkmk_edition: ${{ matrix.checkmk_edition }}\n    strategy:\n      fail-fast: false\n      matrix:\n        checkmk_version:\n          - 2.3.0p46\n          - 2.4.0p26\n          - 2.5.0b4\n        checkmk_edition:\n          - raw\n          - managed\n          - community\n          - ultimatemt\n        exclude:\n          - checkmk_version: 2.3.0p46\n            checkmk_edition: community\n          - checkmk_version: 2.3.0p46\n            checkmk_edition: ultimatemt\n          - checkmk_version: 2.4.0p26\n            checkmk_edition: community\n          - checkmk_version: 2.4.0p26\n            checkmk_edition: ultimatemt\n          - checkmk_version: 2.5.0b4\n            checkmk_edition: raw\n          - checkmk_version: 2.5.0b4\n            checkmk_edition: managed\n",
+    "file_line_count": 63,
+    "workflow_run_count": 367,
+    "repo_language": "Python",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingForkGuardSchedule",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "Checkmk@ansible-collection-checkmk.general@ans-int-test-contact_group.yaml",
+    "repository": "Checkmk/ansible-collection-checkmk.general",
+    "file_path": ".github/workflows/ans-int-test-contact_group.yaml",
+    "yaml_content": "concurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\nname: Module Contact Group\n\npermissions:\n  contents: read\n\non:\n  workflow_dispatch:\n  schedule:\n    - cron: '0 0 * * 0'\n  pull_request:\n    branches:\n      - main\n      - devel\n    types:\n      - opened\n    paths:\n      - 'plugins/modules/contact_group.py'\n  push:\n    paths:\n      - '.github/workflows/ans-int-test-contact_group.yaml'\n      - 'plugins/modules/contact_group.py'\n      - 'plugins/module_utils/**'\n      - 'tests/integration/files/includes/**'\n      - 'tests/integration/targets/contact_group/**'\n\njobs:\n\n  integration:\n    name: \"Integration ${{ matrix.checkmk_version }}.${{ matrix.checkmk_edition }}\"\n    uses: ./.github/workflows/_template-ans-int-test.yaml\n    with:\n      module: contact_group\n      checkmk_version: ${{ matrix.checkmk_version }}\n      checkmk_edition: ${{ matrix.checkmk_edition }}\n    strategy:\n      fail-fast: false\n      matrix:\n        checkmk_version:\n          - 2.3.0p46\n          - 2.4.0p26\n          - 2.5.0b4\n        checkmk_edition:\n          - raw\n          - managed\n          - community\n          - ultimatemt\n        exclude:\n          - checkmk_version: 2.3.0p46\n            checkmk_edition: community\n          - checkmk_version: 2.3.0p46\n            checkmk_edition: ultimatemt\n          - checkmk_version: 2.4.0p26\n            checkmk_edition: community\n          - checkmk_version: 2.4.0p26\n            checkmk_edition: ultimatemt\n          - checkmk_version: 2.5.0b4\n            checkmk_edition: raw\n          - checkmk_version: 2.5.0b4\n            checkmk_edition: managed\n",
+    "file_line_count": 63,
+    "workflow_run_count": 360,
+    "repo_language": "Python",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingForkGuardSchedule",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "Checkmk@ansible-collection-checkmk.general@ans-int-test-discovery.yaml",
+    "repository": "Checkmk/ansible-collection-checkmk.general",
+    "file_path": ".github/workflows/ans-int-test-discovery.yaml",
+    "yaml_content": "concurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\nname: Module Discovery\n\npermissions:\n  contents: read\n\non:\n  workflow_dispatch:\n  schedule:\n    - cron: '0 0 * * 0'\n  pull_request:\n    branches:\n      - main\n      - devel\n    types:\n      - opened\n    paths:\n      - 'plugins/modules/discovery.py'\n  push:\n    paths:\n      - '.github/workflows/ans-int-test-discovery.yaml'\n      - 'plugins/modules/discovery.py'\n      - 'plugins/module_utils/**'\n      - 'tests/integration/files/includes/**'\n      - 'tests/integration/targets/discovery/**'\n\njobs:\n\n  integration:\n    name: \"Integration ${{ matrix.checkmk_version }}.${{ matrix.checkmk_edition }}\"\n    uses: ./.github/workflows/_template-ans-int-test.yaml\n    with:\n      module: discovery\n      checkmk_version: ${{ matrix.checkmk_version }}\n      checkmk_edition: ${{ matrix.checkmk_edition }}\n    strategy:\n      fail-fast: false\n      matrix:\n        checkmk_version:\n          - 2.3.0p46\n          - 2.4.0p26\n          - 2.5.0b4\n        checkmk_edition:\n          - raw\n          - managed\n          - community\n          - ultimatemt\n        exclude:\n          - checkmk_version: 2.3.0p46\n            checkmk_edition: community\n          - checkmk_version: 2.3.0p46\n            checkmk_edition: ultimatemt\n          - checkmk_version: 2.4.0p26\n            checkmk_edition: community\n          - checkmk_version: 2.4.0p26\n            checkmk_edition: ultimatemt\n          - checkmk_version: 2.5.0b4\n            checkmk_edition: raw\n          - checkmk_version: 2.5.0b4\n            checkmk_edition: managed\n",
+    "file_line_count": 63,
+    "workflow_run_count": 369,
+    "repo_language": "Python",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingForkGuardSchedule",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "CloudDetail@apo@apo-ci.yml",
+    "repository": "CloudDetail/apo",
+    "file_path": ".github/workflows/apo-ci.yml",
+    "yaml_content": "name: CI\n\non: \n  pull_request:\n  schedule:\n    - cron: \"0 18 * * *\" # TimeZone: UTC 0\n\nconcurrency:\n  group: apo-${{ github.event.pull_request.number || github.ref }}\n  cancel-in-progress: true\n\njobs:\n  check-license-header:\n    if: (github.event_name == 'schedule' && github.repository == 'CloudDetail/apo') || (github.event_name != 'schedule')\n    name: Check License header\n    runs-on: ubuntu-latest\n    permissions:\n      contents: read\n      pull-requests: write\n    timeout-minutes: 10\n    steps:\n      - uses: actions/checkout@v3\n        with:\n          submodules: false\n      - name: Check license header\n        uses: apache/skywalking-eyes@cd7b195c51fd3d6ad52afceb760719ddc6b3ee91\n\n    \n",
+    "file_line_count": 28,
+    "workflow_run_count": 690,
+    "repo_language": "Go",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "UnpinnedActionVersion",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "Comcast@ip4s@clean.yml",
+    "repository": "Comcast/ip4s",
+    "file_path": ".github/workflows/clean.yml",
+    "yaml_content": "# This file was automatically generated by sbt-github-actions using the\n# githubWorkflowGenerate task. You should add and commit this file to\n# your git repository. It goes without saying that you shouldn't edit\n# this file by hand! Instead, if you wish to make changes, you should\n# change your sbt build configuration to revise the workflow description\n# to meet your needs, then regenerate this file.\n\nname: Clean\n\non: push\n\njobs:\n  delete-artifacts:\n    name: Delete Artifacts\n    runs-on: ubuntu-latest\n    env:\n      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n    steps:\n      - name: Delete artifacts\n        run: |\n          # Customize those three lines with your repository and credentials:\n          REPO=${GITHUB_API_URL}/repos/${{ github.repository }}\n\n          # A shortcut to call GitHub API.\n          ghapi() { curl --silent --location --user _:$GITHUB_TOKEN \"$@\"; }\n\n          # A temporary file which receives HTTP response headers.\n          TMPFILE=/tmp/tmp.$$\n\n          # An associative array, key: artifact name, value: number of artifacts of that name.\n          declare -A ARTCOUNT\n\n          # Process all artifacts on this repository, loop on returned \"pages\".\n          URL=$REPO/actions/artifacts\n          while [[ -n \"$URL\" ]]; do\n\n            # Get current page, get response headers in a temporary file.\n            JSON=$(ghapi --dump-header $TMPFILE \"$URL\")\n\n            # Get URL of next page. Will be empty if we are at the last page.\n            URL=$(grep '^Link:' \"$TMPFILE\" | tr ',' '\\n' | grep 'rel=\"next\"' | head -1 | sed -e 's/.*<//' -e 's/>.*//')\n            rm -f $TMPFILE\n\n            # Number of artifacts on this page:\n            COUNT=$(( $(jq <<<$JSON -r '.artifacts | length') ))\n\n            # Loop on all artifacts on this page.\n            for ((i=0; $i < $COUNT; i++)); do\n\n              # Get name of artifact and count instances of this name.\n              name=$(jq <<<$JSON -r \".artifacts[$i].name?\")\n              ARTCOUNT[$name]=$(( $(( ${ARTCOUNT[$name]} )) + 1))\n\n              id=$(jq <<<$JSON -r \".artifacts[$i].id?\")\n              size=$(( $(jq <<<$JSON -r \".artifacts[$i].size_in_bytes?\") ))\n              printf \"Deleting '%s' #%d, %'d bytes\\n\" $name ${ARTCOUNT[$name]} $size\n              ghapi -X DELETE $REPO/actions/artifacts/$id\n            done\n          done\n",
+    "file_line_count": 59,
+    "workflow_run_count": 120,
+    "repo_language": "Scala",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingTokenPermissions",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "CraterCrash@godot-orchestrator@runner.yml",
+    "repository": "CraterCrash/godot-orchestrator",
+    "file_path": ".github/workflows/runner.yml",
+    "yaml_content": "name: \ud83d\udd17 GHA\n\non:\n  push:\n    branches:\n      - '**'\n    tags-ignore:\n      - '**'\n  pull_request:\n  workflow_dispatch:\n\npermissions:\n  actions: write\n  contents: read\n\nconcurrency:\n  group: ${{github.workflow}}-${{ github.ref_name }}\n  cancel-in-progress: true\n\njobs:\n\n  android-build:\n    name: \ud83e\udd16 Android\n    uses: ./.github/workflows/android_builds.yml\n\n  linux-build:\n    name: \ud83d\udc27 Linux\n    uses: ./.github/workflows/linux_builds.yml\n\n  macos-build:\n    name: \ud83c\udf4e macOS\n    uses: ./.github/workflows/macos_builds.yml\n\n  windows-build:\n    name: \ud83e\ude9f Windows\n    uses: ./.github/workflows/windows_builds.yml\n\n  web-build:\n    name: \ud83c\udf10 Web\n    uses: ./.github/workflows/web_builds.yml\n\n  artifacts-build:\n    name: \ud83d\udcce Artifacts\n    needs: [android-build, linux-build, macos-build, windows-build, web-build]\n    uses: ./.github/workflows/artifact_builds.yml\n",
+    "file_line_count": 45,
+    "workflow_run_count": 1543,
+    "repo_language": "C++",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingPathFilters",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "DigitecGalaxus@next-yak@release.yml",
+    "repository": "DigitecGalaxus/next-yak",
+    "file_path": ".github/workflows/release.yml",
+    "yaml_content": "name: Release\n\non:\n  push:\n    branches:\n      - main\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: false\n\npermissions:\n  contents: read\n\njobs:\n  release:\n    name: Release\n    runs-on: ubuntu-latest\n    permissions:\n      contents: write # changesets pushes the release PR / tags\n      pull-requests: write # changesets opens the release PR\n      id-token: write # npm publish with provenance\n    steps:\n      - name: Checkout code\n        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3\n        with:\n          fetch-depth: 0\n          persist-credentials: false\n\n      - name: Install Node.js\n        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3\n        with:\n          node-version: 22\n\n      - uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0\n        name: Install pnpm\n        with:\n          version: 10.15.0\n          run_install: false\n\n      - name: Add Rust wasm targets\n        run: rustup target add wasm32-wasip1 wasm32-unknown-unknown\n\n      - name: Enable caching\n        uses: Swatinem/rust-cache@f13886b937689c021905a6b90929199931d60db1 # v2.8.1\n        with:\n          workspaces: packages/yak-swc\n\n      - name: Get pnpm store directory\n        shell: bash\n        run: |\n          echo \"STORE_PATH=$(pnpm store path --silent)\" >> $GITHUB_ENV\n\n      - uses: actions/cache@2f8e54208210a422b2efd51efaa6bd6d7ca8920f # v3.4.3\n        name: Setup pnpm cache\n        with:\n          path: ${{ env.STORE_PATH }}\n          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}\n          restore-keys: |\n            ${{ runner.os }}-pnpm-store-\n\n      - name: Install dependencies\n        run: pnpm install\n\n      - name: Install npm with trusted-publishing support\n        run: |\n          corepack enable\n          corepack prepare npm@11.11.0 --activate\n\n      # changesets/action runs `git push` directly, so it needs an authenticated remote.\n      # Done explicitly here (rather than via checkout's persist-credentials) so the\n      # credential is scoped to this step's needs and zizmor can audit the setup.\n      - name: Configure git auth for changesets push\n        env:\n          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n        run: |\n          auth=$(printf 'x-access-token:%s' \"$GH_TOKEN\" | base64 -w0)\n          git config --local \"http.https://github.com/.extraheader\" \"AUTHORIZATION: basic $auth\"\n\n      - name: Create Release Pull Request or Publish to npm\n        id: changesets\n        uses: changesets/action@e0145edc7d9d8679003495b11f87bd8ef63c0cba # v1.5.3\n        with:\n          publish: pnpm release\n          title: Release new version\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n",
+    "file_line_count": 87,
+    "workflow_run_count": 185,
+    "repo_language": "TypeScript",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "SuboptimalCacheUsage",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "Expensify@react-native-live-markdown@build-android.yml",
+    "repository": "Expensify/react-native-live-markdown",
+    "file_path": ".github/workflows/build-android.yml",
+    "yaml_content": "name: Test Android build\non:\n  pull_request:\n    paths:\n      - .github/workflows/build-android.yml\n      - android/**\n      - cpp/**\n      - example/package.json\n      - example/android/**\n      - react-native.config.js\n  merge_group:\n    branches:\n      - main\n  push:\n    branches:\n      - main\n    paths:\n      - .github/workflows/build-android.yml\n      - android/**\n      - cpp/**\n      - example/package.json\n      - example/android/**\n      - react-native.config.js\n\njobs:\n  build:\n    if: github.repository == 'Expensify/react-native-live-markdown'\n    runs-on: ubuntu-latest\n    concurrency:\n      group: build-android-${{ github.ref }}\n      cancel-in-progress: true\n    steps:\n      # v5.0.0\n      - name: Check out Git repository\n        uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493\n\n      # v5.0.0\n      - name: Setup Java 17\n        uses: actions/setup-java@ead9eaa3cfe0b0fc2fa749519ae09c3d4f4080b0\n        with:\n          distribution: 'zulu'\n          java-version: 17\n\n      - name: Install node_modules\n        run: npm ci\n\n      - name: Build app\n        working-directory: example/android\n        run: ./gradlew assembleDebug --build-cache -PreactNativeArchitectures=arm64-v8a\n",
+    "file_line_count": 49,
+    "workflow_run_count": 157,
+    "repo_language": "TypeScript",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "SingleLangVersionCI",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "Expensify@react-native-live-markdown@lint.yml",
+    "repository": "Expensify/react-native-live-markdown",
+    "file_path": ".github/workflows/lint.yml",
+    "yaml_content": "name: Lint JavaScript\n\non:\n  pull_request:\n    types: [opened, synchronize]\n\njobs:\n  lint:\n    runs-on: ubuntu-latest\n    steps:\n      # v5.0.0\n      - name: Check out Git repository\n        uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493\n\n      # v4.3.0\n      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830\n        with:\n          path: ~/.npm\n          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}\n          restore-keys: |\n            ${{ runner.os }}-npm-\n\n      # v6.0.0\n      - name: Setup Node.js\n        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903\n        with:\n          node-version-file: '.nvmrc'\n\n      - name: Install node_modules\n        run: npm ci\n\n      - name: Verify there's no Prettier diff\n        run: |\n          npm run lint -- --fix --quiet\n          if ! git diff --name-only --exit-code; then\n              # shellcheck disable=SC2016\n              echo 'Error: Prettier diff detected! Please run `npm run lint -- --fix` and commit the changes.'\n              exit 1\n          fi\n",
+    "file_line_count": 39,
+    "workflow_run_count": 299,
+    "repo_language": "TypeScript",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "SuboptimalCacheUsage",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "Expensify@react-native-live-markdown@publish.yml",
+    "repository": "Expensify/react-native-live-markdown",
+    "file_path": ".github/workflows/publish.yml",
+    "yaml_content": "name: Publish package to npmjs\n\non:\n  push:\n    branches: [main]\n\npermissions:\n  # Required for OIDC: https://docs.npmjs.com/trusted-publishers\n  id-token: write\n  contents: read\n\n# Ensure that only one instance of this workflow executes at a time.\n# If multiple PRs are merged in quick succession, there will only ever be one publish workflow running and one pending.\nconcurrency: ${{ github.workflow }}\n\njobs:\n  publish:\n    # os-botify[bot] will update the version on `main`, so this check is important to prevent an infinite loop\n    if: ${{ github.actor != 'os-botify[bot]' }}\n    uses: Expensify/GitHub-Actions/.github/workflows/npmPublish.yml@main\n    secrets: inherit\n    with:\n      should_run_pack: true\n",
+    "file_line_count": 23,
+    "workflow_run_count": 210,
+    "repo_language": "TypeScript",
+    "default_branch": "main",
+    "present_smells": [],
+    "absent_smells": [
+      {
+        "pascal": "MissingPermExternalActions"
+      },
+      {
+        "pascal": "MissingTokenPermissions"
+      },
+      {
+        "pascal": "MissingForkGuardPR"
+      },
+      {
+        "pascal": "MissingConcurrencyPR"
+      },
+      {
+        "pascal": "MissingConcurrencyBranch"
+      },
+      {
+        "pascal": "MissingForkGuardSchedule"
+      },
+      {
+        "pascal": "UnsafeArtifactUploadFork"
+      },
+      {
+        "pascal": "MissingUploadCondition"
+      },
+      {
+        "pascal": "MissingConcurrencyGlobal"
+      },
+      {
+        "pascal": "MutableRunnerVersion"
+      },
+      {
+        "pascal": "SuboptimalCacheUsage"
+      },
+      {
+        "pascal": "MultiCommandStep"
+      },
+      {
+        "pascal": "SingleOSExecution"
+      },
+      {
+        "pascal": "UnpinnedDependencies"
+      },
+      {
+        "pascal": "SingleLangVersionCI"
+      }
+    ]
+  },
+  {
+    "file_key": "Expensify@react-native-live-markdown@web-e2e-test.yml",
+    "repository": "Expensify/react-native-live-markdown",
+    "file_path": ".github/workflows/web-e2e-test.yml",
+    "yaml_content": "name: Test web E2E\non:\n  pull_request:\n    paths:\n      - .github/workflows/web-e2e-test.yml\n      - src/**\n      - WebExample/**\n  merge_group:\n    branches:\n      - main\n  push:\n    branches:\n      - main\n    paths:\n      - .github/workflows/web-e2e-test.yml\n      - src/**\n      - WebExample/**\n\njobs:\n  test:\n    if: github.repository == 'Expensify/react-native-live-markdown'\n    runs-on: ubuntu-latest\n\n    concurrency:\n      group: web-e2e-test-${{ github.ref }}\n      cancel-in-progress: true\n    steps:\n      # v5.0.0\n      - name: Check out Git repository\n        uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493\n\n      # v6.0.0\n      - name: Setup Node.js\n        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903\n        with:\n          node-version-file: '.nvmrc'\n\n      - name: Install node_modules\n        run: npm ci\n\n      - name: Install browsers\n        run: npx playwright install --with-deps\n\n      - name: Install dependencies for browsers\n        run: npx playwright install-deps\n\n      - name: Run Playwright tests\n        run: npm run test\n        working-directory: WebExample\n",
+    "file_line_count": 49,
+    "workflow_run_count": 237,
+    "repo_language": "TypeScript",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "SingleLangVersionCI",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "FalkorDB@code-graph@playwright.yml",
+    "repository": "FalkorDB/code-graph",
+    "file_path": ".github/workflows/playwright.yml",
+    "yaml_content": "name: Playwright Tests\non:\n  push:\n    branches: [ main, staging ]\n  pull_request:\n    branches: [ main, staging ]\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}\n  cancel-in-progress: true\n\njobs:\n  test:\n    timeout-minutes: 60\n    runs-on: ubuntu-latest\n    env:\n      PYTHONPATH: ${{ github.workspace }}\n    strategy:\n      fail-fast: false\n      matrix:\n        shard: [1, 2]\n    services:\n      falkordb:\n        image: falkordb/falkordb:latest\n        ports:\n          - 6379:6379\n    steps:\n    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6\n\n    - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6\n      with:\n        node-version: 24\n        cache: 'npm'\n        cache-dependency-path: |\n          package-lock.json\n          app/package-lock.json\n\n    - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6\n      with:\n        python-version: '3.12'\n\n    - name: Install uv\n      uses: astral-sh/setup-uv@cec208311dfd045dd5311c1add060b2062131d57 # v8.0.0\n      with:\n        version: \"latest\"\n\n    - name: Install backend dependencies\n      run: uv sync --all-extras\n\n    - name: Install frontend dependencies\n      working-directory: ./app\n      run: npm ci\n\n    - name: Build frontend\n      working-directory: ./app\n      env:\n        VITE_SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}\n      run: npm run build\n\n    - name: Seed test data into FalkorDB\n      run: uv run python e2e/seed_test_data.py\n\n    - name: Install Playwright npm dependencies\n      run: |\n        npm ci\n\n    - name: Cache Playwright browsers\n      id: playwright-cache\n      uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5\n      with:\n        path: ~/.cache/ms-playwright\n        key: playwright-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('package-lock.json') }}\n\n    - name: Install Playwright browsers\n      if: steps.playwright-cache.outputs.cache-hit != 'true'\n      run: npx playwright install --with-deps chromium firefox\n\n    - name: Install Playwright system deps\n      if: steps.playwright-cache.outputs.cache-hit == 'true'\n      run: |\n        npx playwright install chromium firefox\n        npx playwright install-deps chromium firefox\n\n    - name: Start server\n      id: start-server\n      env:\n        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}\n        SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}\n        CODE_GRAPH_PUBLIC: \"1\"\n        MODEL_NAME: \"openai/gpt-4.1-mini\"\n      run: |\n        uv run uvicorn api.index:app --host 0.0.0.0 --port 5000 &\n        echo \"pid=$!\" >> \"$GITHUB_OUTPUT\"\n        # Wait for server to be ready\n        timeout 30 bash -c 'until curl -s http://localhost:5000/ > /dev/null 2>&1; do sleep 0.5; done'\n\n    - name: Run Playwright tests\n      env:\n        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}\n        SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}\n        CODE_GRAPH_PUBLIC: \"1\"\n        MODEL_NAME: \"openai/gpt-4.1-mini\"\n      run: npx playwright test --shard=${{ matrix.shard }}/2 --reporter=dot,list\n\n    - name: Stop server\n      if: always()\n      run: kill ${{ steps.start-server.outputs.pid }} 2>/dev/null || true\n\n    - name: Ensure required directories exist\n      if: always()\n      run: |\n        mkdir -p playwright-report\n        mkdir -p playwright-report/artifacts\n\n    - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7\n      if: always()\n      with:\n        name: playwright-report-shard-${{ matrix.shard }}\n        path: playwright-report/\n        retention-days: 30\n\n    - name: Upload failed test screenshots\n      if: always()\n      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7\n      with:\n        name: failed-test-screenshots-shard-${{ matrix.shard }}\n        path: playwright-report/artifacts/\n        retention-days: 30\n",
+    "file_line_count": 128,
+    "workflow_run_count": 568,
+    "repo_language": "TypeScript",
+    "default_branch": "staging",
+    "present_smells": [
+      {
+        "pascal": "SuboptimalCacheUsage",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "FlowFuse@flowfuse@update-issue-status.yml",
+    "repository": "FlowFuse/flowfuse",
+    "file_path": ".github/workflows/update-issue-status.yml",
+    "yaml_content": "name: Update Issue Status\non:\n  pull_request:\n    types:\n      - opened\n      - reopened\n      - synchronize\n      - converted_to_draft\n      - ready_for_review\njobs:\n  update_issue_status:\n    uses: flowfuse/.github/.github/workflows/record-in-review.yml@main\n    secrets:\n      PROJECT_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n",
+    "file_line_count": 14,
+    "workflow_run_count": 3640,
+    "repo_language": "JavaScript",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingTokenPermissions",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "FossifyOrg@Gallery@prepare-release-pr.yml",
+    "repository": "FossifyOrg/Gallery",
+    "file_path": ".github/workflows/prepare-release-pr.yml",
+    "yaml_content": "name: Prepare Release PR\n\non:\n  repository_dispatch:\n    types: [prepare-release]\n  workflow_dispatch:\n  push:\n    branches: [main]\n    paths:\n      - \"CHANGELOG.md\"\n\njobs:\n  call-release-pr:\n    uses: FossifyOrg/.github/.github/workflows/prepare-release-pr.yml@main\n    secrets: inherit\n",
+    "file_line_count": 15,
+    "workflow_run_count": 430,
+    "repo_language": "Kotlin",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingConcurrencyGlobal",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "Fryuni@inox-tools@example-deploys.yml",
+    "repository": "Fryuni/inox-tools",
+    "file_path": ".github/workflows/example-deploys.yml",
+    "yaml_content": "name: Deploy Examples\n\non:\n  workflow_dispatch:\n  push:\n    branches:\n      - main\n  merge_group:\n  pull_request:\n    paths-ignore:\n      - '**/*.md'\n      - '.github/ISSUE_TEMPLATE/**'\n\n# Automatically cancel older in-progress jobs on the same branch\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request_target' && github.head_ref || github.ref }}\n  cancel-in-progress: true\n\ndefaults:\n  run:\n    shell: bash\n\nenv:\n  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}\n  TURBO_TEAM: ${{ vars.TURBO_TEAM }}\n  FORCE_COLOR: true\n  ASTRO_TELEMETRY_DISABLED: true\n  # 7 GiB by default on GitHub, setting to 6 GiB\n  # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources\n  NODE_OPTIONS: --max-old-space-size=6144\n\njobs:\n  cloudflare:\n    name: 'Deploy \"${{ matrix.example }}\" to Cloudflare'\n    runs-on: ubuntu-latest\n    timeout-minutes: 10\n    strategy:\n      matrix:\n        example:\n          - sitemap-ext\n          - custom-routing\n          - content-injection\n          - astro-when\n          - request-state\n          - request-nanostores\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n        with:\n          fetch-depth: 0\n\n      - name: Setup PNPM\n        uses: pnpm/action-setup@v4\n\n      - name: Setup Node\n        uses: actions/setup-node@main\n        with:\n          node-version: 24\n          cache: 'pnpm'\n\n      - name: Install dependencies\n        run: pnpm install\n\n      - name: Build Packages\n        run: pnpm -w build\n\n      - name: Build for Cloudflare\n        run: ./examples/deploy-cloudflare.sh ${{ matrix.example }}\n        env:\n          DEPLOY_SITE: 'https://inox-tools-ex-${{ matrix.example }}.workers.dev'\n\n      - name: Deploy to Cloudflare Workers\n        run: pnpm dlx wrangler deploy\n        working-directory: examples/${{ matrix.example }}\n        env:\n          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}\n          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}\n",
+    "file_line_count": 77,
+    "workflow_run_count": 260,
+    "repo_language": "TypeScript",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "UnsafeDeployOnFork",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "GitoxideLabs@gitoxide@cifuzz.yml",
+    "repository": "GitoxideLabs/gitoxide",
+    "file_path": ".github/workflows/cifuzz.yml",
+    "yaml_content": "name: CIFuzz\n\non:\n  pull_request:\n    branches:\n      - main\n    paths:\n      - '.github/**'\n      - 'ci/**'\n      - 'etc/**'\n      - 'src/**'\n      - 'tests/**'\n      - 'cargo-*/**'\n      - 'gix*/**'\n      - '*.toml'\n      - Makefile\n  workflow_dispatch:\n\npermissions: {}  # The fuzzing actions don't use our github.token at all.\n\njobs:\n  Fuzzing:\n    runs-on: ubuntu-latest\n\n    steps:\n      - name: Build Fuzzers\n        id: build\n        uses: google/oss-fuzz/infra/cifuzz/actions/build_fuzzers@master  # zizmor: ignore[unpinned-uses]\n        with:\n          oss-fuzz-project-name: gitoxide\n          language: rust\n\n      - name: Run Fuzzers\n        uses: google/oss-fuzz/infra/cifuzz/actions/run_fuzzers@master  # zizmor: ignore[unpinned-uses]\n        with:\n          oss-fuzz-project-name: gitoxide\n          language: rust\n          fuzz-seconds: 600\n\n      - name: Upload Crash\n        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1\n        if: failure() && steps.build.outcome == 'success'\n        with:\n          name: artifacts\n          path: ./out/artifacts\n",
+    "file_line_count": 45,
+    "workflow_run_count": 1711,
+    "repo_language": "Rust",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "UnsafeArtifactUploadFork",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "GoMudEngine@GoMud@docker-package.yml",
+    "repository": "GoMudEngine/GoMud",
+    "file_path": ".github/workflows/docker-package.yml",
+    "yaml_content": "---\nname: Docker Image\n\n\"on\":\n  workflow_dispatch:\n  push:\n    branches:\n      - master\n  pull_request:\n    branches:\n      - master\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: false\n\nenv:\n  REGISTRY: ghcr.io\n  IMAGE_NAME: ${{ github.repository }}\n\njobs:\n  package:\n    runs-on: ubuntu-24.04\n    timeout-minutes: 60\n    permissions:\n      contents: read\n      packages: write\n      attestations: write\n      id-token: write\n    steps:\n      # actions/checkout v6.0.2\n      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n        with:\n          persist-credentials: false\n\n      - name: Detect Go version\n        id: go-version\n        run: echo \"version=$(make go-version)\" >> \"$GITHUB_OUTPUT\"\n\n      - name: Set up Docker Buildx\n        # docker/setup-buildx-action v4.0.0\n        # yamllint disable-line rule:line-length\n        uses: docker/setup-buildx-action@4d04d5d9486b7bd6fa91e7baf45bbb4f8b9deedd\n\n      - name: Log in to the Container registry ${{ env.REGISTRY }}\n        # docker/login-action v4.1.0\n        uses: docker/login-action@4907a6ddec9925e35a0a9e82d7399ccc52663121\n        with:\n          registry: ${{ env.REGISTRY }}\n          username: ${{ github.actor }}\n          password: ${{ secrets.GITHUB_TOKEN }}\n\n      - name: Extract metadata (tags, labels) for Docker\n        id: meta\n        # docker/metadata-action v6.0.0\n        uses: docker/metadata-action@030e881283bb7a6894de51c315a6bfe6a94e05cf\n        with:\n          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}\n          tags: |\n            type=raw,value=latest,enable=${{\n              github.ref == 'refs/heads/master'\n              }}\n            type=ref,event=pr\n            type=sha\n\n      - name: Build and push Docker image\n        id: push\n        # docker/build-push-action v7.1.0\n        uses: docker/build-push-action@bcafcacb16a39f128d818304e6c9c0c18556b85f\n        with:\n          context: .\n          push: ${{ github.event_name != 'pull_request' }}\n          file: ./provisioning/Dockerfile\n          build-args: |\n            GO_VERSION=${{ steps.go-version.outputs.version }}\n          tags: ${{ steps.meta.outputs.tags }}\n          labels: ${{ steps.meta.outputs.labels }}\n          cache-from: type=gha,scope=docker-package\n          cache-to: type=gha,mode=max,scope=docker-package\n\n      - name: Generate artifact attestation\n        if: github.event_name != 'pull_request'\n        # actions/attest-build-provenance v4.1.0\n        # yamllint disable-line rule:line-length\n        uses: actions/attest-build-provenance@a2bbfa25375fe432b6a289bc6b6cd05ecd0c4c32\n        with:\n          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}\n          subject-digest: ${{ steps.push.outputs.digest }}\n          push-to-registry: false\n",
+    "file_line_count": 89,
+    "workflow_run_count": 602,
+    "repo_language": "Go",
+    "default_branch": "master",
+    "present_smells": [
+      {
+        "pascal": "MissingForkGuardPR",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "GoogleCloudPlatform@magic-modules@basic-pr-checks.yml",
+    "repository": "GoogleCloudPlatform/magic-modules",
+    "file_path": ".github/workflows/basic-pr-checks.yml",
+    "yaml_content": "name: \"pull-request\"\npermissions: read-all\n\non:\n  pull_request\n\njobs:\n  disallow-submodules:\n    runs-on: ubuntu-22.04\n    steps:\n    - name: Checkout repository\n      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.2\n    - name: Check for submodules\n      run: |\n        output=$(git submodule status --recursive 2>&1)\n        if [ ! -z $output ]; then\n          echo $output\n          echo \"Submodules are not allowed\"\n          exit 1\n        else\n          echo \"No submodules found\"\n        fi\n",
+    "file_line_count": 22,
+    "workflow_run_count": 14113,
+    "repo_language": "Go",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingForkGuardPR",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "GoogleCloudPlatform@magic-modules@downstreams.yml",
+    "repository": "GoogleCloudPlatform/magic-modules",
+    "file_path": ".github/workflows/downstreams.yml",
+    "yaml_content": "name: downstreams\npermissions: read-all\n\non:\n  push:\n    branches:\n      - main\n      - 'FEATURE-BRANCH-*'\n  merge_group:\n    types: [checks_requested]\n  pull_request:\n\nconcurrency:\n  group: ${{ github.event_name == 'merge_group' && format('merge-group-{0}', github.event.merge_group.head_sha) || github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || format('commit-{0}', github.sha) }}\n  cancel-in-progress: true\n\njobs:\n\n  terraform-provider-google:\n    uses: ./.github/workflows/build-downstream.yml\n    with:\n      repo: 'terraform-provider-google'\n  terraform-provider-google-beta:\n    uses: ./.github/workflows/build-downstream.yml\n    with:\n      repo: 'terraform-provider-google-beta'\n  terraform-google-conversion:\n    uses: ./.github/workflows/build-downstream.yml\n    with:\n      repo: 'terraform-google-conversion'\n  docs-examples:\n    uses: ./.github/workflows/build-downstream.yml\n    with:\n      repo: 'docs-examples'\n\n  unit-test-terraform-provider-google:\n    name: terraform-provider-google\n    needs: terraform-provider-google\n    uses: ./.github/workflows/unit-test-tpg.yml\n    with:\n      repo: 'terraform-provider-google'\n\n  unit-test-terraform-provider-googele-beta:\n    name: terraform-provider-google-beta\n    needs: terraform-provider-google-beta\n    uses: ./.github/workflows/unit-test-tpg.yml\n    with:\n      repo: 'terraform-provider-google-beta'\n\n  unit-test-terraform-google-conversion:\n    name: terraform-google-conversion\n    needs: [terraform-google-conversion, terraform-provider-google-beta]\n    uses: ./.github/workflows/unit-test-tgc.yml\n",
+    "file_line_count": 53,
+    "workflow_run_count": 21947,
+    "repo_language": "Go",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingPathFilters",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "GoogleCloudPlatform@magic-modules@scorecard.yml",
+    "repository": "GoogleCloudPlatform/magic-modules",
+    "file_path": ".github/workflows/scorecard.yml",
+    "yaml_content": "# This workflow uses actions that are not certified by GitHub. They are provided\n# by a third-party and are governed by separate terms of service, privacy\n# policy, and support documentation.\n\nname: Scorecard supply-chain security\non:\n  # For Branch-Protection check. Only the default branch is supported. See\n  # https://github.com/ossf/scorecard/blob/main/docs/checks.md#branch-protection\n  branch_protection_rule:\n  # To guarantee Maintained check is occasionally updated. See\n  # https://github.com/ossf/scorecard/blob/main/docs/checks.md#maintained\n  schedule:\n    - cron: '33 3 * * 0'\n  push:\n    branches: [ \"main\" ]\n\n# Declare default permissions as read only.\npermissions: read-all\n\njobs:\n  analysis:\n    if: github.repository == 'GoogleCloudPlatform/magic-modules'\n    name: Scorecard analysis\n    runs-on: ubuntu-22.04\n    permissions:\n      # Needed to upload the results to code-scanning dashboard.\n      security-events: write\n      # Needed to publish results and get a badge (see publish_results below).\n      id-token: write\n      # Uncomment the permissions below if installing in a private repository.\n      # contents: read\n      # actions: read\n\n    steps:\n      - name: \"Checkout code\"\n        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.2\n        with:\n          persist-credentials: false\n\n      - name: \"Run analysis\"\n        uses: ossf/scorecard-action@0864cf19026789058feabb7e87baa5f140aac736 # v2.3.1\n        with:\n          results_file: results.sarif\n          results_format: sarif\n          # - Publish results to OpenSSF REST API for easy access by consumers\n          # - Allows the repository to include the Scorecard badge.\n          # - See https://github.com/ossf/scorecard-action#publishing-results.\n          publish_results: true\n\n      # Upload the results as artifacts (optional). Commenting out will disable uploads of run results in SARIF\n      # format to the repository Actions tab.\n      - name: \"Upload artifact\"\n        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0\n        with:\n          name: SARIF file\n          path: results.sarif\n          retention-days: 5\n\n      # Upload the results to GitHub's code scanning dashboard.\n      - name: \"Upload to code-scanning\"\n        uses: github/codeql-action/upload-sarif@05963f47d870e2cb19a537396c1f668a348c7d8f # v3.24.8\n        with:\n          sarif_file: results.sarif\n",
+    "file_line_count": 63,
+    "workflow_run_count": 2972,
+    "repo_language": "Go",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingConcurrencyGlobal",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "GoogleCloudPlatform@magic-modules@teamcity-pr-checks.yml",
+    "repository": "GoogleCloudPlatform/magic-modules",
+    "file_path": ".github/workflows/teamcity-pr-checks.yml",
+    "yaml_content": "name: TeamCity Configuration Tests\npermissions: read-all\n\non:\n  workflow_dispatch:\n  pull_request:\n    paths:\n      - '.github/workflows/teamcity-pr-checks.yml'\n      - 'mmv1/third_party/terraform/.teamcity/**'\n\n\njobs:\n  teamcity-config-tests:\n    runs-on: ubuntu-22.04\n    steps:\n      - name: Checkout Repository\n        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1\n        with:\n          fetch-depth: 0\n\n      - name: Setup Java\n        uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 # v4.0.0\n        with:\n          distribution: zulu\n          java-version: 17\n          java-package: jdk\n\n      - name: Cache Maven files\n        uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n          restore-keys: |\n            ${{ runner.os }}-maven-\n\n      - name: Download TeamCity Tools\n        run : |\n          cd mmv1/third_party/terraform/.teamcity\n          make tools\n\n      # Running the tests twice ensures that the tests are discovered and run\n      - name: Run TeamCity Tests\n        run : |\n          cd mmv1/third_party/terraform/.teamcity\n          make test\n          make test",
+    "file_line_count": 46,
+    "workflow_run_count": 436,
+    "repo_language": "Go",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "SingleLangVersionCI",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "HariSekhon@Knowledge-Base@images.yaml",
+    "repository": "HariSekhon/Knowledge-Base",
+    "file_path": ".github/workflows/images.yaml",
+    "yaml_content": "#\n#  Author: Hari Sekhon\n#  Date: 2024-02-27 18:45:11 +0000 (Tue, 27 Feb 2024)\n#\n#  vim:ts=2:sts=2:sw=2:et\n#\n#  https://github.com/HariSekhon/Knowledge-Base\n#\n#  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback\n#\n#  https://www.linkedin.com/in/HariSekhon\n#\n\n# ============================================================================ #\n#                       I m a g e s   R e f e r e n c e d\n# ============================================================================ #\n\n# Check all images are referenced in markdown files\n\n---\nname: Images Referenced\n\non:  # yamllint disable-line rule:truthy\n  push:\n    branches:\n      - master\n      - main\n    paths:\n      - '**/*.md'\n      - .github/scripts/check_images.sh\n      - .github/workflows/index.yaml\n  pull_request:\n    branches:\n      - master\n      - main\n    paths:\n      - '**/*.md'\n      - .github/scripts/check_images.sh\n      - .github/workflows/index.yaml\n  workflow_dispatch:\n\npermissions:\n  contents: read\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\ndefaults:\n  run:\n    shell: bash -euxo pipefail {0}\n\njobs:\n  image-check:\n    # github.event.repository context not available in scheduled workflows\n    #if: github.event.repository.fork == false\n    if: github.repository_owner == 'HariSekhon'\n    name: Image Check\n    timeout-minutes: 3\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n        #name: Git Checkout  # better to show the action@version\n        with:\n          submodules: 'true'  # requires Git 2.18+ to be installed first\n\n      - name: Check all Images are referenced in Markdown\n        run: .github/scripts/check_images.sh\n",
+    "file_line_count": 68,
+    "workflow_run_count": 642,
+    "repo_language": "Shell",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "UnpinnedActionVersion",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "HariSekhon@Knowledge-Base@index.yaml",
+    "repository": "HariSekhon/Knowledge-Base",
+    "file_path": ".github/workflows/index.yaml",
+    "yaml_content": "#\n#  Author: Hari Sekhon\n#  Date: 2024-02-27 18:45:11 +0000 (Tue, 27 Feb 2024)\n#\n#  vim:ts=2:sts=2:sw=2:et\n#\n#  https://github.com/HariSekhon/Knowledge-Base\n#\n#  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback\n#\n#  https://www.linkedin.com/in/HariSekhon\n#\n\n# ============================================================================ #\n#                                   I n d e x\n# ============================================================================ #\n\n# Check all .md files are referenced in the README.md index\n\n---\nname: Index\n\non:  # yamllint disable-line rule:truthy\n  push:\n    branches:\n      - master\n      - main\n    paths:\n      - '**/*.md'\n      - .github/scripts/check_index.sh\n      - .github/workflows/index.yaml\n  pull_request:\n    branches:\n      - master\n      - main\n    paths:\n      - '**/*.md'\n      - .github/scripts/check_index.sh\n      - .github/workflows/index.yaml\n  workflow_dispatch:\n\npermissions:\n  contents: read\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\ndefaults:\n  run:\n    shell: bash -euxo pipefail {0}\n\njobs:\n  index-check:\n    # github.event.repository context not available in scheduled workflows\n    #if: github.event.repository.fork == false\n    if: github.repository_owner == 'HariSekhon'\n    name: Index Check\n    timeout-minutes: 3\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n        #name: Git Checkout  # better to show the action@version\n        with:\n          submodules: 'true'  # requires Git 2.18+ to be installed first\n\n      - name: Check all *.md are referenced in the README.md index\n        run: .github/scripts/check_index.sh\n",
+    "file_line_count": 68,
+    "workflow_run_count": 641,
+    "repo_language": "Shell",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "UnpinnedActionVersion",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "HariSekhon@Knowledge-Base@markdown.yaml",
+    "repository": "HariSekhon/Knowledge-Base",
+    "file_path": ".github/workflows/markdown.yaml",
+    "yaml_content": "#\n#  Author: Hari Sekhon\n#  Date: 2023-04-14 23:53:43 +0100 (Fri, 14 Apr 2023)\n#\n#  vim:ts=2:sts=2:sw=2:et\n#\n#  https://github.com/HariSekhon/Knowledge-Base\n#\n#  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback\n#\n#  https://www.linkedin.com/in/HariSekhon\n#\n\n# ============================================================================ #\n#                                M a r k D o w n\n# ============================================================================ #\n\n---\nname: Markdown\n\non:  # yamllint disable-line rule:truthy\n  push:\n    branches:\n      - master\n      - main\n    paths:\n      - '**/*.md'\n      - .mdlrc\n      - .mdl.rb\n      - .markdownlint.rb\n      - .github/workflows/markdown.yaml\n  pull_request:\n    branches:\n      - master\n      - main\n    paths:\n      - '**/*.md'\n      - .mdlrc\n      - .mdl.rb\n      - .markdownlint.rb\n      - .github/workflows/markdown.yaml\n  workflow_dispatch:\n\npermissions:\n  contents: read\n  pull-requests: read\n\njobs:\n  Markdown:\n    # github.event.repository context not available in scheduled workflows\n    #if: github.event.repository.fork == false\n    if: github.repository_owner == 'HariSekhon'\n    name: Markdown\n    uses: HariSekhon/GitHub-Actions/.github/workflows/markdown.yaml@master\n",
+    "file_line_count": 54,
+    "workflow_run_count": 641,
+    "repo_language": "Shell",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingConcurrencyBranch",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "HariSekhon@Knowledge-Base@sonarcloud.yaml",
+    "repository": "HariSekhon/Knowledge-Base",
+    "file_path": ".github/workflows/sonarcloud.yaml",
+    "yaml_content": "#\n#  Author: Hari Sekhon\n#  Date: 2023-04-14 23:53:43 +0100 (Fri, 14 Apr 2023)\n#\n#  vim:ts=2:sts=2:sw=2:et\n#\n#  https://github.com/HariSekhon/Knowledge-Base\n#\n#  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback\n#\n#  https://www.linkedin.com/in/HariSekhon\n#\n\n# ============================================================================ #\n#                              S o n a r C l o u d\n# ============================================================================ #\n\n---\nname: SonarCloud\n\non:  # yamllint disable-line rule:truthy\n  push:\n    branches:\n      - master\n      - main\n    #paths-ignore:\n    #  - '**/*.md'\n  pull_request:\n    branches:\n      - master\n      - main\n    #paths-ignore:\n    #  - '**/*.md'\n  workflow_dispatch:\n\npermissions:\n  contents: read\n  pull-requests: read\n\njobs:\n  SonarCloud:\n    # github.event.repository context not available in scheduled workflows\n    #if: github.event.repository.fork == false\n    if: github.repository_owner == 'HariSekhon'\n    name: SonarCloud\n    uses: HariSekhon/GitHub-Actions/.github/workflows/sonarcloud.yaml@master\n    secrets:\n      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}\n",
+    "file_line_count": 48,
+    "workflow_run_count": 646,
+    "repo_language": "Shell",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingConcurrencyBranch",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "IBM@sarama@fvt-main.yml",
+    "repository": "IBM/sarama",
+    "file_path": ".github/workflows/fvt-main.yml",
+    "yaml_content": "name: FVT (main)\non:\n  merge_group:\n  push:\n    branches:\n    - main\n    paths-ignore:\n    - '**/*.md'\n\npermissions:\n  contents: read  # for actions/checkout to fetch code\n\nenv:\n  # Use the Go toolchain installed by setup-go\n  GOTOOLCHAIN: local\n\njobs:\n  fvt:\n    name: Test with Kafka ${{ matrix.kafka-version }}\n    strategy:\n      fail-fast: false\n      matrix:\n        go-version: [stable]\n        kafka-version: [1.0.2, 2.0.1, 2.2.2, 2.6.3, 2.8.2, 3.0.2, 3.3.2, 3.6.2, 3.8.1, 3.9.2, 4.1.1, 4.2.0]\n        include:\n        - kafka-version: 1.0.2\n          scala-version: 2.11\n        - kafka-version: 2.0.1\n          scala-version: 2.12\n        - kafka-version: 2.2.2\n          scala-version: 2.12\n        - kafka-version: 2.6.3\n          scala-version: 2.12\n        - kafka-version: 2.8.2\n          scala-version: 2.12\n        - kafka-version: 3.0.2\n          scala-version: 2.12\n        - kafka-version: 3.3.2\n          scala-version: 2.13\n        - kafka-version: 3.6.2\n          scala-version: 2.13\n        - kafka-version: 3.8.1\n          scala-version: 2.13\n        - kafka-version: 3.9.2\n          scala-version: 2.13\n        - kafka-version: 4.1.1\n          scala-version: 2.13\n        - kafka-version: 4.2.0\n          scala-version: 2.13\n    uses: ./.github/workflows/fvt.yml\n    with:\n      go-version: ${{ matrix.go-version }}\n      kafka-version: ${{ matrix.kafka-version }}\n      scala-version: ${{ matrix.scala-version }}\n",
+    "file_line_count": 54,
+    "workflow_run_count": 214,
+    "repo_language": "Go",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingConcurrencyBranch",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "IBM@sarama@scorecard.yml",
+    "repository": "IBM/sarama",
+    "file_path": ".github/workflows/scorecard.yml",
+    "yaml_content": "name: Scorecard supply-chain security\non:\n  # For Branch-Protection check. Only the default branch is supported. See\n  # https://github.com/ossf/scorecard/blob/main/docs/checks.md#branch-protection\n  branch_protection_rule:\n  # To guarantee Maintained check is occasionally updated. See\n  # https://github.com/ossf/scorecard/blob/main/docs/checks.md#maintained\n  schedule:\n    - cron: '17 4 * * 5'\n  push:\n    branches: [ \"main\" ]\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}\n\n# Declare default permissions as read only.\npermissions:\n  actions: read\n  checks: read\n  contents: read\n  issues: read\n  pull-requests: read\n  statuses: read\n\njobs:\n  analysis:\n    name: Scorecard analysis\n    runs-on: ubuntu-latest\n    permissions:\n      # Needed to upload the results to code-scanning dashboard.\n      security-events: write\n      # Needed to publish results and get a badge (see publish_results below).\n      id-token: write\n      # Uncomment the permissions below if installing in a private repository.\n      # contents: read\n      # actions: read\n\n    steps:\n      - name: \"Checkout code\"\n        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2\n        with:\n          persist-credentials: false\n\n      - name: \"Run analysis\"\n        uses: ossf/scorecard-action@4eaacf0543bb3f2c246792bd56e8cdeffafb205a # v2.4.3\n        with:\n          results_file: results.sarif\n          results_format: sarif\n          # (Optional) \"write\" PAT token. Uncomment the `repo_token` line below if:\n          # - you want to enable the Branch-Protection check on a *public* repository, or\n          # - you are installing Scorecard on a *private* repository\n          # To create the PAT, follow the steps in https://github.com/ossf/scorecard-action#authentication-with-pat.\n          # repo_token: ${{ secrets.SCORECARD_TOKEN }}\n\n          # Public repositories:\n          #   - Publish results to OpenSSF REST API for easy access by consumers\n          #   - Allows the repository to include the Scorecard badge.\n          #   - See https://github.com/ossf/scorecard-action#publishing-results.\n          # For private repositories:\n          #   - `publish_results` will always be set to `false`, regardless\n          #     of the value entered here.\n          publish_results: true\n\n      # Upload the results as artifacts (optional). Commenting out will disable uploads of run results in SARIF\n      # format to the repository Actions tab.\n      - name: \"Upload artifact\"\n        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1\n        with:\n          name: SARIF file\n          path: results.sarif\n          retention-days: 5\n\n      # Upload the results to GitHub's code scanning dashboard.\n      - name: \"Upload to code-scanning\"\n        uses: github/codeql-action/upload-sarif@e46ed2cbd01164d986452f91f178727624ae40d7 # v4.35.3\n        with:\n          sarif_file: results.sarif\n",
+    "file_line_count": 78,
+    "workflow_run_count": 276,
+    "repo_language": "Go",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingUploadCondition",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "JMBeresford@retrom@verify.yml",
+    "repository": "JMBeresford/retrom",
+    "file_path": ".github/workflows/verify.yml",
+    "yaml_content": "name: Verify\n\npermissions:\n  contents: read\n\non:\n  workflow_dispatch:\n  pull_request:\n  push:\n    branches:\n      - main\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\njobs:\n  lint:\n    uses: ./.github/workflows/lint.yml\n    concurrency:\n      group: \"lint-${{ github.ref }}\"\n      cancel-in-progress: true\n    secrets: inherit\n\n  format:\n    uses: ./.github/workflows/format.yml\n    concurrency:\n      group: \"format-${{ github.ref }}\"\n      cancel-in-progress: true\n    secrets: inherit\n\n  build-client:\n    uses: ./.github/workflows/build-client.yml\n    concurrency:\n      group: \"build-client-${{ github.ref }}\"\n      cancel-in-progress: true\n    secrets: inherit\n    with:\n      bundle: false\n",
+    "file_line_count": 39,
+    "workflow_run_count": 657,
+    "repo_language": "TypeScript",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingPathFilters",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "JuliaLang@julia@Typos.yml",
+    "repository": "JuliaLang/julia",
+    "file_path": ".github/workflows/Typos.yml",
+    "yaml_content": "name: Typos\n\npermissions: {}\n\non: [pull_request]\n\njobs:\n  typos-check:\n    name: Check for new typos\n    runs-on: ubuntu-latest\n    timeout-minutes: 5\n    steps:\n      - name: Checkout the JuliaLang/julia repository\n        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2\n        with:\n          persist-credentials: false\n      - name: Check spelling with typos\n        #uses: crate-ci/typos@c7af4712eda24dd1ef54bd8212973888489eb0ce # v1.23.5\n        env:\n          GH_TOKEN: \"${{ github.token }}\"\n        run: |\n          git fetch --depth=1 origin ${{ github.base_ref }}\n          OLD_FILES=$(git diff-index --name-only --diff-filter=ad FETCH_HEAD)\n          NEW_FILES=$(git diff-index --name-only --diff-filter=d FETCH_HEAD)\n\n          # This is necessary because the typos command interprets the\n          # empty string as \"check all files\" rather than \"check no files\".\n          if [ -z \"$NEW_FILES\" ]; then\n            echo \"All edited files were deleted. Skipping typos check.\"\n            exit 0\n          fi\n\n          mkdir -p \"${{ runner.temp }}/typos\"\n          RELEASE_ASSET_URL=\"$(\n            gh api /repos/crate-ci/typos/releases/latest \\\n            --jq '.\"assets\"[] | select(.\"name\" | test(\"^typos-.+-x86_64-unknown-linux-musl\\\\.tar\\\\.gz$\")) | .\"browser_download_url\"'\n          )\"\n          wget --secure-protocol=TLSv1_3 --max-redirect=1 --retry-on-host-error --retry-connrefused --tries=3 \\\n            --quiet --output-document=- \"${RELEASE_ASSET_URL}\" \\\n            | tar -xz -C \"${{ runner.temp }}/typos\" ./typos\n          \"${{ runner.temp }}/typos/typos\" --version\n\n          echo -n $NEW_FILES | xargs \"${{ runner.temp }}/typos/typos\" --format json >> ${{ runner.temp }}/new_typos.jsonl || true\n          git checkout FETCH_HEAD -- $OLD_FILES\n          if [ -z \"$OLD_FILES\" ]; then\n            touch \"${{ runner.temp }}/old_typos.jsonl\" # No old files, so no old typos.\n          else\n            echo -n $OLD_FILES | xargs \"${{ runner.temp }}/typos/typos\" --format json >> ${{ runner.temp }}/old_typos.jsonl || true\n          fi\n\n\n          python -c '\n          import sys, json\n          old = set()\n          with open(sys.argv[1]) as old_file:\n            for line in old_file:\n              j = json.loads(line)\n              if j[\"type\"] == \"typo\":\n                old.add(j[\"typo\"])\n          clean = True\n          with open(sys.argv[2]) as new_file:\n            for line in new_file:\n              new = json.loads(line)\n              if new[\"type\"] == \"typo\" and new[\"typo\"] not in old:\n                if len(new[\"typo\"]) > 6: # Short typos might be false positives. Long are probably real.\n                  clean = False\n                print(\"::warning file={},line={},col={}::perhaps \\\"{}\\\" should be \\\"{}\\\".\".format(\n                  new[\"path\"], new.get(\"line_num\", 1), new[\"byte_offset\"],\n                  new[\"typo\"], \" or \".join(new[\"corrections\"])))\n          sys.exit(1 if not clean else 0)' \"${{ runner.temp }}/old_typos.jsonl\" \"${{ runner.temp }}/new_typos.jsonl\"\n",
+    "file_line_count": 70,
+    "workflow_run_count": 9700,
+    "repo_language": "Julia",
+    "default_branch": "master",
+    "present_smells": [
+      {
+        "pascal": "MutableRunnerVersion",
+        "count": 1
+      },
+      {
+        "pascal": "MultiCommandStep",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "JustArchiNET@ASF-ui@ci.yml",
+    "repository": "JustArchiNET/ASF-ui",
+    "file_path": ".github/workflows/ci.yml",
+    "yaml_content": "name: ASF-ui-ci\n\non: [push, pull_request]\n\nenv:\n  NODE_JS_VERSION: 'lts/*'\n\npermissions: {}\n\njobs:\n  build:\n    strategy:\n      fail-fast: false\n      matrix:\n        os: [macos-latest, ubuntu-latest, windows-latest]\n\n    runs-on: ${{ matrix.os }}\n\n    steps:\n    - name: Checkout code\n      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2\n      with:\n        show-progress: false\n\n    - name: Setup Node.js with npm\n      uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0\n      with:\n        check-latest: true\n        node-version: ${{ env.NODE_JS_VERSION }}\n\n    - name: Verify Node.js\n      run: node -v\n\n    - name: Verify npm\n      run: npm -v\n\n    - name: Install npm modules for ASF-ui\n      run: npm ci --no-progress\n\n    - name: Build ASF-ui\n      run: npm run-script deploy --no-progress\n\n    - name: Test ASF-ui dev environment\n      run: npm run-script serve:ci --no-progress\n\n    - name: Upload ASF-ui\n      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1\n      with:\n        compression-level: 1\n        if-no-files-found: error\n        name: ${{ matrix.os }}_ASF-ui\n        path: dist\n",
+    "file_line_count": 52,
+    "workflow_run_count": 675,
+    "repo_language": "Vue",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingUploadCondition",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "LadybirdBrowser@ladybird@ci.yml",
+    "repository": "LadybirdBrowser/ladybird",
+    "file_path": ".github/workflows/ci.yml",
+    "yaml_content": "name: CI\n\non: [push, pull_request]\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.head_ref || format('{0}-{1}', github.ref, github.run_number) }}\n  cancel-in-progress: true\n\njobs:\n  # CI matrix - runs the job in lagom-template.yml with different configurations.\n  Lagom:\n    if: github.repository == 'LadybirdBrowser/ladybird'\n    name: ${{ matrix.os_name }}, ${{ matrix.arch }}, ${{ matrix.build_preset }}, ${{ matrix.toolchain }}\n\n    strategy:\n      fail-fast: false\n      matrix:\n        os_name: ['Linux']\n        arch: ['x86_64']\n        build_preset: ['Sanitizer']\n        toolchain: ['GNU']\n        clang_plugins: [false]\n        runner_labels: ['[\"blacksmith-16vcpu-ubuntu-2404\"]']\n        container: [&ci_container '{\"image\":\"ghcr.io/ladybirdbrowser/ladybird-ci:2026.05.4\"}']\n\n        include:\n          - os_name: 'Linux'\n            arch: 'x86_64'\n            build_preset: 'Sanitizer'\n            toolchain: 'Clang'\n            clang_plugins: true\n            runner_labels: '[\"blacksmith-16vcpu-ubuntu-2404\"]'\n            container: *ci_container\n\n          - os_name: 'macOS'\n            arch: 'arm64'\n            build_preset: 'Sanitizer'\n            toolchain: 'Clang'\n            clang_plugins: false\n            runner_labels: '[\"macos-15\", \"self-hosted\"]'\n            container: 'null'\n\n          - os_name: 'Linux'\n            arch: 'arm64'\n            build_preset: 'Sanitizer'\n            toolchain: 'Clang'\n            clang_plugins: false\n            runner_labels: '[\"blacksmith-16vcpu-ubuntu-2404-arm\"]'\n            container: *ci_container\n\n          - os_name: 'Linux'\n            arch: 'x86_64'\n            build_preset: 'Fuzzers'\n            toolchain: 'Clang'\n            clang_plugins: false\n            runner_labels: '[\"blacksmith-16vcpu-ubuntu-2404\"]'\n            container: *ci_container\n\n          - os_name: 'Linux'\n            arch: 'x86_64'\n            build_preset: 'All_Debug'\n            toolchain: 'Clang'\n            clang_plugins: false\n            runner_labels: '[\"blacksmith-16vcpu-ubuntu-2404\"]'\n            container: *ci_container\n\n          - os_name: 'Windows'\n            arch: 'x86_64'\n            build_preset: 'Sanitizer'\n            toolchain: 'ClangCL'\n            clang_plugins: false\n            runner_labels: '[\"blacksmith-16vcpu-windows-2025\"]'\n            container: 'null'\n\n    secrets: inherit\n    uses: ./.github/workflows/lagom-template.yml\n    with:\n      toolchain: ${{ matrix.toolchain }}\n      os_name: ${{ matrix.os_name }}\n      runner_labels: ${{ matrix.runner_labels }}\n      arch: ${{ matrix.arch }}\n      build_preset: ${{ matrix.build_preset }}\n      clang_plugins: ${{ matrix.clang_plugins }}\n      container: ${{ matrix.container }}\n",
+    "file_line_count": 84,
+    "workflow_run_count": 16823,
+    "repo_language": "C++",
+    "default_branch": "master",
+    "present_smells": [],
+    "absent_smells": [
+      {
+        "pascal": "UnpinnedActionVersion"
+      },
+      {
+        "pascal": "MissingForkGuardPR"
+      },
+      {
+        "pascal": "MissingJobTimeout"
+      },
+      {
+        "pascal": "MissingConcurrencyPR"
+      },
+      {
+        "pascal": "MissingConcurrencyBranch"
+      },
+      {
+        "pascal": "MissingUploadCondition"
+      },
+      {
+        "pascal": "UnsafeDeployOnFork"
+      },
+      {
+        "pascal": "MutableRunnerVersion"
+      },
+      {
+        "pascal": "SingleOSExecution"
+      },
+      {
+        "pascal": "SingleLangVersionCI"
+      }
+    ]
+  },
+  {
+    "file_key": "Lightning-AI@lightning-thunder@auto-cc.yml",
+    "repository": "Lightning-AI/lightning-thunder",
+    "file_path": ".github/workflows/auto-cc.yml",
+    "yaml_content": "name: Probot\n\non:\n  issues:\n    types: [labeled]\n  # should use `pull_request_target` but it's blocked by\n  # https://github.com/probot/probot/issues/1635\n  # so this job will not run on forks until the above is fixed\n  pull_request:\n    types: [labeled, ready_for_review]\n\njobs:\n  auto-cc:\n    runs-on: ubuntu-latest\n    if: github.event_name == 'issue' || github.event.pull_request.draft == false\n    timeout-minutes: 5\n    steps:\n      - uses: Lightning-AI/probot@v5\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n        with:\n          job: auto-cc\n",
+    "file_line_count": 22,
+    "workflow_run_count": 974,
+    "repo_language": "Python",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingTokenPermissions",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "Renumics@spotlight@pr.yml",
+    "repository": "Renumics/spotlight",
+    "file_path": ".github/workflows/pr.yml",
+    "yaml_content": "name: Pull request\n\non: pull_request\n\njobs:\n    # Comment\n    comment-gui-screenshots:\n        name: '\ud83d\udd8d Comment GUI screenshots'\n        if: github.event.pull_request.head.repo.full_name == 'Renumics/spotlight'\n        permissions:\n            pull-requests: write\n        runs-on: ubuntu-latest\n        env:\n            AZURE_FOLDER_URL: https://spotlightpublic.blob.core.windows.net/github-public/${{ github.repository }}/${{ github.event.pull_request.head.sha }}/screenshots\n        steps:\n            - name: '\ud83d\udd8d Comment GUI screenshots'\n              if: github.actor != 'dependabot[bot]'\n              uses: thollander/actions-comment-pull-request@24bffb9b452ba05a4f3f77933840a6a841d1b32b\n              with:\n                  comment-tag: gui-screenshots\n                  pr-number: ${{ github.event.pull_request.number }}\n                  message: |\n                      ### GUI in Chrome\n\n                      ![\u23f3 CI is still running or has failed](${{ env.AZURE_FOLDER_URL }}/gui-chrome.png \"GUI in Chrome\")\n\n                      <details>\n                          <summary>Diff to the last main</summary>\n\n                      ![\u23f3 CI is still running or has failed](${{ env.AZURE_FOLDER_URL }}/gui-chrome-diff.png \"GUI diff in Chrome\")\n\n                      </details>\n\n                      ### GUI in Firefox\n\n                      ![\u23f3 CI is still running or has failed](${{ env.AZURE_FOLDER_URL }}/gui-firefox.png \"GUI in Firefox\")\n\n                      <details>\n                          <summary>Diff to the last main</summary>\n\n                      ![\u23f3 CI is still running or has failed](${{ env.AZURE_FOLDER_URL }}/gui-firefox-diff.png \"GUI diff in Firefox\")\n\n                      </details>\n                  reactions: eyes\n",
+    "file_line_count": 44,
+    "workflow_run_count": 179,
+    "repo_language": "TypeScript",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingJobTimeout",
+        "count": 1
+      },
+      {
+        "pascal": "MutableRunnerVersion",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "TraceMachina@nativelink@coverage.yaml",
+    "repository": "TraceMachina/nativelink",
+    "file_path": ".github/workflows/coverage.yaml",
+    "yaml_content": "---\nname: Coverage\n\non:\n  push:\n    branches: [main]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n  pull_request:\n    branches: [main]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n\npermissions: read-all\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}\n\njobs:\n  coverage:\n    name: Coverage\n    runs-on: xlarge-ubuntu-24.04\n    timeout-minutes: 180\n    steps:\n      - name: Checkout\n        uses: >- # v6.0.2\n          actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n\n      - name: Prepare Worker\n        uses: ./.github/actions/prepare-nix\n        with:\n          nativelink_attic_token: ${{ secrets.NATIVELINK_ATTIC_TOKEN }}\n\n      # Ubuntu 24.04 restricts unprivileged user namespaces by default, which breaks\n      # the worker tests that use namespaces (e.g. for sandboxing).\n      - name: Disable AppArmor namespace restrictions\n        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0\n\n      - name: Generate coverage\n        run: |\n          nix build -L .#nativelinkCoverageForHost\n\n      - name: Upload coverage artifact\n        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}\n        uses: >- # v3.0.1\n          actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa\n        with:\n          path: result/html\n\n      - name: Teardown Worker\n        uses: ./.github/actions/end-nix\n        if: always()\n        with:\n          nix_name: .#nativelinkCoverageForHost\n          nativelink_attic_token: ${{ secrets.NATIVELINK_ATTIC_TOKEN }}\n\n  deploy:\n    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}\n    name: Deploy Coverage\n    environment:\n      name: github-pages\n      url: ${{ steps.deployment.outputs.page_url }}\n    needs: coverage\n    runs-on: ubuntu-24.04\n    permissions:\n      pages: write      # to deploy to GitHub Pages\n      id-token: write   # to authenticate to GitHub Pages\n    steps:\n      - name: Deploy to GitHub Pages\n        id: deployment\n        uses: >- # v4.0.5\n          actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e\n",
+    "file_line_count": 75,
+    "workflow_run_count": 2457,
+    "repo_language": "Rust",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingJobTimeout",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "TraceMachina@nativelink@main.yaml",
+    "repository": "TraceMachina/nativelink",
+    "file_path": ".github/workflows/main.yaml",
+    "yaml_content": "name: CI\n\n# Controls when the workflow will run.\non:\n  push:\n    branches: [ main ]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n  pull_request:\n    branches: [ main ]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n\npermissions: read-all\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}\n\njobs:\n  # TODO(palfrey): Flaky. Fix.\n  # docker-compose-compiles-nativelink:\n  #   # The type of runner that the job will run on.\n  #   runs-on: ubuntu-24.04\n  #   strategy:\n  #     matrix:\n  #       # Which OS versions we will test on.\n  #       os_version: [ 24.04 ]\n  #   steps:\n  #   - name: Checkout\n  #     uses: >- # v6.0.2\n  #       actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n\n  #   - name: Set up Docker Buildx\n  #     uses: >- # v3.9.0\n  #       docker/setup-buildx-action@f7ce87c1d6bead3e36075b2ce75da1f6cc28aaca\n\n  #   - name: Build Nativelink image\n  #     uses: >- # v6.13.0\n  #       docker/build-push-action@ca877d9245402d1537745e0e356eab47c3520991\n  #     with:\n  #       context: .\n  #       file: ./deployment-examples/docker-compose/Dockerfile\n  #       build-args: |\n  #         OPT_LEVEL=opt\n  #         OS_VERSION=${{ matrix.os_version }}\n  #         ADDITIONAL_SETUP_WORKER_CMD=apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y gcc g++ lld pkg-config python3\n  #       load: true # This brings the build into `docker images` from buildx.\n  #       tags: trace_machina/nativelink:latest\n\n  #   - name: Build builder image\n  #     uses: >- # v6.13.0\n  #       docker/build-push-action@ca877d9245402d1537745e0e356eab47c3520991\n  #     with:\n  #       context: .\n  #       file: ./deployment-examples/docker-compose/Dockerfile\n  #       build-args: |\n  #         OPT_LEVEL=opt\n  #         OS_VERSION=${{ matrix.os_version }}\n  #       load: true # This brings the build into `docker images` from buildx.\n  #       tags: trace_machina/nativelink:builder\n  #       target: builder\n\n  #   - name: Compile NativeLink with NativeLink\n  #     run: |\n  #       mkdir -p ~/.cache && \\\n  #       cd deployment-examples/docker-compose && \\\n  #       (docker-compose up -d || docker compose up -d) && \\\n  #       cd ../../ && \\\n  #       docker run --rm --net=host -w /root/nativelink -v $PWD:/root/nativelink trace_machina/nativelink:builder sh -c ' \\\n  #         bazel clean && \\\n  #         bazel test //... \\\n  #         --extra_toolchains=@rust_toolchains//:all \\\n  #         --remote_cache=grpc://127.0.0.1:50051 \\\n  #         --remote_executor=grpc://127.0.0.1:50052 \\\n  #         --remote_default_exec_properties=cpu_count=2 \\\n  #       ' && \\\n  #       docker run --rm --net=host -w /root/nativelink -v $PWD:/root/nativelink trace_machina/nativelink:builder sh -c ' \\\n  #         bazel clean && \\\n  #         bazel test //... \\\n  #         --extra_toolchains=@rust_toolchains//:all \\\n  #         --remote_cache=grpc://127.0.0.1:50051 \\\n  #         --remote_executor=grpc://127.0.0.1:50052 \\\n  #         --remote_default_exec_properties=cpu_count=2 \\\n  #       ' 2>&1 | ( ! grep '         PASSED in ' ) # If we get PASSED without (cache) it means there's a cache issue.\n\n  integration-tests:\n    runs-on: ubuntu-24.04\n    timeout-minutes: 60\n    steps:\n    - name: Checkout\n      uses: >- # v6.0.2\n        actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n\n    - name: Set up Docker Buildx\n      uses: >- # v3.9.0\n        docker/setup-buildx-action@f7ce87c1d6bead3e36075b2ce75da1f6cc28aaca\n\n    - name: Build image\n      uses: >- # v6.13.0\n        docker/build-push-action@ca877d9245402d1537745e0e356eab47c3520991\n      with:\n        context: .\n        file: ./deployment-examples/docker-compose/Dockerfile\n        build-args: |\n          OPT_LEVEL=fastbuild\n          ADDITIONAL_BAZEL_FLAGS=--extra_toolchains=@rust_toolchains//:all\n        load: true # This brings the build into `docker images` from buildx.\n        tags: trace_machina/nativelink:latest\n\n    - name: Run tests\n      run: ./run_integration_tests.sh\n",
+    "file_line_count": 114,
+    "workflow_run_count": 2101,
+    "repo_language": "Rust",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "SingleOSExecution",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "TraceMachina@nativelink@native-bazel.yaml",
+    "repository": "TraceMachina/nativelink",
+    "file_path": ".github/workflows/native-bazel.yaml",
+    "yaml_content": "---\nname: Bazel Native\n\non:\n  push:\n    branches: [main]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n  pull_request:\n    branches: [main]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n\npermissions: read-all\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}\n\njobs:\n  unit-tests:\n    strategy:\n      fail-fast: false\n      matrix:\n        os: [ubuntu-24.04, macos-26]\n    name: ${{ matrix.os }}\n    runs-on: ${{ matrix.os }}\n    timeout-minutes: 30\n    steps:\n      - name: Checkout\n        uses: >- # v6.0.2\n          actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n\n      - name: Free disk space\n        uses: ./.github/actions/free-disk\n\n      - name: Setup Bazel\n        uses: >- # v0.19.0\n          bazel-contrib/setup-bazel@c5acdfb288317d0b5c0bbd7a396a3dc868bb0f86\n        with:\n          bazelisk-cache: true\n          repository-cache: true\n          disk-cache: ${{ github.workflow }}-${{ matrix.os }}\n\n      - name: Run Bazel tests\n        run: |\n          if [ \"$RUNNER_OS\" == \"Linux\" ] || [ \"$RUNNER_OS\" == \"macOS\" ]; then\n            bazel test //... \\\n              --lockfile_mode=error \\\n              --extra_toolchains=@rust_toolchains//:all \\\n              --verbose_failures\n          elif [ \"$RUNNER_OS\" == \"Windows\" ]; then\n            bazel \\\n              --lockfile_mode=error \\\n              --output_user_root=${{ steps.bazel-cache.outputs.mountpoint }} \\\n              test \\\n              --config=windows \\\n              //... \\\n              --verbose_failures\n          else\n            echo \"Unknown runner OS: $RUNNER_OS\"\n            exit 1\n          fi\n        shell: bash\n\n  redis-store-tester:\n    name: Redis store tester\n    runs-on: ubuntu-24.04\n    timeout-minutes: 30\n    steps:\n      - name: Checkout\n        uses: >- # v6.0.2\n          actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n\n      - uses: hoverkraft-tech/compose-action@3846bcd61da338e9eaaf83e7ed0234a12b099b72 # v2.4.1\n        with:\n          compose-file: src/bin/docker-compose.store-tester.yaml\n\n      - name: Setup Bazel\n        uses: >- # v0.19.0\n          bazel-contrib/setup-bazel@c5acdfb288317d0b5c0bbd7a396a3dc868bb0f86\n        with:\n          bazelisk-cache: true\n          repository-cache: true\n          disk-cache: ${{ github.workflow }}-ubuntu-24.04\n\n      - name: Run Store tester with sentinel\n        run: |\n          bazel run //:redis_store_tester \\\n            --lockfile_mode=error \\\n            --extra_toolchains=@rust_toolchains//:all \\\n            --verbose_failures -- --redis-mode sentinel --mode sequential\n        env:\n          RUST_LOG: trace\n          REDIS_HOST: localhost\n          MAX_LOOPS: 10 # running sequentially just to test all the actions work\n        shell: bash\n\n      - name: Run Store tester with standard\n        run: |\n          bazel run //:redis_store_tester \\\n            --lockfile_mode=error \\\n            --extra_toolchains=@rust_toolchains//:all \\\n            --verbose_failures -- --redis-mode standard --mode sequential\n        env:\n          RUST_LOG: trace\n          REDIS_HOST: localhost\n          MAX_LOOPS: 10 # running sequentially just to test all the actions work\n        shell: bash\n\n      - name: Run Store tester with cluster\n        run: |\n          bazel run //:redis_store_tester \\\n            --lockfile_mode=error \\\n            --extra_toolchains=@rust_toolchains//:all \\\n            --verbose_failures -- --redis-mode cluster --mode sequential\n        env:\n          RUST_LOG: trace\n          REDIS_HOST: localhost\n          MAX_LOOPS: 10 # running sequentially just to test all the actions work\n        shell: bash\n",
+    "file_line_count": 123,
+    "workflow_run_count": 2457,
+    "repo_language": "Rust",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "SingleOSExecution",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "TraceMachina@nativelink@native-cargo.yaml",
+    "repository": "TraceMachina/nativelink",
+    "file_path": ".github/workflows/native-cargo.yaml",
+    "yaml_content": "---\nname: Cargo Native\n\non:\n  push:\n    branches: [main]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n  pull_request:\n    branches: [main]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n\npermissions: read-all\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}\n\nenv:\n  RUSTFLAGS: -Dwarnings\n\njobs:\n  cargo-native:\n    strategy:\n      fail-fast: false\n      matrix:\n        os: [ubuntu-24.04, windows-2022]\n        toolchain: [stable]\n    name: ${{ matrix.os }} / ${{ matrix.toolchain }}\n    runs-on: ${{ matrix.os }}\n    timeout-minutes: 30\n    steps:\n      - name: Checkout\n        uses: >- # v6.0.2\n          actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n\n      # Ubuntu 24.04 restricts unprivileged user namespaces by default, which breaks\n      # the worker tests that use namespaces (e.g. for sandboxing).\n      - name: Disable AppArmor namespace restrictions\n        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0\n        if: matrix.os == 'ubuntu-24.04'\n\n      - name: Set up Rust toolchain\n        run: rustup update && rustup default ${{ matrix.toolchain }}\n        shell: bash\n\n      - name: Rust cache\n        # https://github.com/Swatinem/rust-cache/releases/tag/v2.9.1\n        uses: Swatinem/rust-cache@c19371144df3bb44fab255c43d04cbc2ab54d1c4\n\n      - name: Build on ${{ runner.os }}\n        run: cargo build --all --profile=smol\n\n      - name: Test on ${{ runner.os }}\n        run: cargo test --all --profile=smol\n\n      - name: Check schema export\n        run: cargo run --bin build-schema --features dev-schema --package nativelink-config\n",
+    "file_line_count": 61,
+    "workflow_run_count": 2457,
+    "repo_language": "Rust",
+    "default_branch": "main",
+    "present_smells": [],
+    "absent_smells": [
+      {
+        "pascal": "MissingPermExternalActions"
+      },
+      {
+        "pascal": "MissingJobTimeout"
+      }
+    ]
+  },
+  {
+    "file_key": "TraceMachina@nativelink@nix.yaml",
+    "repository": "TraceMachina/nativelink",
+    "file_path": ".github/workflows/nix.yaml",
+    "yaml_content": "---\nname: Nix\n\non:\n  push:\n    branches: [main]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n  pull_request:\n    branches: [main]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n\npermissions: read-all\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}\n\njobs:\n  nix-bazel:\n    strategy:\n      fail-fast: false\n      matrix:\n        os: [ubuntu-24.04, macos-26]\n    name: Bazel Dev / ${{ matrix.os }}\n    runs-on: ${{ matrix.os }}\n    timeout-minutes: 180\n    steps:\n      - name: Checkout\n        uses: >- # v6.0.2\n          actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n\n      - name: Prepare Worker\n        uses: ./.github/actions/prepare-nix\n        with:\n          nativelink_attic_token: ${{ secrets.NATIVELINK_ATTIC_TOKEN }}\n\n      - name: Invoke Bazel build in Nix shell\n        run: |\n          if [ \"$RUNNER_OS\" == \"Linux\" ]; then\n            nix develop --fallback --impure --command \\\n            bash -c \"bazel test ... --verbose_failures --lockfile_mode=error\"\n          elif [ \"$RUNNER_OS\" == \"macOS\" ]; then\n            nix develop --fallback --impure --command \\\n            bash -c \"bazel test //... --verbose_failures --lockfile_mode=error\"\n          else\n            echo \"Unsupported runner OS: $RUNNER_OS\"\n            exit 1\n          fi\n        shell: bash\n\n      - name: Teardown Worker\n        uses: ./.github/actions/end-nix\n        if: always()\n        with:\n          nativelink_attic_token: ${{ secrets.NATIVELINK_ATTIC_TOKEN }}\n\n  nix-cargo:\n    strategy:\n      fail-fast: false\n      matrix:\n        os: [ubuntu-24.04, macos-26]\n    name: Cargo Dev / ${{ matrix.os }}\n    runs-on: ${{ matrix.os }}\n    timeout-minutes: 180\n    steps:\n      - name: Checkout\n        uses: >- # v6.0.2\n          actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n\n      - name: Prepare Worker\n        uses: ./.github/actions/prepare-nix\n        with:\n          nativelink_attic_token: ${{ secrets.NATIVELINK_ATTIC_TOKEN }}\n\n      - name: Invoke Cargo build in Nix shell\n        run: >\n          nix develop --fallback --impure --command\n          bash -c \"cargo test --all --profile=smol\"\n\n      - name: Teardown Worker\n        uses: ./.github/actions/end-nix\n        if: always()\n        with:\n          nativelink_attic_token: ${{ secrets.NATIVELINK_ATTIC_TOKEN }}\n\n  installation:\n    strategy:\n      fail-fast: false\n      matrix:\n        os:\n          - ubuntu-24.04\n          - macos-26\n    name: Installation / ${{ matrix.os }}\n    runs-on: ${{ matrix.os }}\n    timeout-minutes: 180\n    steps:\n      - name: Checkout\n        uses: >- # v6.0.2\n          actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n\n      - name: Prepare Worker\n        uses: ./.github/actions/prepare-nix\n        with:\n          nativelink_attic_token: ${{ secrets.NATIVELINK_ATTIC_TOKEN }}\n\n      - name: Test nix run\n        run: |\n          nix run -L .#nativelink-is-executable-test\n\n      - name: Teardown Worker\n        uses: ./.github/actions/end-nix\n        if: always()\n        with:\n          nix_name: .#nativelink-is-executable-test\n          nativelink_attic_token: ${{ secrets.NATIVELINK_ATTIC_TOKEN }}\n\n  integration:\n    name: ${{ matrix.test-name }}\n    strategy:\n      matrix:\n          test-name: [buildstream, buck2, rbe-toolchain, mongo]\n    runs-on: ubuntu-24.04\n    timeout-minutes: 45\n    steps:\n      - name: Checkout\n        uses: >- # v6.0.2\n          actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n\n      - name: Prepare Worker\n        uses: ./.github/actions/prepare-nix\n        with:\n          nativelink_attic_token: ${{ secrets.NATIVELINK_ATTIC_TOKEN }}\n\n      - name: Test ${{ matrix.test-name }} run\n        run: |\n          nix run -L .#${{ matrix.test-name }}-with-nativelink-test\n\n      - name: Teardown Worker\n        uses: ./.github/actions/end-nix\n        if: always()\n        with:\n          nativelink_attic_token: ${{ secrets.NATIVELINK_ATTIC_TOKEN }}\n          nix_name: .#${{ matrix.test-name }}-with-nativelink-test\n",
+    "file_line_count": 147,
+    "workflow_run_count": 2458,
+    "repo_language": "Rust",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "SingleOSExecution",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "TraceMachina@nativelink@sanitizers.yaml",
+    "repository": "TraceMachina/nativelink",
+    "file_path": ".github/workflows/sanitizers.yaml",
+    "yaml_content": "---\nname: Sanitizers\n\non:\n  push:\n    branches: [main]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n  pull_request:\n    branches: [main]\n    paths-ignore:\n      - '.github/styles/**'\n      - 'web/**'\n\npermissions: read-all\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}\n\njobs:\n  sanitized-tests:\n    strategy:\n      fail-fast: false\n      matrix:\n        os: [ubuntu-24.04]\n        sanitizer: [asan]\n    name: ${{ matrix.sanitizer }} / ${{ matrix.os }}\n    runs-on: ${{ matrix.os }}\n    timeout-minutes: 30\n    steps:\n      - name: Checkout\n        uses: >- # v6.0.2\n          actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd\n\n      - name: Free disk space\n        uses: ./.github/actions/free-disk\n\n      - name: Setup Bazel\n        uses: >- # v0.19.0\n          bazel-contrib/setup-bazel@c5acdfb288317d0b5c0bbd7a396a3dc868bb0f86\n        with:\n          bazelisk-cache: true\n          repository-cache: true\n\n      - name: Run Bazel tests\n        run: bazel test --config=${{ matrix.sanitizer }} --lockfile_mode=error --verbose_failures //...\n        shell: bash\n",
+    "file_line_count": 49,
+    "workflow_run_count": 2457,
+    "repo_language": "Rust",
+    "default_branch": "main",
+    "present_smells": [],
+    "absent_smells": [
+      {
+        "pascal": "MissingPathFilters"
+      }
+    ]
+  },
+  {
+    "file_key": "TracecatHQ@tracecat@release-drafter.yml",
+    "repository": "TracecatHQ/tracecat",
+    "file_path": ".github/workflows/release-drafter.yml",
+    "yaml_content": "name: Update draft release\n\non:\n  push:\n    branches:\n      - main\n\npermissions:\n  contents: write\n  pull-requests: read\n\njobs:\n  main:\n    runs-on: blacksmith-4vcpu-ubuntu-2204\n    steps:\n      - name: Draft release\n        uses: release-drafter/release-drafter@6a93d829887aa2e0748befe2e808c66c0ec6e4c7 # v6\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n",
+    "file_line_count": 19,
+    "workflow_run_count": 3126,
+    "repo_language": "Python",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingConcurrencyGlobal",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "ZSWatch@ZSWatch@ci.yml",
+    "repository": "ZSWatch/ZSWatch",
+    "file_path": ".github/workflows/ci.yml",
+    "yaml_content": "name: CI\n\non:\n  pull_request:  # Internal PRs only\n    types: [opened, synchronize, reopened]\n  pull_request_target:  # External PRs only  \n    types: [opened, synchronize, reopened]\n  workflow_dispatch:\n\npermissions:\n  contents: read\n  packages: read\n  pull-requests: write\n  checks: write\n\njobs:\n  build:\n    uses: ./.github/workflows/build.yml\n\n  test:\n    needs: [build]\n    # Dual trigger (pull_request, pull_request_target) approach is needed because:\n    # - Self-hosted runners with hardware are required for testing\n    # - Fork PRs can't access self-hosted runners with 'pull_request' trigger\n    # - Fork PRs need 'pull_request_target' for self-hosted runner access and test annotation.\n    # - Internal PRs need 'pull_request' to test updated workflow files\n    # - Both triggers have comment/annotation permissions in their respective contexts\n    #\n    # Logic ensures each PR type runs the tests exactly once:\n    # - Internal PRs: Only 'pull_request' runs (uses PR branch workflows, no approval needed)\n    # - External PRs: Only 'pull_request_target' runs (uses main branch workflows, requires approval)\n    #\n    # Note: Build job runs twice (once per trigger) but let it be because otherwise\n    # we would need complex cross-workflow artifact downloading logic.\n    if: |\n      (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository) ||\n      (github.event_name == 'pull_request_target' && github.event.pull_request.head.repo.full_name != github.repository)\n    uses: ./.github/workflows/test.yml\n    with:\n      is-external-pr: ${{ github.event_name == 'pull_request_target' }}\n      pr-head-sha: ${{ github.event.pull_request.head.sha }}\n      pr-head-repo: ${{ github.event.pull_request.head.repo.full_name }}\n",
+    "file_line_count": 42,
+    "workflow_run_count": 906,
+    "repo_language": "C",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingConcurrencyPR",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "ada-url@ada@cifuzz.yml",
+    "repository": "ada-url/ada",
+    "file_path": ".github/workflows/cifuzz.yml",
+    "yaml_content": "name: CIFuzz\n\non:\n  pull_request:\n    branches:\n      - main\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\npermissions: read-all\n\njobs:\n  Fuzzing:\n    runs-on: ubuntu-latest\n    strategy:\n      fail-fast: false\n      matrix:\n        sanitizer: [address, undefined, memory]\n    steps:\n      - name: Build Fuzzers (${{ matrix.sanitizer }})\n        id: build\n        uses: google/oss-fuzz/infra/cifuzz/actions/build_fuzzers@master\n        with:\n         oss-fuzz-project-name: 'ada-url'\n         language: c++\n         sanitizer: ${{ matrix.sanitizer }}\n      - name: Run Fuzzers (${{ matrix.sanitizer }})\n        uses: google/oss-fuzz/infra/cifuzz/actions/run_fuzzers@master\n        with:\n         oss-fuzz-project-name: 'ada-url'\n         language: c++\n         fuzz-seconds: 600\n         sanitizer: ${{ matrix.sanitizer }}\n      - name: Upload Crash\n        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1\n        if: steps.build.outcome == 'success'\n        with:\n          name: ${{ matrix.sanitizer }}-artifacts\n          path: ./out/artifacts\n",
+    "file_line_count": 41,
+    "workflow_run_count": 492,
+    "repo_language": "C++",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "UnsafeArtifactUploadFork",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "adoptium@installer@semgrep_diff.yml",
+    "repository": "adoptium/installer",
+    "file_path": ".github/workflows/semgrep_diff.yml",
+    "yaml_content": "# ********************************************************************************\n# Copyright (c) 2024 Contributors to the Eclipse Foundation\n#\n# See the NOTICE file(s) with this work for additional\n# information regarding copyright ownership.\n#\n# This program and the accompanying materials are made\n# available under the terms of the Apache Software License 2.0\n# which is available at https://www.apache.org/licenses/LICENSE-2.0.\n#\n# SPDX-License-Identifier: Apache-2.0\n# ********************************************************************************\n---\nname: Semgrep Differential Scan\non:\n  pull_request:\n\npermissions:\n  contents: read\n  statuses: write\n\njobs:\n  semgrep-diff:\n    uses: adoptium/.github/.github/workflows/semgrep_diff.yml@main\n",
+    "file_line_count": 24,
+    "workflow_run_count": 310,
+    "repo_language": "Java",
+    "default_branch": "master",
+    "present_smells": [
+      {
+        "pascal": "MissingConcurrencyPR",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "adyen@adyen-magento2@restapi-test.yml",
+    "repository": "adyen/adyen-magento2",
+    "file_path": ".github/workflows/restapi-test.yml",
+    "yaml_content": "name: REST API Tests\n\non: [pull_request]\n\njobs:\n  build-rest:\n    if: github.event.pull_request.head.repo.full_name == github.repository\n\n    strategy:\n      matrix:\n        php-version: [8.3]\n        magento-version: [2.4.8-p3]\n    runs-on: ubuntu-latest\n    timeout-minutes: 25\n    permissions:\n      contents: read\n    env:\n      PHP_VERSION: ${{ matrix.php-version }}\n      MAGENTO_VERSION: ${{ matrix.magento-version }}\n      ADMIN_USERNAME: ${{ secrets.MAGENTO_ADMIN_USERNAME }}\n      ADMIN_PASSWORD: ${{ secrets.MAGENTO_ADMIN_PASSWORD }}\n      DONATION_ACCOUNT: ${{ secrets.DONATION_ACCOUNT }}\n      ADYEN_MERCHANT: ${{ secrets.ADYEN_MERCHANT }}\n      ADYEN_API_KEY: ${{ secrets.ADYEN_API_KEY }}\n      ADYEN_CLIENT_KEY: ${{ secrets.ADYEN_CLIENT_KEY }}\n      DEPLOY_SAMPLEDATA: 0\n\n    steps:\n      - name: Checkout repository\n        uses: actions/checkout@1e31de5234b9f8995739874a8ce0492dc87873e2\n\n      - name: Install Magento\n        run: docker compose -f .github/docker-compose.yml run --rm web make magento\n\n      - name: Start web server in background\n        run: docker compose -f .github/docker-compose.yml up -d web\n\n      - name: Setup permissions\n        run: docker exec magento2-container make fs\n\n      - name: Check install\n        run: docker exec magento2-container make sys-check\n\n      - name: Install plugin\n        run: docker exec -u www-data magento2-container make plugin\n\n      - name: Stop cron\n        run: docker exec magento2-container /etc/init.d/cron stop\n\n      - name: Configure REST API requirements\n        run: docker exec magento2-container make setup-restapi\n\n      - name: Run REST API tests\n        run: docker exec magento2-container make restapi\n",
+    "file_line_count": 54,
+    "workflow_run_count": 2259,
+    "repo_language": "PHP",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MutableRunnerVersion",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "aeron-io@agrona@ci-low-cadence.yml",
+    "repository": "aeron-io/agrona",
+    "file_path": ".github/workflows/ci-low-cadence.yml",
+    "yaml_content": "name: Continuous Integration (Low Cadence)\n\non:\n  workflow_call:\n  workflow_dispatch:\n  repository_dispatch:\n    types: run-slow-tests\n  schedule:\n    - cron: '0 0,12 * * *'\n  push:\n    branches:\n      - master\n      - 'release/**'\n  pull_request:\n    types: [opened, synchronize]\n    branches:\n      - master\n      - 'release/**'\n\nconcurrency:\n  group: ci-low-cadence-${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: ${{ github.event_name != 'schedule' }}\n\nenv:\n  GRADLE_OPTS: '-Dorg.gradle.daemon=false -Dorg.gradle.java.installations.auto-detect=false -Dorg.gradle.warning.mode=fail'\n  JAVA_VERSION: '17'\n\npermissions:\n  contents: read\n\njobs:\n  build:\n    name: Java ${{ matrix.java }} (${{ matrix.os }})\n    runs-on: ${{ matrix.os }}\n    timeout-minutes: 180\n    strategy:\n      fail-fast: false\n      matrix:\n        java: [ '17', '21', '25' ]\n        os: ['ubuntu-24.04', 'windows-latest', 'macos-15']\n    steps:\n      - name: Use faster temporary storage (Windows)\n        if: runner.os == 'Windows'\n        run: |\n          echo \"TMP=$env:RUNNER_TEMP\" | Out-File $env:GITHUB_ENV -Encoding utf8 -Append\n          echo \"TEMP=$env:RUNNER_TEMP\" | Out-File $env:GITHUB_ENV -Encoding utf8 -Append\n      - name: Checkout code\n        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2\n        with:\n          ref: ${{ github.sha }}\n      - name: Setup java\n        uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654 # v5.2.0\n        with:\n          distribution: 'zulu'\n          java-version: ${{ matrix.java }}\n      - name: Setup BUILD_JAVA_HOME & BUILD_JAVA_VERSION (Linux/macOS)\n        if: runner.os == 'Linux' || runner.os == 'macOS'\n        run: |\n          java -Xinternalversion\n          echo \"BUILD_JAVA_HOME=${JAVA_HOME}\" >> $GITHUB_ENV\n          echo \"BUILD_JAVA_VERSION=${{ matrix.java }}\" >> $GITHUB_ENV\n      - name: Setup BUILD_JAVA_HOME & BUILD_JAVA_VERSION (Windows)\n        if: runner.os == 'Windows'\n        run: |\n          java -Xinternalversion\n          echo \"BUILD_JAVA_HOME=$env:JAVA_HOME\" | Out-File $env:GITHUB_ENV -Encoding utf8 -Append\n          echo \"BUILD_JAVA_VERSION=${{ matrix.java }}\" | Out-File $env:GITHUB_ENV -Encoding utf8 -Append\n      - name: Setup java to run Gradle script\n        uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654 # v5.2.0\n        with:\n          distribution: 'zulu'\n          java-version: ${{ env.JAVA_VERSION }}\n      - name: Setup Gradle\n        uses: gradle/actions/setup-gradle@50e97c2cd7a37755bbfafc9c5b7cafaece252f6e # v6.1.0\n      - name: Build with Gradle\n        run: ./gradlew clean build :agrona-concurrency-tests:concurrencyTests\n      - name: Copy test logs\n        id: copy_test_logs\n        if: failure()\n        run: |\n          ${{ runner.os == 'Windows' && 'echo \"file=build/distributions/test_logs.tbz2\" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append' || 'echo \"file=build/distributions/test_logs.tbz2\" >> $GITHUB_OUTPUT' }}\n          ./gradlew tarTestLogs\n      - name: Upload crash logs\n        if: always() && steps.copy_test_logs.outputs.file == 'build/distributions/test_logs.tbz2'\n        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1\n        with:\n          name: crash-logs-${{ matrix.os }}-java-${{ matrix.java }}\n          path: ${{ steps.copy_test_logs.outputs.file }}\n\n  ea-build:\n    name: Java ${{ matrix.java }} (${{ matrix.os }})\n    runs-on: ${{ matrix.os }}\n    timeout-minutes: 180\n    strategy:\n      fail-fast: false\n      matrix:\n        java: [ '27-ea' ]\n        os: ['ubuntu-24.04', 'windows-latest']\n    steps:\n      - name: Use faster temporary storage (Windows)\n        if: runner.os == 'Windows'\n        run: |\n          echo \"TMP=$env:RUNNER_TEMP\" | Out-File $env:GITHUB_ENV -Encoding utf8 -Append\n          echo \"TEMP=$env:RUNNER_TEMP\" | Out-File $env:GITHUB_ENV -Encoding utf8 -Append\n      - name: Checkout code\n        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2\n        with:\n          ref: ${{ github.sha }}\n      - name: Setup java\n        uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654 # v5.2.0\n        with:\n          distribution: 'temurin'\n          java-version: ${{ matrix.java }}\n      - name: Setup BUILD_JAVA_HOME & BUILD_JAVA_VERSION (Linux/macOS)\n        if: runner.os == 'Linux' || runner.os == 'macOS'\n        run: |\n          java -Xinternalversion\n          echo \"BUILD_JAVA_HOME=${JAVA_HOME}\" >> $GITHUB_ENV\n          echo \"BUILD_JAVA_VERSION=${{ matrix.java }}\" >> $GITHUB_ENV\n      - name: Setup BUILD_JAVA_HOME & BUILD_JAVA_VERSION (Windows)\n        if: runner.os == 'Windows'\n        run: |\n          java -Xinternalversion\n          echo \"BUILD_JAVA_HOME=$env:JAVA_HOME\" | Out-File $env:GITHUB_ENV -Encoding utf8 -Append\n          echo \"BUILD_JAVA_VERSION=${{ matrix.java }}\" | Out-File $env:GITHUB_ENV -Encoding utf8 -Append\n      - name: Setup java to run Gradle script\n        uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654 # v5.2.0\n        with:\n          distribution: 'zulu'\n          java-version: ${{ env.JAVA_VERSION }}\n      - name: Setup Gradle\n        uses: gradle/actions/setup-gradle@50e97c2cd7a37755bbfafc9c5b7cafaece252f6e # v6.1.0\n      - name: Build with Gradle\n        run: ./gradlew clean build :agrona-concurrency-tests:concurrencyTests\n      - name: Copy test logs\n        id: copy_test_logs\n        if: failure()\n        run: |\n          ${{ runner.os == 'Windows' && 'echo \"file=build/distributions/test_logs.tbz2\" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append' || 'echo \"file=build/distributions/test_logs.tbz2\" >> $GITHUB_OUTPUT' }}\n          ./gradlew tarTestLogs\n      - name: Upload crash logs\n        if: always() && steps.copy_test_logs.outputs.file == 'build/distributions/test_logs.tbz2'\n        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1\n        with:\n          name: crash-logs-ea-${{ matrix.os }}-java-${{ matrix.java }}\n          path: ${{ steps.copy_test_logs.outputs.file }}\n",
+    "file_line_count": 146,
+    "workflow_run_count": 1026,
+    "repo_language": "Java",
+    "default_branch": "master",
+    "present_smells": [
+      {
+        "pascal": "UnsafeArtifactUploadFork",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "agama-project@agama@obs-staging-rust.yml",
+    "repository": "agama-project/agama",
+    "file_path": ".github/workflows/obs-staging-rust.yml",
+    "yaml_content": "name: Submit agama\n\npermissions:\n  contents: read\n\non:\n  push:\n    paths:\n      # run only when a Rust source is changed\n      - rust/**\n\n  # allow running manually\n  workflow_dispatch:\n\njobs:\n  update_staging:\n    uses: ./.github/workflows/obs-staging-shared.yml\n    # pass all secrets\n    secrets: inherit\n    with:\n      install_packages: obs-service-cargo_audit obs-service-cargo_vendor\n      package_name: agama\n      service_file: rust/package/_service\n",
+    "file_line_count": 23,
+    "workflow_run_count": 3137,
+    "repo_language": "Ruby",
+    "default_branch": "master",
+    "present_smells": [],
+    "absent_smells": [
+      {
+        "pascal": "MissingPathFilters"
+      }
+    ]
+  },
+  {
+    "file_key": "agama-project@agama@obs-staging-web.yml",
+    "repository": "agama-project/agama",
+    "file_path": ".github/workflows/obs-staging-web.yml",
+    "yaml_content": "name: Submit agama-web-ui\n\npermissions:\n  contents: read\n\non:\n  push:\n    paths:\n      # run only when a web frontend source is changed\n      - web/**\n\n  # allow running manually\n  workflow_dispatch:\n\njobs:\n  update_staging:\n    uses: ./.github/workflows/obs-staging-shared.yml\n    # pass all secrets\n    secrets: inherit\n    with:\n      install_packages: obs-service-node_modules\n      package_name: agama-web-ui\n      service_file: web/package/_service\n",
+    "file_line_count": 23,
+    "workflow_run_count": 2214,
+    "repo_language": "Ruby",
+    "default_branch": "master",
+    "present_smells": [],
+    "absent_smells": [
+      {
+        "pascal": "MissingPathFilters"
+      }
+    ]
+  },
+  {
+    "file_key": "ant-design@ant-design@sync-gitee.yml",
+    "repository": "ant-design/ant-design",
+    "file_path": ".github/workflows/sync-gitee.yml",
+    "yaml_content": "name: \ud83d\udd00 Sync mirror to Gitee\n\non:\n  push:\n    branches:\n      - master\n      - gh-pages\n      - feature\n      - 2.x-stable\n      - 3.x-stable\n      - 4.x-stable\n  create:\n  workflow_dispatch:\n\npermissions:\n  contents: read\n\njobs:\n  mirror:\n    permissions:\n      contents: none\n    runs-on: blacksmith-4vcpu-ubuntu-2404\n    if: github.repository == 'ant-design/ant-design'\n    steps:\n      - name: mirror\n        continue-on-error: true\n        if: github.event_name == 'push' || (github.event_name == 'create' && github.event.ref_type == 'tag') || github.event_name == 'workflow_dispatch'\n        uses: wearerequired/git-mirror-action@c44c68aebe42de49a80a8dfd557416b6a0cafdad # v1\n        env:\n          SSH_PRIVATE_KEY: ${{ secrets.GITEE_SSH_PRIVATE_KEY }}\n        with:\n          source-repo: 'git@github.com:ant-design/ant-design.git'\n          destination-repo: 'git@gitee.com:ant-design/ant-design.git'\n",
+    "file_line_count": 33,
+    "workflow_run_count": 3254,
+    "repo_language": "TypeScript",
+    "default_branch": "master",
+    "present_smells": [],
+    "absent_smells": [
+      {
+        "pascal": "UnsafeDeployOnFork"
+      }
+    ]
+  },
+  {
+    "file_key": "apache@apisix@link-check.yml",
+    "repository": "apache/apisix",
+    "file_path": ".github/workflows/link-check.yml",
+    "yaml_content": "name: 'Link Checker'\n\n# **What it does**: Renders the content of every page and check all internal links.\n# **Why we have it**: To make sure all links connect correctly.\n# **Who does it impact**: Docs content.\n\non:\n  workflow_dispatch:\n  push:\n    # branches: [master, 'release/**']\n    paths:\n      - '**/*.md'\n      - '**/link-check.yml'\n  pull_request:\n    branches: [master, \"release/**\"]\n    paths:\n      - '**/*.md'\n      - '**/link-check.yml'\n\npermissions:\n  contents: read\n  # Needed for the 'trilom/file-changes-action' action\n  pull-requests: read\n\n# This allows a subsequently queued workflow run to interrupt previous runs\nconcurrency:\n  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'\n  cancel-in-progress: true\n\njobs:\n  check-links:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2\n\n      - name: Get script\n        run: |\n          wget https://raw.githubusercontent.com/xuruidong/markdown-link-checker/main/link_checker.py\n\n      - name: Setup python\n        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6\n        with:\n          python-version: '3.9'\n\n      - name: Link check (critical, all files)\n        run: |\n          # python link_checker.py ./ --enable-external --ignore \"http://apisix.iresty.com\" \"https://www.upyun.com\" \"https://github.com/apache/apisix/actions/workflows/build.yml/badge.svg\" \"https://httpbin.org/\" \"https://en.wikipedia.org/wiki/Cache\"\n          python link_checker.py ./\n",
+    "file_line_count": 49,
+    "workflow_run_count": 1752,
+    "repo_language": "Lua",
+    "default_branch": "master",
+    "present_smells": [
+      {
+        "pascal": "MultiCommandStep",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "apache@apisix@lint.yml",
+    "repository": "apache/apisix",
+    "file_path": ".github/workflows/lint.yml",
+    "yaml_content": "name: \u2744\ufe0f Lint\n\non: [push, pull_request]\n\npermissions:\n  contents: read\n\njobs:\n  misc:\n    name: misc checker\n    runs-on: ubuntu-latest\n    steps:\n      - name: Check out code.\n        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2\n      - name: spell check\n        run: |\n          pip install codespell==2.1.0\n          # codespell considers some repo name in go.sum are misspelled\n          git grep --cached -l '' | grep -v go.sum | grep -v pnpm-lock.yaml |xargs codespell --ignore-words=.ignore_words --skip=\"*.ts,*.mts\"\n      - name: Merge conflict\n        run: |\n          bash ./utils/check-merge-conflict.sh\n      - name: Plugin Code\n        run: |\n          bash ./utils/check-plugins-code.sh\n\n  ci-eclint:\n    runs-on: ubuntu-latest\n    timeout-minutes: 5\n\n    steps:\n      - name: Check out code\n        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2\n\n      - name: Setup Nodejs env\n        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0\n        with:\n          node-version: '12'\n\n      - name: Install eclint\n        run: |\n          sudo npm install -g eclint\n\n      - name: Run eclint\n        run: |\n          eclint check\n",
+    "file_line_count": 46,
+    "workflow_run_count": 3875,
+    "repo_language": "Lua",
+    "default_branch": "master",
+    "present_smells": [
+      {
+        "pascal": "UnpinnedDependencies",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "apache@celix@coverage.yml",
+    "repository": "apache/celix",
+    "file_path": ".github/workflows/coverage.yml",
+    "yaml_content": "name: Celix Coverage\n\non: [push, pull_request]\n\nenv:\n  CONAN_USER_HOME: \"${{ github.workspace }}/release/\"\n  CONAN_USER_HOME_SHORT: \"${{ github.workspace }}/release/short\"\n  CONAN_HOME: \"${{ github.workspace }}/release/\"\n  CCACHE_DIR: \"${{ github.workspace }}/.ccache\"\n  CCACHE_SLOPPINESS: include_file_ctime,include_file_mtime\n\njobs:\n  coverage:\n    runs-on: ubuntu-22.04\n    timeout-minutes: 120\n    steps:\n      - name: Checkout source code\n        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c #v3.3.0\n      - name: Install conan and lcov\n        run: |\n          sudo apt-get install -yq --no-install-recommends lcov\n          sudo pip install -U conan coverage\n      - name: Setup Conan Profile\n        run: |\n          # build profile\n          conan profile detect -f --name release\n          sed -i 's/compiler.cppstd=gnu14/compiler.cppstd=gnu17/g' `conan profile path release`\n          echo \"[tool_requires]\" >> `conan profile path release`\n          echo \"cmake/3.26.4\" >> `conan profile path release`\n          \n          # host profile\n          conan profile detect -f \n          sed -i 's/build_type=Release/build_type=Debug/g' `conan profile path default`\n          sed -i 's/compiler.cppstd=gnu14/compiler.cppstd=gnu17/g' `conan profile path default`\n          echo \"[tool_requires]\" >> `conan profile path default`\n          echo \"cmake/3.26.4\" >> `conan profile path default`\n      - name: Conan Cache\n        id: cache-conan\n        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf #v4.2.2\n        env:\n          cache-name: cache-conan2-modules\n        with:\n          path: ${{ env.CONAN_HOME }}\n          key: ${{ runner.os }}-gcov-builder-${{ env.cache-name }}-${{ hashFiles('conanfile.py') }}\n          restore-keys: ${{ runner.os }}-gcov-builder-${{ env.cache-name }}-\n      - name: Prepare ccache timestamp\n        id: ccache_cache_timestamp\n        run: |\n          echo timestamp=`date +\"%Y-%m-%d-%H;%M;%S\"` >> $GITHUB_OUTPUT\n      - name: ccache Cache\n        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf #v4.2.2\n        with:\n          path: ${{ env.CCACHE_DIR }}\n          key: ${{ runner.os }}-gcov-ccache-${{ steps.ccache_cache_timestamp.outputs.timestamp }}\n          restore-keys: |\n            ${{ runner.os }}-gcov-ccache-\n      - name: Install Dependencies and Build\n        env:\n          CONAN_BUILD_OPTIONS: |\n            -o celix/*:enable_testing=True\n            -o celix/*:build_all=True\n            -o celix/*:enable_code_coverage=True\n            -o celix/*:enable_testing_on_ci=True\n            -o celix/*:enable_ccache=True\n            -o mosquitto/*:broker=True \n            -o *:shared=True\n        run: |\n          conan build .  -pr:b release -pr:h default ${CONAN_BUILD_OPTIONS} -b missing\n      - name: Test with coverage\n        run: |\n          cd build/Debug\n          source generators/conanrun.sh\n          make coverage\n          source generators/deactivate_conanrun.sh\n          lcx=\"lcov --output-file=coverage.info \" && for i in `find . -name \"*.info.cleaned\"`; do lcx+=\" --add-tracefile=$i\"; done && $lcx\n      - name: Codecov\n        uses: codecov/codecov-action@125fc84a9a348dbcf27191600683ec096ec9021c #v4.4.1\n        if: github.repository_owner == 'apache'\n        with:\n          files: build/Debug/coverage.info\n          disable_search: true\n          name: codecov-celix\n          token: ${{ secrets.CODECOV_TOKEN }}\n",
+    "file_line_count": 83,
+    "workflow_run_count": 283,
+    "repo_language": "C",
+    "default_branch": "master",
+    "present_smells": [
+      {
+        "pascal": "UnpinnedDependencies",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "apache@nuttx@check.yml",
+    "repository": "apache/nuttx",
+    "file_path": ".github/workflows/check.yml",
+    "yaml_content": "# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#      http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\nname: Check\n\non:\n  pull_request:\n    paths-ignore:\n      - 'Documentation/**'\n\nconcurrency:\n  group: check-${{ github.event.pull_request.number || github.ref }}\n  cancel-in-progress: true\n\npermissions:\n  contents: read\n\njobs:\n  check:\n    runs-on: ubuntu-latest\n\n    steps:\n      - name: Checkout nuttx repo\n        uses: actions/checkout@v6\n        with:\n          repository: apache/nuttx\n          path: nuttx\n          fetch-depth: 0\n\n      - name: Check Pull Request\n        run: |\n          echo \"::add-matcher::nuttx/.github/nxstyle.json\"\n          python3 -m venv .venv\n          source .venv/bin/activate\n          pip install codespell cmake-format black isort flake8 cvt2utf\n          cd nuttx\n          commits=\"${{ github.event.pull_request.base.sha }}..HEAD\"\n          git log --oneline $commits\n          breaking_opts=\"\"\n          if echo '${{ toJSON(github.event.pull_request.labels) }}' | jq -e 'any(.[].name; test(\"breaking change\"; \"i\"))' >/dev/null 2>&1; then\n            breaking_opts=\"-b\"\n          fi\n          echo \"../nuttx/tools/checkpatch.sh -c -u -m -g $breaking_opts $commits\"\n          ../nuttx/tools/checkpatch.sh -c -u -m -g $breaking_opts $commits\n",
+    "file_line_count": 53,
+    "workflow_run_count": 6614,
+    "repo_language": "C",
+    "default_branch": "master",
+    "present_smells": [
+      {
+        "pascal": "UnpinnedDependencies",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "astarte-platform@astarte@astarte-data-updater-plant-workflow.yaml",
+    "repository": "astarte-platform/astarte",
+    "file_path": ".github/workflows/astarte-data-updater-plant-workflow.yaml",
+    "yaml_content": "name: Build and Test Astarte Data Updater Plant\n\non:\n  # Run when pushing to stable branches\n  push:\n    paths:\n      - \"apps/astarte_data_updater_plant/**\"\n      - \"libs/**\"\n      - \".github/workflows/astarte-apps-build-workflow.yaml\"\n      - \".github/workflows/astarte-data-updater-plant-workflow.yaml\"\n      - \".github/codecov.yml\"\n    branches:\n      - \"master\"\n      - \"release-*\"\n  # Run on branch/tag creation\n  create:\n  # Run on pull requests for astarte_data_updater_plant\n  pull_request:\n    paths:\n      - \"apps/astarte_data_updater_plant/**\"\n      - \"libs/**\"\n      - \".github/workflows/astarte-apps-build-workflow.yaml\"\n      - \".github/workflows/astarte-data-updater-plant-workflow.yaml\"\n      - \".github/codecov.yml\"\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}\n  cancel-in-progress: true\n\ndefaults:\n  run:\n    shell: bash\n\njobs:\n  astarte_data_updater_plant:\n    uses: ./.github/workflows/astarte-apps-build-workflow.yaml\n    with:\n      app: \"astarte_data_updater_plant\"\n    secrets: inherit\n",
+    "file_line_count": 39,
+    "workflow_run_count": 2138,
+    "repo_language": "Elixir",
+    "default_branch": "master",
+    "present_smells": [
+      {
+        "pascal": "MissingPermExternalActions",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "bombshell-dev@clack@ci.yml",
+    "repository": "bombshell-dev/clack",
+    "file_path": ".github/workflows/ci.yml",
+    "yaml_content": "name: CI\n\non:\n  push:\n    branches:\n      - main\n  pull_request:\n\n# Automatically cancel in-progress actions on the same branch\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}\n  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}\n\njobs:\n  scripts:\n    if: github.repository_owner == 'bombshell-dev'\n    uses: bombshell-dev/automation/.github/workflows/run.yml@main\n    secrets: inherit\n    with:\n      commands: >\n        [\n          \"build\",\n          \"types\",\n          \"test\",\n          \"deps\"\n        ]\n",
+    "file_line_count": 26,
+    "workflow_run_count": 785,
+    "repo_language": "TypeScript",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MissingPermExternalActions",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "canonical@microcloud@codeql.yml",
+    "repository": "canonical/microcloud",
+    "file_path": ".github/workflows/codeql.yml",
+    "yaml_content": "# For most projects, this workflow file will not need changing; you simply need\n# to commit it to your repository.\n#\n# You may wish to alter this file to override the set of languages analyzed,\n# or to provide custom queries or build logic.\n#\n# ******** NOTE ********\n# We have attempted to detect the languages in your repository. Please check\n# the `language` matrix defined below to confirm you have the correct set of\n# supported CodeQL languages.\n#\nname: \"CodeQL\"\n\non:\n  push:\n    branches: [ \"main\", \"*\" ]\n  pull_request:\n    branches: [ \"main\", \"*\" ]\n  schedule:\n    - cron: '19 20 * * 5'\n\nenv:\n  CGO_CFLAGS: -I/home/runner/go/deps/dqlite/include/\n  CGO_LDFLAGS: -L/home/runner/go/deps/dqlite/.libs/\n  LD_LIBRARY_PATH: /home/runner/go/deps/dqlite/.libs/\n  CGO_LDFLAGS_ALLOW: (-Wl,-wrap,pthread_create)|(-Wl,-z,now)\n\npermissions: {}\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\njobs:\n  analyze:\n    if: ${{ github.repository_owner == 'canonical' }}\n    name: Analyze\n    # Runner size impacts CodeQL analysis time. To learn more, please see:\n    #   - https://gh.io/recommended-hardware-resources-for-running-codeql\n    #   - https://gh.io/supported-runners-and-hardware-resources\n    #   - https://gh.io/using-larger-runners\n    # Consider using larger runners for possible analysis time improvements.\n    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}\n    timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}\n    permissions:\n      # required for all workflows\n      security-events: write\n\n      # only required for workflows in private repositories\n      actions: read\n      contents: read\n\n    strategy:\n      fail-fast: false\n      matrix:\n        language: ['actions', 'go']\n        # CodeQL supports [ 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'swift' ]\n        # Use only 'java-kotlin' to analyze code written in Java, Kotlin or both\n        # Use only 'javascript-typescript' to analyze code written in JavaScript, TypeScript or both\n        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support\n\n    steps:\n    - name: Checkout repository\n      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2\n      with:\n        persist-credentials: false\n\n    - name: Install Go\n      if: matrix.language == 'go'\n      uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c # v6.4.0\n      with:\n        go-version-file: 'go.mod'\n\n    # Initializes the CodeQL tools for scanning.\n    - name: Initialize CodeQL\n      uses: github/codeql-action/init@95e58e9a2cdfd71adc6e0353d5c52f41a045d225 # v4.35.2\n      with:\n        languages: ${{ matrix.language }}\n        # If you wish to specify custom queries, you can do so here or in a config file.\n        # By default, queries listed here will override any specified in a config file.\n        # Prefix the list here with \"+\" to use these queries and those in the config file.\n\n        # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs\n        # queries: security-extended,security-and-quality\n\n    # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).\n    - name: Autobuild\n      if: matrix.language != 'go'\n      uses: github/codeql-action/autobuild@95e58e9a2cdfd71adc6e0353d5c52f41a045d225 # v4.35.2\n\n    - name: Install MicroCloud build dependencies\n      if: matrix.language == 'go'\n      uses: ./.github/actions/install-builddeps\n\n    - name: Build\n      if: matrix.language == 'go'\n      run: |\n        make deps\n        make build\n\n    - name: Perform CodeQL Analysis\n      uses: github/codeql-action/analyze@95e58e9a2cdfd71adc6e0353d5c52f41a045d225 # v4.35.2\n      with:\n        category: \"/language:${{matrix.language}}\"\n",
+    "file_line_count": 104,
+    "workflow_run_count": 2123,
+    "repo_language": "Go",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "MultiCommandStep",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "eprosima@fast-dds@ubuntu-ci.yml",
+    "repository": "eprosima/fast-dds",
+    "file_path": ".github/workflows/ubuntu-ci.yml",
+    "yaml_content": "name: Fast DDS Ubuntu CI\n\non:\n  workflow_dispatch:\n    inputs:\n      label:\n        description: 'ID associated to the workflow'\n        required: true\n        type: string\n      colcon-args:\n        description: 'Extra arguments for colcon cli'\n        required: false\n        type: string\n      cmake-args:\n        description: 'Extra arguments for cmake cli'\n        required: false\n        type: string\n      ctest-args:\n        description: 'Extra arguments for ctest cli'\n        required: false\n        type: string\n      fastdds_branch:\n        description: 'Branch or tag of Fast DDS repository (https://github.com/eProsima/Fast-DDS)'\n        type: string\n        required: true\n      security:\n        description: 'Enable security features'\n        required: false\n        type: boolean\n        default: true\n      run-tests:\n        description: 'Run suite of tests of Fast DDS, Fast DDS python, and Fast DDS Discovery Server'\n        required: false\n        type: boolean\n        default: true\n      use-ccache:\n        description: 'Use CCache to speed up the build'\n        required: false\n        type: boolean\n        default: false\n\n  pull_request:\n    types:\n      - review_requested\n    paths-ignore:\n      - '**.md'\n      - '**.txt'\n      - '!**/CMakeLists.txt'\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}\n  cancel-in-progress: true\n\njobs:\n  ubuntu-ci:\n\n    if: ${{ !(github.event_name == 'pull_request') || !contains(github.event.pull_request.labels.*.name, 'conflicts') }}\n    uses: ./.github/workflows/reusable-ubuntu-ci.yml\n    with:\n      # It would be desirable to have a matrix of ubuntu OS for this job, but due to the issue opened in this ticket:\n      # https://github.com/orgs/community/discussions/128118 , it has been set as a single OS job.\n      os-image: 'ubuntu-24.04'\n      label: ${{ inputs.label || 'ubuntu-ci' }}\n      colcon-args: ${{ inputs.colcon-args }}\n      cmake-args: ${{ inputs.cmake-args }}\n      ctest-args: ${{ inputs.ctest-args || '-LE xfail' }}\n      fastdds-branch: ${{ inputs.fastdds_branch || github.ref || 'master' }}\n      security: ${{ ((inputs.security == true) && true) || github.event_name == 'pull_request' }}\n      run-build: ${{ !(github.event_name == 'pull_request') || !contains(github.event.pull_request.labels.*.name, 'skip-ci') }}\n      run-tests: ${{ ((inputs.run-tests == true) && true) || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'no-test')) }}\n      use-ccache: ${{ ((inputs.use-ccache == true) && true) || false }}\n      add-label: ${{ (github.event_name == 'pull_request') && (github.event.pull_request.head.repo.full_name == github.repository) && true || false }}\n",
+    "file_line_count": 72,
+    "workflow_run_count": 1301,
+    "repo_language": "C++",
+    "default_branch": "master",
+    "present_smells": [
+      {
+        "pascal": "MissingPermExternalActions",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "intelowlproject@greedybear@release.yml",
+    "repository": "intelowlproject/greedybear",
+    "file_path": ".github/workflows/release.yml",
+    "yaml_content": "name: Release and publish\n\non:\n  pull_request:\n    types:\n      - closed\n\n# discard previous execution if you commit to a branch that is already running\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\njobs:\n\n  release_and_tag:\n    uses: ./.github/workflows/_release_and_tag.yml\n    secrets: inherit\n    with:\n      publish_on_pypi: false\n      publish_on_test_pypi: false\n      publish_on_npm: false\n      publish_on_twitter: false\n      publish_on_ecr: false\n      repository: certego-test\n      working_directory: .github/test/python_test\n      dockerfiles: >-\n        [\"Dockerfile\"]\n      aws_region: eu-central-1\n",
+    "file_line_count": 28,
+    "workflow_run_count": 452,
+    "repo_language": "Python",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "UnsafeDeployOnFork",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  },
+  {
+    "file_key": "nodejs@nodejs.org@chromatic.yml",
+    "repository": "nodejs/nodejs.org",
+    "file_path": ".github/workflows/chromatic.yml",
+    "yaml_content": "# Security Notes\n# Only selected Actions are allowed within this repository. Please refer to (https://github.com/nodejs/nodejs.org/settings/actions)\n# for the full list of available actions. If you want to add a new one, please reach out a maintainer with Admin permissions.\n# REVIEWERS, please always double-check security practices before merging a PR that contains Workflow changes!!\n# AUTHORS, please only use actions with explicit SHA references, and avoid using `@master` or `@main` references or `@version` tags.\n\nname: Chromatic\n\non:\n  merge_group:\n  push:\n    branches:\n      - main\n    paths:\n      - packages/ui-components/**\n      - .github/workflows/chromatic.yml\n  pull_request_target:\n    branches:\n      - main\n    paths:\n      - packages/ui-components/**\n      - .github/workflows/chromatic.yml\n    types:\n      - labeled\n  workflow_dispatch:\n\ndefaults:\n  run:\n    # This ensures that the working directory is the root of the repository\n    working-directory: ./\n\nconcurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: ${{ github.event_name != 'push' }}\n\npermissions:\n  contents: read\n  actions: read\n\njobs:\n  chromatic:\n    # We only need to run Storybook Builds and Storybook Visual Regression Tests within Pull Requests that actually\n    # introduce changes to the Storybook. Hence, we skip running these on Crowdin PRs and Dependabot PRs\n    if: |\n      github.event_name != 'pull_request_target' ||\n      (\n        github.event.label.name == 'github_actions:pull-request' &&\n        github.actor != 'dependabot[bot]' &&\n        github.event.pull_request.head.ref != 'chore/crowdin'\n      )\n\n    name: Chromatic\n    runs-on: ubuntu-latest\n\n    environment:\n      name: Storybook\n      url: ${{ steps.chromatic-deploy.outputs.storybookUrl }}\n\n    steps:\n      - uses: nodejs/web-team/actions/setup-environment@9f3c83af227d721768d9dbb63009a47ed4f4282f\n        with:\n          pnpm: true\n          use-version-file: true\n          fetch-depth: 0\n\n      - name: Start Visual Regression Tests (Chromatic)\n        # This assigns the Environment Deployment for Storybook\n        id: chromatic-deploy\n        uses: chromaui/action@cad40970f69e7a6a5bef4ddfe42c01309ba17cb1 # v16.6.0\n        with:\n          workingDir: packages/ui-components\n          buildScriptName: storybook:build\n          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}\n          exitOnceUploaded: true\n          onlyChanged: true\n",
+    "file_line_count": 75,
+    "workflow_run_count": 1745,
+    "repo_language": "TypeScript",
+    "default_branch": "main",
+    "present_smells": [
+      {
+        "pascal": "UnsafeDeployOnFork",
+        "count": 1
+      }
+    ],
+    "absent_smells": []
+  }
+]
